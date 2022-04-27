@@ -117,7 +117,7 @@
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.Location = new System.Drawing.Point(594, 75);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
@@ -129,9 +129,10 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(711, 84);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label6.Location = new System.Drawing.Point(710, 79);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(31, 13);
+            this.label6.Size = new System.Drawing.Size(45, 20);
             this.label6.TabIndex = 8;
             this.label6.Text = "200$";
             this.label6.Click += new System.EventHandler(this.label6_Click);
