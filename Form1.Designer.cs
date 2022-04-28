@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn_hello = new System.Windows.Forms.Button();
-            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.lbl_click = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -40,6 +39,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.time_lbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -151,12 +151,23 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
+            // time_lbl
+            // 
+            this.time_lbl.AutoSize = true;
+            this.time_lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.time_lbl.Location = new System.Drawing.Point(921, 497);
+            this.time_lbl.Name = "time_lbl";
+            this.time_lbl.Size = new System.Drawing.Size(71, 20);
+            this.time_lbl.TabIndex = 10;
+            this.time_lbl.Text = "00:00:00";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1136, 578);
+            this.Controls.Add(this.time_lbl);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.button1);
@@ -167,8 +178,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_click);
             this.Controls.Add(this.btn_hello);
-            this.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Farm Simulator™";
             this.Load += new System.EventHandler(this.Form1_Load_1);
@@ -181,7 +194,6 @@
         #endregion
 
         private System.Windows.Forms.Button btn_hello;
-        private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.Label lbl_click;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -191,6 +203,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label time_lbl;
     }
 }
 

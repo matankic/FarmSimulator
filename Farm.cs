@@ -10,8 +10,8 @@ namespace HelloWorldWinForms
     public class Farm 
     {
         static int credit;
-        public Employee[] employees =new Employee();
-        public Animal[] animals= new Animal();
+        //public Employee[] employees =new Employee();
+        //public Animal[] animals= new Animal();
 
     }
 }
