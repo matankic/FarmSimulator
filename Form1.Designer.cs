@@ -243,7 +243,9 @@
             // 
             // comboBox1
             // 
+            this.comboBox1.DropDownHeight = 60;
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
             this.comboBox1.Items.AddRange(new object[] {
             "1",
             "2",
@@ -349,6 +351,7 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(152, 21);
             this.comboBox1.TabIndex = 14;
+            this.comboBox1.Text = "3";
             // 
             // button2
             // 
