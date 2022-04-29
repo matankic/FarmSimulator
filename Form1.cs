@@ -14,6 +14,7 @@ namespace HelloWorldWinForms
     {
         //System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         private int cnt_chicken;
+        private int _credit;
         private int _minutes;
         private int _hours;
         private int _days;
@@ -23,24 +24,19 @@ namespace HelloWorldWinForms
             InitializeComponent();
             //player.SoundLocation = "Relaxing.mp3";
             timer1.Start();
+
             pictureBox2.Parent = pictureBox1;
             pictureBox2.BackColor = Color.Transparent;
             pictureBox3.Parent = pictureBox1;
             pictureBox3.BackColor = Color.Transparent;
-            pictureBox4.Parent = pictureBox1;
-            pictureBox4.BackColor = Color.Transparent;
-            pictureBox5.Parent = pictureBox1;
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox6.Parent = pictureBox1;
-            pictureBox6.BackColor = Color.Transparent;
-            pictureBox7.Parent = pictureBox1;
-            pictureBox7.BackColor = Color.Transparent;
-            pictureBox8.Parent = pictureBox1;
-            pictureBox8.BackColor = Color.Transparent;
+                        
             cnt_chicken = 0;
             _minutes = 0;
             _hours = 5;
             _days = 1;
+            _credit = 2000;
+            label11.Text = _credit.ToString();
+
 
             label10.Parent = pictureBox1;
             label10.BackColor = Color.Transparent;
@@ -59,6 +55,14 @@ namespace HelloWorldWinForms
         {
             cnt_chicken++;
             lbl_1.Text = cnt_chicken.ToString();
+
+            _credit -= 50;
+            if (_credit < 0)
+            {
+                label11.ForeColor = Color.Red;
+                label12.ForeColor = Color.Red;
+            }
+            label11.Text = _credit.ToString();
         }
 
         private void Form1_Load_1(object sender, EventArgs e)
