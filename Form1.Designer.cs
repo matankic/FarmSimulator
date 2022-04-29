@@ -86,11 +86,11 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F);
-            this.label2.Location = new System.Drawing.Point(838, 5);
+            this.label2.Location = new System.Drawing.Point(828, 5);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 25);
+            this.label2.Size = new System.Drawing.Size(94, 25);
             this.label2.TabIndex = 3;
-            this.label2.Text = "Buy :";
+            this.label2.Text = "Spieces :";
             // 
             // label3
             // 
