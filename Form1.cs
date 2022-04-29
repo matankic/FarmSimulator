@@ -23,14 +23,27 @@ namespace HelloWorldWinForms
             InitializeComponent();
             //player.SoundLocation = "Relaxing.mp3";
             timer1.Start();
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
             cnt_chicken = 0;
             _minutes = 0;
             _hours = 5;
             _days = 1;
-            label9.BackColor = System.Drawing.Color.Transparent;
+
+            label11.Parent = pictureBox1;
+            label11.BackColor = Color.Transparent;
+            label10.Parent = pictureBox1;
+            label10.BackColor = Color.Transparent;
+            label9.Parent = pictureBox1;
+            label9.BackColor = Color.Transparent;
+            label8.Parent = pictureBox1;
+            label8.BackColor = Color.Transparent;
+            label7.Parent = pictureBox1;
+            label7.BackColor = Color.Transparent;
+            label5.Parent = pictureBox1;
+            label5.BackColor = Color.Transparent;
+        }
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -46,7 +59,6 @@ namespace HelloWorldWinForms
         private void timer1_Tick(object sender, EventArgs e)
         {
             _minutes++;
-            label13.Text = _minutes.ToString();
             label9.Text = _hours.ToString();
             label10.Text = _days.ToString();
             if (_minutes == 60)
@@ -59,11 +71,6 @@ namespace HelloWorldWinForms
                 _hours = 0;
                 _days++;
             }
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
