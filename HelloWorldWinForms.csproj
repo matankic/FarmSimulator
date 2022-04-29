@@ -88,7 +88,11 @@
     <None Include="Resources\grass.jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\sheep.gif" />
     <None Include="Resources\Chicken_Strut1.gif" />
+    <None Include="Resources\cow.gif" />
+    <None Include="Resources\pig.gif" />
+    <None Include="Resources\duck.gif" />
     <Content Include="Resources\Relaxing.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
