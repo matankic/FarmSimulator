@@ -82,6 +82,15 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label34 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -93,7 +102,7 @@
             // btn_hello
             // 
             this.btn_hello.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_hello.Location = new System.Drawing.Point(815, 486);
+            this.btn_hello.Location = new System.Drawing.Point(144, 537);
             this.btn_hello.Name = "btn_hello";
             this.btn_hello.Size = new System.Drawing.Size(89, 33);
             this.btn_hello.TabIndex = 0;
@@ -757,6 +766,96 @@
             this.label34.TabIndex = 8;
             this.label34.Text = "Total cost";
             // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(817, 363);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(301, 29);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Selected spieces properties :";
+            // 
+            // label35
+            // 
+            this.label35.AutoSize = true;
+            this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label35.Location = new System.Drawing.Point(815, 392);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(59, 20);
+            this.label35.TabIndex = 5;
+            this.label35.Text = "Name :";
+            // 
+            // label36
+            // 
+            this.label36.AutoSize = true;
+            this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label36.Location = new System.Drawing.Point(815, 412);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(74, 20);
+            this.label36.TabIndex = 5;
+            this.label36.Text = "Spieces :";
+            // 
+            // label37
+            // 
+            this.label37.AutoSize = true;
+            this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label37.Location = new System.Drawing.Point(815, 432);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(34, 20);
+            this.label37.TabIndex = 5;
+            this.label37.Text = "ID :";
+            // 
+            // label38
+            // 
+            this.label38.AutoSize = true;
+            this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label38.Location = new System.Drawing.Point(815, 452);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(44, 20);
+            this.label38.TabIndex = 5;
+            this.label38.Text = "Sex :";
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label39.Location = new System.Drawing.Point(816, 472);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(46, 20);
+            this.label39.TabIndex = 5;
+            this.label39.Text = "Age :";
+            // 
+            // label40
+            // 
+            this.label40.AutoSize = true;
+            this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label40.Location = new System.Drawing.Point(965, 392);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(70, 20);
+            this.label40.TabIndex = 5;
+            this.label40.Text = "Hunger :";
+            // 
+            // label41
+            // 
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label41.Location = new System.Drawing.Point(965, 412);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(56, 20);
+            this.label41.TabIndex = 5;
+            this.label41.Text = "Thirst :";
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label42.Location = new System.Drawing.Point(965, 432);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(64, 20);
+            this.label42.TabIndex = 5;
+            this.label42.Text = "Health :";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -764,6 +863,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1136, 575);
+            this.Controls.Add(this.btn_hello);
             this.Controls.Add(this.sheep_radio);
             this.Controls.Add(this.pig_radio);
             this.Controls.Add(this.cow_radio);
@@ -788,9 +888,18 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label23);
+            this.Controls.Add(this.label42);
+            this.Controls.Add(this.label41);
+            this.Controls.Add(this.label40);
+            this.Controls.Add(this.label39);
+            this.Controls.Add(this.label38);
+            this.Controls.Add(this.label37);
+            this.Controls.Add(this.label36);
+            this.Controls.Add(this.label35);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label3);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label32);
@@ -798,7 +907,6 @@
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.lbl_1);
-            this.Controls.Add(this.btn_hello);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
@@ -877,6 +985,15 @@
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
     }
 }
 

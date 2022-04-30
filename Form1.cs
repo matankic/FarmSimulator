@@ -14,6 +14,9 @@ namespace HelloWorldWinForms
     {
         //System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         private int cnt_chicken, cnt_duck, cnt_goose, cnt_cow, cnt_pig, cnt_sheep;
+        private int buy_chicken, buy_duck, buy_goose, buy_cow, buy_pig, buy_sheep;
+        private int sell_chicken, sell_duck, sell_goose, sell_cow, sell_pig, sell_sheep;
+
         private int _credit, _minutes, _hours, _days;
 
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
@@ -70,6 +73,20 @@ namespace HelloWorldWinForms
             _days = 1;
             _credit = 2000;
             label11.Text = _credit.ToString();
+
+            buy_chicken = 50;
+            buy_duck = 75;
+            buy_goose = 100;
+            buy_cow = 200;
+            buy_pig = 150;
+            buy_sheep = 225;
+
+            sell_chicken = 47;
+            sell_duck = 70;
+            sell_goose = 87;
+            sell_cow = 180;
+            sell_pig = 70;
+            sell_sheep = 200;
 
 
             label10.Parent = pictureBox1;
