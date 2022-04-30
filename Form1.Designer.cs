@@ -369,6 +369,7 @@
             this.comboBox1.TabIndex = 14;
             this.comboBox1.Text = "3";
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
             // button2
             // 

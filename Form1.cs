@@ -34,6 +34,11 @@ namespace HelloWorldWinForms
             amount_lbl.Text = comboBox1.SelectedIndex.ToString();
         }
 
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            amount_lbl.Text = comboBox1.Text;
+        }
+
         private void sheep_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.sheep;
