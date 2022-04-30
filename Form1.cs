@@ -109,16 +109,44 @@ namespace HelloWorldWinForms
             try
             {
                 y = Int32.Parse(comboBox1.Text);
+                if (y > 99)
+                    y = 99;
+                if (y < 0)
+                    y = 0;
                 amount_lbl.Text = y.ToString();
             }
             catch
             {
                 amount_lbl.Text = y.ToString();
             }
-            int x = 0;
+            int x = 0, price = 0;
+            if (Chicken_radio.Checked == true)
+            {
+                price = buy_chicken;
+            }
+            else if (goose_radio.Checked == true)
+            {
+                price = buy_goose;
+            }
+            else if (pig_radio.Checked == true)
+            {
+                price = buy_pig;
+            }
+            else if (sheep_radio.Checked == true)
+            {
+                price = buy_sheep;
+            }
+            else if (Duck_radio.Checked == true)
+            {
+                price = buy_duck;
+            }
+            else if (cow_radio.Checked == true)
+            {
+                price = buy_cow;
+            }
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * buy_cow;
+                x = Int32.Parse(amount_lbl.Text) * price;
                 label18.Text = x.ToString();
             }
             catch
