@@ -90,14 +90,11 @@
   <ItemGroup>
     <None Include="Resources\song.wav" />
     <None Include="Resources\sheep.gif" />
-    <None Include="Resources\Chicken_Strut1.gif" />
     <None Include="Resources\cow.gif" />
     <None Include="Resources\pig.gif" />
     <None Include="Resources\duck.gif" />
     <None Include="Resources\goose.gif" />
     <Content Include="Resources\Chicken_Strut.gif" />
-    <Content Include="Resources\FarmSong.wav" />
-    <Content Include="Resources\Relaxing.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
