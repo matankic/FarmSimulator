@@ -446,9 +446,9 @@
             this.label18.Font = new System.Drawing.Font("Comic Sans MS", 20F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.label18.Location = new System.Drawing.Point(220, 84);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(65, 38);
+            this.label18.Size = new System.Drawing.Size(33, 38);
             this.label18.TabIndex = 4;
-            this.label18.Text = "---";
+            this.label18.Text = "0";
             // 
             // panel2
             // 
