@@ -208,7 +208,7 @@
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(30, 34);
             this.label9.TabIndex = 11;
-            this.label9.Text = "1";
+            this.label9.Text = "5";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // panel1
