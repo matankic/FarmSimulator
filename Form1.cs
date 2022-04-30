@@ -22,14 +22,20 @@ namespace HelloWorldWinForms
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.duck;
+            int x = Int32.Parse(amount_lbl.Text) * buy_duck;
+            label18.Text = x.ToString();
         }
         private void goose_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.goose;
+            int x = Int32.Parse(amount_lbl.Text) * buy_goose;
+            label18.Text = x.ToString();
         }
         private void Chicken_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            int x = Int32.Parse(amount_lbl.Text) * buy_chicken;
+            label18.Text = x.ToString();
         }
 
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
@@ -45,14 +51,20 @@ namespace HelloWorldWinForms
         private void sheep_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.sheep;
+            int x = Int32.Parse(amount_lbl.Text) * buy_sheep;
+            label18.Text = x.ToString();
         }
         private void pig_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.pig;
+            int x = Int32.Parse(amount_lbl.Text) * buy_pig;
+            label18.Text = x.ToString();
         }
         private void cow_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.cow;
+            int x = Int32.Parse(amount_lbl.Text) * buy_cow;
+            label18.Text = x.ToString();
         }
 
         public Form1()

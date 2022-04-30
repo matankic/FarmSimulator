@@ -382,6 +382,7 @@
             // 
             // button2
             // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button2.Location = new System.Drawing.Point(12, 79);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(74, 33);
@@ -391,6 +392,7 @@
             // 
             // button3
             // 
+            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.button3.Location = new System.Drawing.Point(90, 79);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(74, 33);
