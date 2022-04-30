@@ -17,6 +17,65 @@ namespace HelloWorldWinForms
         private int buy_chicken, buy_duck, buy_goose, buy_cow, buy_pig, buy_sheep;
         private int sell_chicken, sell_duck, sell_goose, sell_cow, sell_pig, sell_sheep;
 
+        private void sell_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buy_btn_Click(object sender, EventArgs e)
+        {
+            int price = 0;
+            try
+            {
+                price = Int32.Parse(label18.Text);
+                if (price > 0)
+                {
+                    if (Chicken_radio.Checked == true)
+                    {
+                        _credit -= price;
+                        cnt_chicken += Int32.Parse(amount_lbl.Text);
+                        lbl_1.Text = cnt_chicken.ToString();
+
+                        if (_credit < 0)
+                        {
+                            label11.ForeColor = Color.Red;
+                            label12.ForeColor = Color.Red;
+                        }
+                        label11.Text = _credit.ToString();
+                    }
+                    else if (goose_radio.Checked == true)
+                    {
+                        _credit -= price;
+                        cnt_goose += Int32.Parse(amount_lbl.Text);
+                    }
+                    else if (pig_radio.Checked == true)
+                    {
+                        _credit -= price;
+                        cnt_pig += Int32.Parse(amount_lbl.Text);
+                    }
+                    else if (sheep_radio.Checked == true)
+                    {
+                        _credit -= price;
+                        cnt_sheep += Int32.Parse(amount_lbl.Text);
+                    }
+                    else if (Duck_radio.Checked == true)
+                    {
+                        _credit -= price;
+                        cnt_duck += Int32.Parse(amount_lbl.Text);
+                    }
+                    else if (cow_radio.Checked == true)
+                    {
+                        _credit -= price;
+                        cnt_cow += Int32.Parse(amount_lbl.Text);
+                    }
+                }
+            }
+            catch
+            {
+
+            }
+        }
+
         private int _credit, _minutes, _hours, _days;
 
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)

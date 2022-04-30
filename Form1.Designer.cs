@@ -30,7 +30,6 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.btn_hello = new System.Windows.Forms.Button();
             this.lbl_1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,8 +46,8 @@
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.buy_btn = new System.Windows.Forms.Button();
+            this.sell_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.amount_lbl = new System.Windows.Forms.Label();
@@ -98,17 +97,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // btn_hello
-            // 
-            this.btn_hello.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.btn_hello.Location = new System.Drawing.Point(144, 537);
-            this.btn_hello.Name = "btn_hello";
-            this.btn_hello.Size = new System.Drawing.Size(89, 33);
-            this.btn_hello.TabIndex = 0;
-            this.btn_hello.Text = "1 Chicken";
-            this.btn_hello.UseVisualStyleBackColor = true;
-            this.btn_hello.Click += new System.EventHandler(this.button1_Click);
             // 
             // lbl_1
             // 
@@ -380,25 +368,27 @@
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
-            // button2
+            // buy_btn
             // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button2.Location = new System.Drawing.Point(12, 79);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(74, 33);
-            this.button2.TabIndex = 15;
-            this.button2.Text = "Buy";
-            this.button2.UseVisualStyleBackColor = true;
+            this.buy_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buy_btn.Location = new System.Drawing.Point(12, 79);
+            this.buy_btn.Name = "buy_btn";
+            this.buy_btn.Size = new System.Drawing.Size(74, 33);
+            this.buy_btn.TabIndex = 15;
+            this.buy_btn.Text = "Buy";
+            this.buy_btn.UseVisualStyleBackColor = true;
+            this.buy_btn.Click += new System.EventHandler(this.buy_btn_Click);
             // 
-            // button3
+            // sell_btn
             // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.button3.Location = new System.Drawing.Point(90, 79);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(74, 33);
-            this.button3.TabIndex = 15;
-            this.button3.Text = "Sell";
-            this.button3.UseVisualStyleBackColor = true;
+            this.sell_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.sell_btn.Location = new System.Drawing.Point(90, 79);
+            this.sell_btn.Name = "sell_btn";
+            this.sell_btn.Size = new System.Drawing.Size(74, 33);
+            this.sell_btn.TabIndex = 15;
+            this.sell_btn.Text = "Sell";
+            this.sell_btn.UseVisualStyleBackColor = true;
+            this.sell_btn.Click += new System.EventHandler(this.sell_btn_Click);
             // 
             // label1
             // 
@@ -454,8 +444,8 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.button3);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.sell_btn);
+            this.panel2.Controls.Add(this.buy_btn);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.pictureBox4);
             this.panel2.Controls.Add(this.label34);
@@ -865,7 +855,6 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1136, 575);
-            this.Controls.Add(this.btn_hello);
             this.Controls.Add(this.sheep_radio);
             this.Controls.Add(this.pig_radio);
             this.Controls.Add(this.cow_radio);
@@ -934,8 +923,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btn_hello;
         private System.Windows.Forms.Label lbl_1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -954,8 +941,8 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button buy_btn;
+        private System.Windows.Forms.Button sell_btn;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;
