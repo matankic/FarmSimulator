@@ -556,6 +556,11 @@ namespace HelloWorldWinForms
             {
                 _minutes = 0;
                 _hours++;
+                if (_credit < 0)
+                {
+                    _credit += (int)((double)(_credit) * 0.01);
+                    label11.Text = _credit.ToString();
+                }
             }
             if(_hours == 24)
             {

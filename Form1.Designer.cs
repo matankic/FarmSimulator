@@ -229,9 +229,9 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.label14.Location = new System.Drawing.Point(2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(206, 13);
+            this.label14.Size = new System.Drawing.Size(201, 13);
             this.label14.TabIndex = 8;
-            this.label14.Text = "•Negative interest rate costs 10% per day.";
+            this.label14.Text = "•Negative interest rate costs 1% per hour";
             // 
             // label12
             // 
@@ -370,6 +370,7 @@
             // 
             // buy_btn
             // 
+            this.buy_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buy_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.buy_btn.Location = new System.Drawing.Point(12, 79);
             this.buy_btn.Name = "buy_btn";
@@ -381,6 +382,7 @@
             // 
             // sell_btn
             // 
+            this.sell_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.sell_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.sell_btn.Location = new System.Drawing.Point(90, 79);
             this.sell_btn.Name = "sell_btn";
