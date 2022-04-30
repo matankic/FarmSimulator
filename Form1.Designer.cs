@@ -752,11 +752,11 @@
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label34.Location = new System.Drawing.Point(246, 114);
+            this.label34.Location = new System.Drawing.Point(191, 116);
             this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(70, 17);
+            this.label34.Size = new System.Drawing.Size(125, 17);
             this.label34.TabIndex = 8;
-            this.label34.Text = "Total cost";
+            this.label34.Text = "Buying : Total cost";
             // 
             // label16
             // 

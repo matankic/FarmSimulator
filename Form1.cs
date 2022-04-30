@@ -19,7 +19,96 @@ namespace HelloWorldWinForms
 
         private void sell_btn_Click(object sender, EventArgs e)
         {
+            int price = 0;
+            try
+            {
+                price = Int32.Parse(label18.Text);
+                if (price > 0)
+                {
+                    if (Chicken_radio.Checked == true)
+                    {
+                        _credit += Int32.Parse(amount_lbl.Text) * sell_chicken;
+                        cnt_chicken -= Int32.Parse(amount_lbl.Text);
+                        lbl_1.Text = cnt_chicken.ToString();
 
+                        if (_credit > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = _credit.ToString();
+                    }
+                    else if (goose_radio.Checked == true)
+                    {
+                        _credit += Int32.Parse(amount_lbl.Text) * sell_goose;
+                        cnt_goose -= Int32.Parse(amount_lbl.Text);
+                        label30.Text = cnt_goose.ToString();
+
+                        if (_credit > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = _credit.ToString();
+                    }
+                    else if (pig_radio.Checked == true)
+                    {
+                        _credit += Int32.Parse(amount_lbl.Text) * sell_pig;
+                        cnt_pig -= Int32.Parse(amount_lbl.Text);
+                        label32.Text = cnt_pig.ToString();
+
+                        if (_credit > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = _credit.ToString();
+                    }
+                    else if (sheep_radio.Checked == true)
+                    {
+                        _credit += Int32.Parse(amount_lbl.Text) * sell_sheep;
+                        cnt_sheep -= Int32.Parse(amount_lbl.Text);
+                        label33.Text = cnt_sheep.ToString();
+
+                        if (_credit > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = _credit.ToString();
+                    }
+                    else if (Duck_radio.Checked == true)
+                    {
+                        _credit += Int32.Parse(amount_lbl.Text) * sell_duck;
+                        cnt_duck -= Int32.Parse(amount_lbl.Text);
+                        label29.Text = cnt_duck.ToString();
+
+                        if (_credit > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = _credit.ToString();
+                    }
+                    else if (cow_radio.Checked == true)
+                    {
+                        _credit += Int32.Parse(amount_lbl.Text) * sell_cow;
+                        cnt_cow -= Int32.Parse(amount_lbl.Text);
+                        label31.Text = cnt_cow.ToString();
+
+                        if (_credit > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = _credit.ToString();
+                    }
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         private void buy_btn_Click(object sender, EventArgs e)
