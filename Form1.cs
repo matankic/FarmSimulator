@@ -47,26 +47,66 @@ namespace HelloWorldWinForms
                     {
                         _credit -= price;
                         cnt_goose += Int32.Parse(amount_lbl.Text);
+                        label30.Text = cnt_goose.ToString();
+
+                        if (_credit < 0)
+                        {
+                            label11.ForeColor = Color.Red;
+                            label12.ForeColor = Color.Red;
+                        }
+                        label11.Text = _credit.ToString();
                     }
                     else if (pig_radio.Checked == true)
                     {
                         _credit -= price;
                         cnt_pig += Int32.Parse(amount_lbl.Text);
+                        label32.Text = cnt_pig.ToString();
+
+                        if (_credit < 0)
+                        {
+                            label11.ForeColor = Color.Red;
+                            label12.ForeColor = Color.Red;
+                        }
+                        label11.Text = _credit.ToString();
                     }
                     else if (sheep_radio.Checked == true)
                     {
                         _credit -= price;
                         cnt_sheep += Int32.Parse(amount_lbl.Text);
+                        label33.Text = cnt_sheep.ToString();
+
+                        if (_credit < 0)
+                        {
+                            label11.ForeColor = Color.Red;
+                            label12.ForeColor = Color.Red;
+                        }
+                        label11.Text = _credit.ToString();
                     }
                     else if (Duck_radio.Checked == true)
                     {
                         _credit -= price;
                         cnt_duck += Int32.Parse(amount_lbl.Text);
+                        label29.Text = cnt_duck.ToString();
+
+                        if (_credit < 0)
+                        {
+                            label11.ForeColor = Color.Red;
+                            label12.ForeColor = Color.Red;
+                        }
+                        label11.Text = _credit.ToString();
                     }
                     else if (cow_radio.Checked == true)
                     {
                         _credit -= price;
                         cnt_cow += Int32.Parse(amount_lbl.Text);
+                        label31.Text = cnt_cow.ToString();
+
+                        if (_credit < 0)
+                        {
+                            label11.ForeColor = Color.Red;
+                            label12.ForeColor = Color.Red;
+                        }
+                        label11.Text = _credit.ToString();
                     }
                 }
             }
