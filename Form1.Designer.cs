@@ -229,9 +229,9 @@
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
             this.label14.Location = new System.Drawing.Point(2, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(201, 13);
+            this.label14.Size = new System.Drawing.Size(204, 13);
             this.label14.TabIndex = 8;
-            this.label14.Text = "•Negative interest rate costs 1% per hour";
+            this.label14.Text = "•Negative interest rate costs 1% per hour.";
             // 
             // label12
             // 
