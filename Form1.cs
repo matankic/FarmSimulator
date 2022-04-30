@@ -555,12 +555,11 @@ namespace HelloWorldWinForms
         private void timer1_Tick(object sender, EventArgs e)
         {
             _minutes++;
-            label9.Text = _hours.ToString();
-            label10.Text = _days.ToString();
             if (_minutes == 60)
             {
                 _minutes = 0;
                 _hours++;
+                label9.Text = _hours.ToString();
                 if (_credit < 0)
                 {
                     _credit += (int)((double)(_credit) * 0.01);
@@ -571,6 +570,7 @@ namespace HelloWorldWinForms
             {
                 _hours = 0;
                 _days++;
+                label10.Text = _days.ToString();
             }
         }
     }
