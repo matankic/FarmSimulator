@@ -485,9 +485,8 @@ namespace HelloWorldWinForms
         public Form1()
         {
             InitializeComponent();
-            //player.SoundLocation = "Relaxing.mp3";
             timer1.Start();
-            playSimpleSound();
+            playaudio();
 
             pictureBox2.Parent = pictureBox1;
             pictureBox2.BackColor = Color.Transparent;
@@ -549,10 +548,10 @@ namespace HelloWorldWinForms
         {
 
         }
-        private void playSimpleSound()
+        private void playaudio() 
         {
-            SoundPlayer simpleSound = HelloWorldWinForms.Properties.Resources.FarmSong.wav;
-            simpleSound.Play();
+            SoundPlayer audio = new SoundPlayer(Properties.Resources.song);
+            audio.Play();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -578,7 +577,7 @@ namespace HelloWorldWinForms
             if(_song == 13)
             {
                 _song = 0;
-                playSimpleSound();
+                playaudio();
             }
         }
     }

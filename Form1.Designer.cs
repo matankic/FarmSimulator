@@ -55,6 +55,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label34 = new System.Windows.Forms.Label();
             this.Chicken_radio = new System.Windows.Forms.RadioButton();
             this.Duck_radio = new System.Windows.Forms.RadioButton();
             this.goose_radio = new System.Windows.Forms.RadioButton();
@@ -80,7 +81,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label34 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -473,6 +473,16 @@
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
             // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label34.Location = new System.Drawing.Point(191, 116);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(125, 17);
+            this.label34.TabIndex = 8;
+            this.label34.Text = "Buying : Total cost";
+            // 
             // Chicken_radio
             // 
             this.Chicken_radio.AutoSize = true;
@@ -749,16 +759,6 @@
             this.label33.Size = new System.Drawing.Size(18, 20);
             this.label33.TabIndex = 1;
             this.label33.Text = "0";
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label34.Location = new System.Drawing.Point(191, 116);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(125, 17);
-            this.label34.TabIndex = 8;
-            this.label34.Text = "Buying : Total cost";
             // 
             // label16
             // 
