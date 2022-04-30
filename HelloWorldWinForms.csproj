@@ -94,6 +94,7 @@
     <None Include="Resources\pig.gif" />
     <None Include="Resources\duck.gif" />
     <None Include="Resources\goose.gif" />
+    <Content Include="Resources\Chicken_Strut.gif" />
     <Content Include="Resources\Relaxing.mp3" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

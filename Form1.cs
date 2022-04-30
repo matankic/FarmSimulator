@@ -13,11 +13,39 @@ namespace HelloWorldWinForms
     public partial class Form1 : Form
     {
         //System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-        private int cnt_chicken;
-        private int _credit;
-        private int _minutes;
-        private int _hours;
-        private int _days;
+        private int cnt_chicken, cnt_duck, cnt_goose, cnt_cow, cnt_pig, cnt_sheep;
+        private int _credit, _minutes, _hours, _days;
+
+        private void Duck_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.duck;
+        }
+        private void goose_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.goose;
+        }
+        private void Chicken_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+        }
+
+        private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
+        {
+            amount_lbl.Text = comboBox1.SelectedIndex.ToString();
+        }
+
+        private void sheep_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.sheep;
+        }
+        private void pig_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.pig;
+        }
+        private void cow_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.cow;
+        }
 
         public Form1()
         {
@@ -30,7 +58,8 @@ namespace HelloWorldWinForms
             pictureBox3.Parent = pictureBox1;
             pictureBox3.BackColor = Color.Transparent;
                         
-            cnt_chicken = 0;
+            cnt_chicken = cnt_duck = cnt_goose = cnt_cow = cnt_pig = cnt_sheep = 0;
+
             _minutes = 0;
             _hours = 5;
             _days = 1;
