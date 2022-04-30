@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace HelloWorldWinForms
 {
@@ -301,7 +302,7 @@ namespace HelloWorldWinForms
             }
         }
 
-        private int _credit, _minutes, _hours, _days;
+        private int _credit, _minutes, _hours, _days, _song;
 
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
         {
@@ -486,6 +487,7 @@ namespace HelloWorldWinForms
             InitializeComponent();
             //player.SoundLocation = "Relaxing.mp3";
             timer1.Start();
+            playSimpleSound();
 
             pictureBox2.Parent = pictureBox1;
             pictureBox2.BackColor = Color.Transparent;
@@ -496,6 +498,7 @@ namespace HelloWorldWinForms
 
             _minutes = 0;
             _hours = 5;
+            _song = 0;
             _days = 1;
             _credit = 2000;
             label11.Text = _credit.ToString();
@@ -546,7 +549,11 @@ namespace HelloWorldWinForms
         {
 
         }
-
+        private void playSimpleSound()
+        {
+            SoundPlayer simpleSound = HelloWorldWinForms.Properties.Resources.FarmSong.wav;
+            simpleSound.Play();
+        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             _minutes++;
@@ -556,6 +563,7 @@ namespace HelloWorldWinForms
             {
                 _minutes = 0;
                 _hours++;
+                _song++;
                 if (_credit < 0)
                 {
                     _credit += (int)((double)(_credit) * 0.01);
@@ -566,6 +574,11 @@ namespace HelloWorldWinForms
             {
                 _hours = 0;
                 _days++;
+            }
+            if(_song == 13)
+            {
+                _song = 0;
+                playSimpleSound();
             }
         }
     }
