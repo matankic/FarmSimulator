@@ -302,7 +302,7 @@ namespace HelloWorldWinForms
             }
         }
 
-        private int _credit, _minutes, _hours, _days, _song;
+        private int _credit, _minutes, _hours, _days;
 
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
         {
@@ -497,7 +497,6 @@ namespace HelloWorldWinForms
 
             _minutes = 0;
             _hours = 5;
-            _song = 0;
             _days = 1;
             _credit = 2000;
             label11.Text = _credit.ToString();
@@ -551,7 +550,7 @@ namespace HelloWorldWinForms
         private void playaudio() 
         {
             SoundPlayer audio = new SoundPlayer(Properties.Resources.song);
-            audio.Play();
+            audio.PlayLooping();
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -562,7 +561,6 @@ namespace HelloWorldWinForms
             {
                 _minutes = 0;
                 _hours++;
-                _song++;
                 if (_credit < 0)
                 {
                     _credit += (int)((double)(_credit) * 0.01);
@@ -573,11 +571,6 @@ namespace HelloWorldWinForms
             {
                 _hours = 0;
                 _days++;
-            }
-            if(_song == 13)
-            {
-                _song = 0;
-                playaudio();
             }
         }
     }
