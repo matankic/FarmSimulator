@@ -302,7 +302,7 @@ namespace HelloWorldWinForms
             }
         }
 
-        private int _credit, _minutes, _hours, _days;
+        private int _credit, _hours, _days;
 
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
         {
@@ -495,7 +495,6 @@ namespace HelloWorldWinForms
                         
             cnt_chicken = cnt_duck = cnt_goose = cnt_cow = cnt_pig = cnt_sheep = 0;
 
-            _minutes = 0;
             _hours = 5;
             _days = 1;
             _credit = 2000;
@@ -554,17 +553,12 @@ namespace HelloWorldWinForms
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            _minutes++;
-            if (_minutes == 60)
+            _hours++;
+            label9.Text = _hours.ToString();
+            if (_credit < 0)
             {
-                _minutes = 0;
-                _hours++;
-                label9.Text = _hours.ToString();
-                if (_credit < 0)
-                {
-                    _credit += (int)((double)(_credit) * 0.01);
-                    label11.Text = _credit.ToString();
-                }
+                _credit += (int)((double)(_credit) * 0.01);
+                label11.Text = _credit.ToString();
             }
             if(_hours == 24)
             {
