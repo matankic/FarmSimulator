@@ -17,6 +17,8 @@ namespace HelloWorldWinForms
         private int cnt_chicken, cnt_duck, cnt_goose, cnt_cow, cnt_pig, cnt_sheep;
         private int buy_chicken, buy_duck, buy_goose, buy_cow, buy_pig, buy_sheep;
         private int sell_chicken, sell_duck, sell_goose, sell_cow, sell_pig, sell_sheep;
+        private int counter;
+        private SoundPlayer audio;
 
         private void sell_btn_Click(object sender, EventArgs e)
         {
@@ -302,6 +304,17 @@ namespace HelloWorldWinForms
             }
         }
 
+        private void timer_song_Tick(object sender, EventArgs e)
+        {
+            if(counter == 15)
+            {
+                audio.Stop();
+                audio.Play();
+                counter = 0;
+            }
+            counter++;
+        }
+
         private int _credit, _hours, _days;
 
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
@@ -486,7 +499,9 @@ namespace HelloWorldWinForms
         {
             InitializeComponent();
             timer1.Start();
-            playaudio();
+            counter = 0;
+            audio = new SoundPlayer(Properties.Resources.song);
+            audio.Play();
 
             pictureBox2.Parent = pictureBox1;
             pictureBox2.BackColor = Color.Transparent;
@@ -546,11 +561,6 @@ namespace HelloWorldWinForms
         {
 
         }
-        private void playaudio() 
-        {
-            SoundPlayer audio = new SoundPlayer(Properties.Resources.song);
-            audio.PlayLooping();
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
             _hours++;
@@ -558,7 +568,13 @@ namespace HelloWorldWinForms
             if (_credit < 0)
             {
                 _credit += (int)((double)(_credit) * 0.01);
-                label11.Text = _credit.ToString();
+                if (_credit >= -99999)
+                    label11.Text = _credit.ToString();
+                else
+                {
+                    label11.Size = new Size(100, 12);
+                    label11.Text = "Over draft :(";
+                }
             }
             if(_hours == 24)
             {

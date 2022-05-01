@@ -93,6 +93,7 @@
             this.label43 = new System.Windows.Forms.Label();
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
+            this.timer_song = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -883,6 +884,12 @@
             this.label45.TabIndex = 5;
             this.label45.Text = "Age :";
             // 
+            // timer_song
+            // 
+            this.timer_song.Enabled = true;
+            this.timer_song.Interval = 1800;
+            this.timer_song.Tick += new System.EventHandler(this.timer_song_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1024,6 +1031,7 @@
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Timer timer_song;
     }
 }
 
