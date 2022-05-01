@@ -306,7 +306,7 @@ namespace HelloWorldWinForms
 
         private void timer_song_Tick(object sender, EventArgs e)
         {
-            if(counter == 15)
+            if(counter == 29)
             {
                 audio.Stop();
                 audio.Play();
@@ -571,10 +571,7 @@ namespace HelloWorldWinForms
                 if (_credit >= -99999)
                     label11.Text = _credit.ToString();
                 else
-                {
-                    label11.Size = new Size(100, 12);
-                    label11.Text = "Over draft :(";
-                }
+                    label11.Text = "OVD :(";
             }
             if(_hours == 24)
             {

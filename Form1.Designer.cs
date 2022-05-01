@@ -168,6 +168,7 @@
             this.label11.Size = new System.Drawing.Size(75, 34);
             this.label11.TabIndex = 11;
             this.label11.Text = "2000";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
             // 
@@ -887,7 +888,7 @@
             // timer_song
             // 
             this.timer_song.Enabled = true;
-            this.timer_song.Interval = 1800;
+            this.timer_song.Interval = 1000;
             this.timer_song.Tick += new System.EventHandler(this.timer_song_Tick);
             // 
             // Form1
