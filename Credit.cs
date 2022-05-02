@@ -33,9 +33,7 @@ namespace HelloWorldWinForms
             if (_credit < 0)
                 _credit += (int)((double)(_credit) * 0.01);
         }
-        public static Credit operator +(Credit a, int b)
-     => new Credit(a._credit + b, a._interest);
-        public static Credit operator -(Credit a, int b)
-=> new Credit(a._credit - b, a._interest);
+        public static Credit operator +(Credit a, int b) => new Credit(a._credit + b, a._interest);
+        public static Credit operator -(Credit a, int b) => new Credit(a._credit - b, a._interest);
     }
 }
