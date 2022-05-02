@@ -13,12 +13,56 @@ namespace HelloWorldWinForms
 {
     public partial class Form1 : Form
     {
+        public Form1()
+        {
+            InitializeComponent();
+            timer1.Start();
+            counter = 0;
+            audio = new SoundPlayer(Properties.Resources.song);
+            audio.Play();
+
+            pictureBox2.Parent = pictureBox1;
+            pictureBox2.BackColor = Color.Transparent;
+            pictureBox3.Parent = pictureBox1;
+            pictureBox3.BackColor = Color.Transparent;
+
+            cnt_chicken = cnt_duck = cnt_goose = cnt_cow = cnt_pig = cnt_sheep = 0;
+
+            _hours = 5;
+            _days = 1;
+            label11.Text = myCredit.creditUpdate();
+
+            buy_chicken = 50;
+            buy_duck = 75;
+            buy_goose = 100;
+            buy_cow = 200;
+            buy_pig = 150;
+            buy_sheep = 225;
+
+            sell_chicken = 47;
+            sell_duck = 70;
+            sell_goose = 87;
+            sell_cow = 180;
+            sell_pig = 70;
+            sell_sheep = 200;
+
+
+            label10.Parent = pictureBox1;
+            label10.BackColor = Color.Transparent;
+            label9.Parent = pictureBox1;
+            label9.BackColor = Color.Transparent;
+            label8.Parent = pictureBox1;
+            label8.BackColor = Color.Transparent;
+            label7.Parent = pictureBox1;
+            label7.BackColor = Color.Transparent;
+        }
         //System.Media.SoundPlayer player = new System.Media.SoundPlayer();
         private int cnt_chicken, cnt_duck, cnt_goose, cnt_cow, cnt_pig, cnt_sheep;
         private int buy_chicken, buy_duck, buy_goose, buy_cow, buy_pig, buy_sheep;
         private int sell_chicken, sell_duck, sell_goose, sell_cow, sell_pig, sell_sheep;
         private int counter;
         private SoundPlayer audio;
+        private Credit myCredit = new Credit(2000, 0.01);
 
         private void sell_btn_Click(object sender, EventArgs e)
         {
@@ -32,174 +76,174 @@ namespace HelloWorldWinForms
                     {
                         if (Int32.Parse(amount_lbl.Text) <= cnt_chicken)
                         {
-                            _credit += Int32.Parse(amount_lbl.Text) * sell_chicken;
+                            myCredit += Int32.Parse(amount_lbl.Text) * sell_chicken;
                             cnt_chicken -= Int32.Parse(amount_lbl.Text);
                             lbl_1.Text = cnt_chicken.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                         else
                         {
-                            _credit += cnt_chicken * sell_chicken;
+                            myCredit += cnt_chicken * sell_chicken;
                             cnt_chicken = 0;
                             lbl_1.Text = cnt_chicken.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                     }
                     else if (goose_radio.Checked == true)
                     {
                         if (Int32.Parse(amount_lbl.Text) <= cnt_goose)
                         {
-                            _credit += Int32.Parse(amount_lbl.Text) * sell_goose;
+                            myCredit += Int32.Parse(amount_lbl.Text) * sell_goose;
                             cnt_goose -= Int32.Parse(amount_lbl.Text);
                             label30.Text = cnt_goose.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                         else
                         {
-                            _credit += cnt_goose * sell_goose;
+                            myCredit += cnt_goose * sell_goose;
                             cnt_goose = 0;
                             label30.Text = cnt_goose.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                     }
                     else if (pig_radio.Checked == true)
                     {
                         if (Int32.Parse(amount_lbl.Text) <= cnt_pig)
                         {
-                            _credit += Int32.Parse(amount_lbl.Text) * sell_pig;
+                            myCredit += Int32.Parse(amount_lbl.Text) * sell_pig;
                             cnt_pig -= Int32.Parse(amount_lbl.Text);
                             label32.Text = cnt_pig.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                         else
                         {
-                            _credit += cnt_pig * sell_pig;
+                            myCredit += cnt_pig * sell_pig;
                             cnt_pig = 0;
                             label32.Text = cnt_pig.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                     }
                     else if (sheep_radio.Checked == true)
                     {
                         if (Int32.Parse(amount_lbl.Text) <= cnt_sheep)
                         {
-                            _credit += Int32.Parse(amount_lbl.Text) * sell_sheep;
+                            myCredit += Int32.Parse(amount_lbl.Text) * sell_sheep;
                             cnt_sheep -= Int32.Parse(amount_lbl.Text);
                             label33.Text = cnt_sheep.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                         else
                         {
-                            _credit += cnt_sheep * sell_sheep;
+                            myCredit += cnt_sheep * sell_sheep;
                             cnt_sheep = 0;
                             label33.Text = cnt_sheep.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                     }
                     else if (Duck_radio.Checked == true)
                     {
                         if (Int32.Parse(amount_lbl.Text) <= cnt_duck)
                         {
-                            _credit += Int32.Parse(amount_lbl.Text) * sell_duck;
+                            myCredit += Int32.Parse(amount_lbl.Text) * sell_duck;
                             cnt_duck -= Int32.Parse(amount_lbl.Text);
                             label29.Text = cnt_duck.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                         else
                         {
-                            _credit += cnt_duck * sell_duck;
+                            myCredit += cnt_duck * sell_duck;
                             cnt_duck = 0;
                             label29.Text = cnt_duck.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                     }
                     else if (cow_radio.Checked == true)
                     {
                         if (Int32.Parse(amount_lbl.Text) <= cnt_cow)
                         {
-                            _credit += Int32.Parse(amount_lbl.Text) * sell_cow;
+                            myCredit += Int32.Parse(amount_lbl.Text) * sell_cow;
                             cnt_cow -= Int32.Parse(amount_lbl.Text);
                             label31.Text = cnt_cow.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                         else
                         {
-                            _credit += cnt_cow * sell_cow;
+                            myCredit += cnt_cow * sell_cow;
                             cnt_cow = 0;
                             label31.Text = cnt_cow.ToString();
 
-                            if (_credit > 0)
+                            if (myCredit.get_credit() > 0)
                             {
                                 label11.ForeColor = Color.ForestGreen;
                                 label12.ForeColor = Color.ForestGreen;
                             }
-                            label11.Text = _credit.ToString();
+                            label11.Text = myCredit.creditUpdate();
                         }
                     }
                 }
@@ -220,81 +264,81 @@ namespace HelloWorldWinForms
                 {
                     if (Chicken_radio.Checked == true)
                     {
-                        _credit -= price;
+                        myCredit -= price;
                         cnt_chicken += Int32.Parse(amount_lbl.Text);
                         lbl_1.Text = cnt_chicken.ToString();
 
-                        if (_credit < 0)
+                        if (myCredit.get_credit() < 0)
                         {
                             label11.ForeColor = Color.Red;
                             label12.ForeColor = Color.Red;
                         }
-                        label11.Text = _credit.ToString();
+                        label11.Text = myCredit.creditUpdate();
                     }
                     else if (goose_radio.Checked == true)
                     {
-                        _credit -= price;
+                        myCredit -= price;
                         cnt_goose += Int32.Parse(amount_lbl.Text);
                         label30.Text = cnt_goose.ToString();
 
-                        if (_credit < 0)
+                        if (myCredit.get_credit() < 0)
                         {
                             label11.ForeColor = Color.Red;
                             label12.ForeColor = Color.Red;
                         }
-                        label11.Text = _credit.ToString();
+                        label11.Text = myCredit.creditUpdate();
                     }
                     else if (pig_radio.Checked == true)
                     {
-                        _credit -= price;
+                        myCredit -= price;
                         cnt_pig += Int32.Parse(amount_lbl.Text);
                         label32.Text = cnt_pig.ToString();
 
-                        if (_credit < 0)
+                        if (myCredit.get_credit() < 0)
                         {
                             label11.ForeColor = Color.Red;
                             label12.ForeColor = Color.Red;
                         }
-                        label11.Text = _credit.ToString();
+                        label11.Text = myCredit.creditUpdate();
                     }
                     else if (sheep_radio.Checked == true)
                     {
-                        _credit -= price;
+                        myCredit -= price;
                         cnt_sheep += Int32.Parse(amount_lbl.Text);
                         label33.Text = cnt_sheep.ToString();
 
-                        if (_credit < 0)
+                        if (myCredit.get_credit() < 0)
                         {
                             label11.ForeColor = Color.Red;
                             label12.ForeColor = Color.Red;
                         }
-                        label11.Text = _credit.ToString();
+                        label11.Text = myCredit.creditUpdate();
                     }
                     else if (Duck_radio.Checked == true)
                     {
-                        _credit -= price;
+                        myCredit -= price;
                         cnt_duck += Int32.Parse(amount_lbl.Text);
                         label29.Text = cnt_duck.ToString();
 
-                        if (_credit < 0)
+                        if (myCredit.get_credit() < 0)
                         {
                             label11.ForeColor = Color.Red;
                             label12.ForeColor = Color.Red;
                         }
-                        label11.Text = _credit.ToString();
+                        label11.Text = myCredit.creditUpdate();
                     }
                     else if (cow_radio.Checked == true)
                     {
-                        _credit -= price;
+                        myCredit -= price;
                         cnt_cow += Int32.Parse(amount_lbl.Text);
                         label31.Text = cnt_cow.ToString();
 
-                        if (_credit < 0)
+                        if (myCredit.get_credit() < 0)
                         {
                             label11.ForeColor = Color.Red;
                             label12.ForeColor = Color.Red;
                         }
-                        label11.Text = _credit.ToString();
+                        label11.Text = myCredit.creditUpdate();
                     }
                 }
             }
@@ -315,7 +359,7 @@ namespace HelloWorldWinForms
             counter++;
         }
 
-        private int _credit, _hours, _days;
+        private int _hours, _days;
 
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
         {
@@ -495,85 +539,15 @@ namespace HelloWorldWinForms
                 label18.Text = x.ToString();
             }
         }
-        public Form1()
-        {
-            InitializeComponent();
-            timer1.Start();
-            counter = 0;
-            audio = new SoundPlayer(Properties.Resources.song);
-            audio.Play();
 
-            pictureBox2.Parent = pictureBox1;
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox3.Parent = pictureBox1;
-            pictureBox3.BackColor = Color.Transparent;
-                        
-            cnt_chicken = cnt_duck = cnt_goose = cnt_cow = cnt_pig = cnt_sheep = 0;
-
-            _hours = 5;
-            _days = 1;
-            _credit = 2000;
-            label11.Text = _credit.ToString();
-
-            buy_chicken = 50;
-            buy_duck = 75;
-            buy_goose = 100;
-            buy_cow = 200;
-            buy_pig = 150;
-            buy_sheep = 225;
-
-            sell_chicken = 47;
-            sell_duck = 70;
-            sell_goose = 87;
-            sell_cow = 180;
-            sell_pig = 70;
-            sell_sheep = 200;
-
-
-            label10.Parent = pictureBox1;
-            label10.BackColor = Color.Transparent;
-            label9.Parent = pictureBox1;
-            label9.BackColor = Color.Transparent;
-            label8.Parent = pictureBox1;
-            label8.BackColor = Color.Transparent;
-            label7.Parent = pictureBox1;
-            label7.BackColor = Color.Transparent;
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void button1_Click(object sender, EventArgs e)
-        {
-            cnt_chicken++;
-            lbl_1.Text = cnt_chicken.ToString();
-
-            _credit -= 50;
-            if (_credit < 0)
-            {
-                label11.ForeColor = Color.Red;
-                label12.ForeColor = Color.Red;
-            }
-            label11.Text = _credit.ToString();
-        }
-
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            _hours++;
             label9.Text = _hours.ToString();
-            if (_credit < 0)
-            {
-                _credit += (int)((double)(_credit) * 0.01);
-                if (_credit >= -99999)
-                    label11.Text = _credit.ToString();
-                else
-                    label11.Text = "OVD :(";
-            }
-            if(_hours == 24)
+            myCredit.applyInterest();
+            label11.Text = myCredit.creditUpdate();
+
+            _hours++;
+            if (_hours == 24)
             {
                 _hours = 0;
                 _days++;

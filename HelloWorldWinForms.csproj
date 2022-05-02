@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Animal.cs" />
+    <Compile Include="Credit.cs" />
     <Compile Include="Employee.cs" />
     <Compile Include="Farm.cs" />
     <Compile Include="Form1.cs">
