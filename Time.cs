@@ -17,8 +17,16 @@ namespace HelloWorldWinForms
         }
         public Time(int x, int y)
         {
-            _hours = x;
-            _days = y;
+            if (x >= 24)
+            {
+                _days = x / 24 + y;
+                _hours = x % 24;
+            }
+            else
+            {
+                _hours = x;
+                _days = y;
+            }
         }
         public void tick()
         {

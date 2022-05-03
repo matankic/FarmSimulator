@@ -20,6 +20,7 @@ namespace HelloWorldWinForms
         private int counter;
 
         private SoundPlayer audio;
+
         private Credit myCredit;
         private Time myTime;
         

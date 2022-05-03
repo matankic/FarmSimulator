@@ -94,12 +94,14 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.timer_song = new System.Windows.Forms.Timer(this.components);
+            this.Animal_stats = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.Animal_stats.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_1
@@ -742,7 +744,7 @@
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label35.Location = new System.Drawing.Point(815, 392);
+            this.label35.Location = new System.Drawing.Point(9, 6);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(59, 20);
             this.label35.TabIndex = 5;
@@ -752,7 +754,7 @@
             // 
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label36.Location = new System.Drawing.Point(815, 412);
+            this.label36.Location = new System.Drawing.Point(9, 26);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(74, 20);
             this.label36.TabIndex = 5;
@@ -762,7 +764,7 @@
             // 
             this.label37.AutoSize = true;
             this.label37.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label37.Location = new System.Drawing.Point(815, 432);
+            this.label37.Location = new System.Drawing.Point(9, 46);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(34, 20);
             this.label37.TabIndex = 5;
@@ -772,7 +774,7 @@
             // 
             this.label38.AutoSize = true;
             this.label38.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label38.Location = new System.Drawing.Point(815, 452);
+            this.label38.Location = new System.Drawing.Point(9, 66);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(44, 20);
             this.label38.TabIndex = 5;
@@ -782,7 +784,7 @@
             // 
             this.label39.AutoSize = true;
             this.label39.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label39.Location = new System.Drawing.Point(1038, 472);
+            this.label39.Location = new System.Drawing.Point(232, 86);
             this.label39.Name = "label39";
             this.label39.Size = new System.Drawing.Size(24, 20);
             this.label39.TabIndex = 5;
@@ -792,7 +794,7 @@
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label40.Location = new System.Drawing.Point(965, 392);
+            this.label40.Location = new System.Drawing.Point(159, 6);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(70, 20);
             this.label40.TabIndex = 5;
@@ -802,7 +804,7 @@
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label41.Location = new System.Drawing.Point(965, 412);
+            this.label41.Location = new System.Drawing.Point(159, 26);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(56, 20);
             this.label41.TabIndex = 5;
@@ -812,7 +814,7 @@
             // 
             this.label42.AutoSize = true;
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label42.Location = new System.Drawing.Point(965, 432);
+            this.label42.Location = new System.Drawing.Point(159, 46);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(64, 20);
             this.label42.TabIndex = 5;
@@ -859,7 +861,7 @@
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(964, 445);
+            this.label43.Location = new System.Drawing.Point(157, 59);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(144, 29);
             this.label43.TabIndex = 3;
@@ -869,7 +871,7 @@
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label44.Location = new System.Drawing.Point(965, 472);
+            this.label44.Location = new System.Drawing.Point(159, 86);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(24, 20);
             this.label44.TabIndex = 5;
@@ -879,7 +881,7 @@
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label45.Location = new System.Drawing.Point(816, 472);
+            this.label45.Location = new System.Drawing.Point(10, 86);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(46, 20);
             this.label45.TabIndex = 5;
@@ -891,6 +893,24 @@
             this.timer_song.Interval = 1000;
             this.timer_song.Tick += new System.EventHandler(this.timer_song_Tick);
             // 
+            // Animal_stats
+            // 
+            this.Animal_stats.Controls.Add(this.label42);
+            this.Animal_stats.Controls.Add(this.label41);
+            this.Animal_stats.Controls.Add(this.label40);
+            this.Animal_stats.Controls.Add(this.label44);
+            this.Animal_stats.Controls.Add(this.label39);
+            this.Animal_stats.Controls.Add(this.label45);
+            this.Animal_stats.Controls.Add(this.label38);
+            this.Animal_stats.Controls.Add(this.label37);
+            this.Animal_stats.Controls.Add(this.label36);
+            this.Animal_stats.Controls.Add(this.label35);
+            this.Animal_stats.Controls.Add(this.label43);
+            this.Animal_stats.Location = new System.Drawing.Point(810, 386);
+            this.Animal_stats.Name = "Animal_stats";
+            this.Animal_stats.Size = new System.Drawing.Size(300, 139);
+            this.Animal_stats.TabIndex = 18;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -898,6 +918,8 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1136, 575);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.Animal_stats);
             this.Controls.Add(this.sheep_radio);
             this.Controls.Add(this.pig_radio);
             this.Controls.Add(this.cow_radio);
@@ -922,21 +944,9 @@
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.label42);
-            this.Controls.Add(this.label41);
-            this.Controls.Add(this.label40);
-            this.Controls.Add(this.label44);
-            this.Controls.Add(this.label39);
-            this.Controls.Add(this.label45);
-            this.Controls.Add(this.label38);
-            this.Controls.Add(this.label37);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.label35);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label43);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label32);
@@ -962,6 +972,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.Animal_stats.ResumeLayout(false);
+            this.Animal_stats.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1032,6 +1044,7 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Timer timer_song;
+        private System.Windows.Forms.Panel Animal_stats;
     }
 }
 
