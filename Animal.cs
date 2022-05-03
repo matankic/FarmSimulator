@@ -15,10 +15,13 @@ namespace HelloWorldWinForms
         private int _id,
             _thirst,
             _hunger,
-            _health;
+            _health,
+            _buyPrice,
+            _sellPrice;
         private Vector _coordinates;
         private double _speed;
         private bool _sex, _isFertile;
+       
         public Animal() { }
         public void updateAnimal()
         {

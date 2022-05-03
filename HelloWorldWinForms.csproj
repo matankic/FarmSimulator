@@ -92,12 +92,20 @@
     <None Include="Resources\grass.jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\woosh.wav" />
+    <None Include="Resources\Pig.wav" />
+    <None Include="Resources\Goose.wav" />
+    <None Include="Resources\Goat.wav" />
+    <None Include="Resources\Duck.wav" />
+    <None Include="Resources\Cow.wav" />
     <None Include="Resources\song.wav" />
     <None Include="Resources\sheep.gif" />
     <None Include="Resources\cow.gif" />
     <None Include="Resources\pig.gif" />
     <None Include="Resources\duck.gif" />
     <None Include="Resources\goose.gif" />
+    <None Include="Resources\ChaChing.wav" />
+    <None Include="Resources\Chicken.wav" />
     <Content Include="Resources\Chicken_Strut.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -61,12 +61,30 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream ChaChing {
+            get {
+                return ResourceManager.GetStream("ChaChing", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Chicken_Strut {
             get {
                 object obj = ResourceManager.GetObject("Chicken_Strut", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream ChickenSound {
+            get {
+                return ResourceManager.GetStream("ChickenSound", resourceCulture);
             }
         }
         
@@ -81,6 +99,15 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream CowSound {
+            get {
+                return ResourceManager.GetStream("CowSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap duck {
@@ -91,12 +118,39 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream DuckSound {
+            get {
+                return ResourceManager.GetStream("DuckSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream GoatSound {
+            get {
+                return ResourceManager.GetStream("GoatSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap goose {
             get {
                 object obj = ResourceManager.GetObject("goose", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream GooseSound {
+            get {
+                return ResourceManager.GetStream("GooseSound", resourceCulture);
             }
         }
         
@@ -121,6 +175,15 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream PigSound {
+            get {
+                return ResourceManager.GetStream("PigSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap sheep {
@@ -136,6 +199,15 @@ namespace HelloWorldWinForms.Properties {
         internal static System.IO.UnmanagedMemoryStream song {
             get {
                 return ResourceManager.GetStream("song", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream woosh {
+            get {
+                return ResourceManager.GetStream("woosh", resourceCulture);
             }
         }
     }

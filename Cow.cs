@@ -8,8 +8,9 @@ namespace HelloWorldWinForms
 {
     internal class Cow : Mammal
     {
-        private int _buyPrice;
-        private int _sellPrice;
+       public  void makeNoise()
+        { }
+        
         
     }
 }
