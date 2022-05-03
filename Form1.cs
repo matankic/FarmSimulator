@@ -13,6 +13,15 @@ namespace HelloWorldWinForms
 {
     public partial class Form1 : Form
     {
+        private int cnt_chicken, cnt_duck, cnt_goose, cnt_cow, cnt_pig, cnt_sheep;
+        private int buy_chicken, buy_duck, buy_goose, buy_cow, buy_pig, buy_sheep;
+        private int sell_chicken, sell_duck, sell_goose, sell_cow, sell_pig, sell_sheep;
+        private int counter;
+
+        private SoundPlayer audio;
+        private Credit myCredit;
+        private Time myTime;
+
         public Form1()
         {
             InitializeComponent();
@@ -20,6 +29,8 @@ namespace HelloWorldWinForms
             counter = 0;
             audio = new SoundPlayer(Properties.Resources.song);
             audio.Play();
+            myCredit = new Credit(2000, 0.01);
+            myTime = new Time(5, 1);
 
             pictureBox2.Parent = pictureBox1;
             pictureBox2.BackColor = Color.Transparent;
@@ -28,8 +39,6 @@ namespace HelloWorldWinForms
 
             cnt_chicken = cnt_duck = cnt_goose = cnt_cow = cnt_pig = cnt_sheep = 0;
 
-            _hours = 5;
-            _days = 1;
             label11.Text = myCredit.creditUpdate();
 
             buy_chicken = 50;
@@ -56,13 +65,6 @@ namespace HelloWorldWinForms
             label7.Parent = pictureBox1;
             label7.BackColor = Color.Transparent;
         }
-        //System.Media.SoundPlayer player = new System.Media.SoundPlayer();
-        private int cnt_chicken, cnt_duck, cnt_goose, cnt_cow, cnt_pig, cnt_sheep;
-        private int buy_chicken, buy_duck, buy_goose, buy_cow, buy_pig, buy_sheep;
-        private int sell_chicken, sell_duck, sell_goose, sell_cow, sell_pig, sell_sheep;
-        private int counter;
-        private SoundPlayer audio;
-        private Credit myCredit = new Credit(2000, 0.01);
 
         private void sell_btn_Click(object sender, EventArgs e)
         {
@@ -359,8 +361,6 @@ namespace HelloWorldWinForms
             counter++;
         }
 
-        private int _hours, _days;
-
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.duck;
@@ -542,17 +542,10 @@ namespace HelloWorldWinForms
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            label9.Text = _hours.ToString();
             myCredit.applyInterest();
             label11.Text = myCredit.creditUpdate();
 
-            _hours++;
-            if (_hours == 24)
-            {
-                _hours = 0;
-                _days++;
-                label10.Text = _days.ToString();
-            }
+            myTime.tick(label9, label10);
         }
     }
 }
