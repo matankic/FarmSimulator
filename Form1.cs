@@ -22,6 +22,12 @@ namespace HelloWorldWinForms
         private SoundPlayer audio;
 
         private Credit myCredit;
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            daisy.makeNoise();
+        }
+
         private Time myTime;
         
         //Methods
@@ -31,6 +37,7 @@ namespace HelloWorldWinForms
             timer1.Start();
             counter = 0;
             audio = new SoundPlayer(Properties.Resources.song);
+            
             audio.Play();
             myCredit = new Credit(2000, 0.01);
             myTime = new Time(5, 1);

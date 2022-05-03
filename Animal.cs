@@ -5,11 +5,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Forms;
+using System.Media;
 
 namespace HelloWorldWinForms
 {
     internal class Animal
     {
+        protected SoundPlayer noise;
         public virtual string _name { get; set; }
         private Time _age;
         private int _id,
