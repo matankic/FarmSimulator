@@ -16,7 +16,7 @@ namespace HelloWorldWinForms
             _thirst,
             _hunger,
             _health;
-        private Vector vector;
+        private Vector _coordinates;
         private double _speed;
         private bool _sex, _isFertile;
         public Animal() { }
@@ -41,10 +41,20 @@ namespace HelloWorldWinForms
             _health += 200;
         }
         public void displayAnimalStats(Label lbl1, Label lbl2, Label lbl3, Label lbl4, 
-            Label lbl5, Label lbl6, Label lbl7, Label lbl8, Label lbl9, Label lbl10)
+            Label lbl5, Label lbl6, Label lbl7, Label lbl8, Label lbl9)
         {
             lbl1.Text = _name;
             lbl2.Text = _id.ToString();
+            lbl3.Text = _thirst.ToString();
+            lbl4.Text = _hunger.ToString();
+            lbl5.Text = _health.ToString();
+            if (_sex)
+                lbl6.Text = "Female";
+            else
+                lbl6.Text = "Male";
+            lbl7.Text = _age.daysUpdate() + " days, " + _age.hoursUpdate() + " hours";
+            lbl8.Text = _coordinates.X.ToString();
+            lbl9.Text = _coordinates.Y.ToString();
         }
 
     }
