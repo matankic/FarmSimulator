@@ -13,6 +13,7 @@ namespace HelloWorldWinForms
 {
     public partial class Form1 : Form
     {
+        //Fields
         private int cnt_chicken, cnt_duck, cnt_goose, cnt_cow, cnt_pig, cnt_sheep;
         private int buy_chicken, buy_duck, buy_goose, buy_cow, buy_pig, buy_sheep;
         private int sell_chicken, sell_duck, sell_goose, sell_cow, sell_pig, sell_sheep;
@@ -21,7 +22,8 @@ namespace HelloWorldWinForms
         private SoundPlayer audio;
         private Credit myCredit;
         private Time myTime;
-
+        
+        //Methods
         public Form1()
         {
             InitializeComponent();
@@ -350,60 +352,6 @@ namespace HelloWorldWinForms
             }
         }
 
-        private void timer_song_Tick(object sender, EventArgs e)
-        {
-            if(counter == 29)
-            {
-                audio.Stop();
-                audio.Play();
-                counter = 0;
-            }
-            counter++;
-        }
-
-        private void Duck_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.duck;
-            int x = 0;
-            try
-            {
-                x = Int32.Parse(amount_lbl.Text) * buy_duck;
-                label18.Text = x.ToString();
-            }
-            catch
-            {
-                label18.Text = x.ToString();
-            }
-        }
-        private void goose_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.goose;
-            int x = 0;
-            try
-            {
-                x = Int32.Parse(amount_lbl.Text) * buy_goose;
-                label18.Text = x.ToString();
-            }
-            catch
-            {
-                label18.Text = x.ToString();
-            }
-        }
-        private void Chicken_radio_CheckedChanged(object sender, EventArgs e)
-        {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            int x = 0;
-            try
-            {
-                x = Int32.Parse(amount_lbl.Text) * buy_chicken;
-                label18.Text = x.ToString();
-            }
-            catch
-            {
-                label18.Text = x.ToString();
-            }
-        }
-
         private void comboBox1_SelectedValueChanged(object sender, EventArgs e)
         {
             amount_lbl.Text = comboBox1.SelectedIndex.ToString();
@@ -497,6 +445,49 @@ namespace HelloWorldWinForms
             }
         }
 
+        //Radios
+        private void Duck_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.duck;
+            int x = 0;
+            try
+            {
+                x = Int32.Parse(amount_lbl.Text) * buy_duck;
+                label18.Text = x.ToString();
+            }
+            catch
+            {
+                label18.Text = x.ToString();
+            }
+        }
+        private void goose_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.goose;
+            int x = 0;
+            try
+            {
+                x = Int32.Parse(amount_lbl.Text) * buy_goose;
+                label18.Text = x.ToString();
+            }
+            catch
+            {
+                label18.Text = x.ToString();
+            }
+        }
+        private void Chicken_radio_CheckedChanged(object sender, EventArgs e)
+        {
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            int x = 0;
+            try
+            {
+                x = Int32.Parse(amount_lbl.Text) * buy_chicken;
+                label18.Text = x.ToString();
+            }
+            catch
+            {
+                label18.Text = x.ToString();
+            }
+        }
         private void sheep_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.sheep;
@@ -539,13 +530,24 @@ namespace HelloWorldWinForms
                 label18.Text = x.ToString();
             }
         }
-
+        
+        //Timers
         private void timer1_Tick(object sender, EventArgs e)
         {
             myCredit.applyInterest();
             label11.Text = myCredit.creditUpdate();
 
             myTime.tick(label9, label10);
+        }
+        private void timer_song_Tick(object sender, EventArgs e)
+        {
+            if (counter == 29)
+            {
+                audio.Stop();
+                audio.Play();
+                counter = 0;
+            }
+            counter++;
         }
     }
 }
