@@ -23,11 +23,6 @@ namespace HelloWorldWinForms
 
         private Credit myCredit;
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            daisy.makeNoise();
-        }
-
         private Time myTime;
         
         //Methods
