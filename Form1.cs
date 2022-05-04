@@ -14,12 +14,16 @@ namespace HelloWorldWinForms
     public partial class Form1 : Form
     {
         //Fields
-        private int cnt_chicken, cnt_duck, cnt_goose, cnt_cow, cnt_pig, cnt_sheep;
-        private int buy_chicken, buy_duck, buy_goose, buy_cow, buy_pig, buy_sheep;
-        private int sell_chicken, sell_duck, sell_goose, sell_cow, sell_pig, sell_sheep;
         private int counter;
 
-        private SoundPlayer audio;
+        private Cow myCow;
+        private Pig myPig;
+        private Sheep mySheep;
+        private Duck myDuck;
+        private Goose myGoose;
+        private Chicken myChicken;
+
+        private SoundPlayer audio, buy_sell;
 
         private Credit myCredit;
 
@@ -32,7 +36,15 @@ namespace HelloWorldWinForms
             timer1.Start();
             counter = 0;
             audio = new SoundPlayer(Properties.Resources.song);
-            
+            buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
+
+            myChicken = new Chicken();
+            myCow = new Cow();
+            mySheep = new Sheep();
+            myDuck = new Duck();
+            myGoose = new Goose();
+            myPig = new Pig();
+
             audio.Play();
             myCredit = new Credit(2000, 0.01);
             myTime = new Time(5, 1);
@@ -42,24 +54,7 @@ namespace HelloWorldWinForms
             pictureBox3.Parent = pictureBox1;
             pictureBox3.BackColor = Color.Transparent;
 
-            cnt_chicken = cnt_duck = cnt_goose = cnt_cow = cnt_pig = cnt_sheep = 0;
-
             label11.Text = myCredit.creditUpdate();
-
-            buy_chicken = 50;
-            buy_duck = 75;
-            buy_goose = 100;
-            buy_cow = 200;
-            buy_pig = 150;
-            buy_sheep = 225;
-
-            sell_chicken = 47;
-            sell_duck = 70;
-            sell_goose = 87;
-            sell_cow = 180;
-            sell_pig = 70;
-            sell_sheep = 200;
-
 
             label10.Parent = pictureBox1;
             label10.BackColor = Color.Transparent;
@@ -81,11 +76,13 @@ namespace HelloWorldWinForms
                 {
                     if (Chicken_radio.Checked == true)
                     {
-                        if (Int32.Parse(amount_lbl.Text) <= cnt_chicken)
+                        if (Chicken._cnt_chicken > 0)
+                            buy_sell.Play();
+                        if (Int32.Parse(amount_lbl.Text) <= Chicken._cnt_chicken)
                         {
-                            myCredit += Int32.Parse(amount_lbl.Text) * sell_chicken;
-                            cnt_chicken -= Int32.Parse(amount_lbl.Text);
-                            lbl_1.Text = cnt_chicken.ToString();
+                            myCredit += Int32.Parse(amount_lbl.Text) * Chicken._sell_chicken;
+                            Chicken._cnt_chicken -= Int32.Parse(amount_lbl.Text);
+                            lbl_1.Text = Chicken._cnt_chicken.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -96,9 +93,9 @@ namespace HelloWorldWinForms
                         }
                         else
                         {
-                            myCredit += cnt_chicken * sell_chicken;
-                            cnt_chicken = 0;
-                            lbl_1.Text = cnt_chicken.ToString();
+                            myCredit += Chicken._cnt_chicken * Chicken._sell_chicken;
+                            Chicken._cnt_chicken = 0;
+                            lbl_1.Text = Chicken._cnt_chicken.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -110,11 +107,13 @@ namespace HelloWorldWinForms
                     }
                     else if (goose_radio.Checked == true)
                     {
-                        if (Int32.Parse(amount_lbl.Text) <= cnt_goose)
+                        if (Goose._cnt_goose > 0)
+                            buy_sell.Play();
+                        if (Int32.Parse(amount_lbl.Text) <= Goose._cnt_goose)
                         {
-                            myCredit += Int32.Parse(amount_lbl.Text) * sell_goose;
-                            cnt_goose -= Int32.Parse(amount_lbl.Text);
-                            label30.Text = cnt_goose.ToString();
+                            myCredit += Int32.Parse(amount_lbl.Text) * Goose._sell_goose;
+                            Goose._cnt_goose -= Int32.Parse(amount_lbl.Text);
+                            label30.Text = Goose._cnt_goose.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -125,9 +124,9 @@ namespace HelloWorldWinForms
                         }
                         else
                         {
-                            myCredit += cnt_goose * sell_goose;
-                            cnt_goose = 0;
-                            label30.Text = cnt_goose.ToString();
+                            myCredit += Goose._cnt_goose * Goose._sell_goose;
+                            Goose._cnt_goose = 0;
+                            label30.Text = Goose._cnt_goose.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -139,11 +138,13 @@ namespace HelloWorldWinForms
                     }
                     else if (pig_radio.Checked == true)
                     {
-                        if (Int32.Parse(amount_lbl.Text) <= cnt_pig)
+                        if (Pig._cnt_pig > 0)
+                            buy_sell.Play();
+                        if (Int32.Parse(amount_lbl.Text) <= Pig._cnt_pig)
                         {
-                            myCredit += Int32.Parse(amount_lbl.Text) * sell_pig;
-                            cnt_pig -= Int32.Parse(amount_lbl.Text);
-                            label32.Text = cnt_pig.ToString();
+                            myCredit += Int32.Parse(amount_lbl.Text) * Pig._sell_pig;
+                            Pig._cnt_pig -= Int32.Parse(amount_lbl.Text);
+                            label32.Text = Pig._cnt_pig.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -154,9 +155,9 @@ namespace HelloWorldWinForms
                         }
                         else
                         {
-                            myCredit += cnt_pig * sell_pig;
-                            cnt_pig = 0;
-                            label32.Text = cnt_pig.ToString();
+                            myCredit += Pig._cnt_pig * Pig._sell_pig;
+                            Pig._cnt_pig = 0;
+                            label32.Text = Pig._cnt_pig.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -168,11 +169,13 @@ namespace HelloWorldWinForms
                     }
                     else if (sheep_radio.Checked == true)
                     {
-                        if (Int32.Parse(amount_lbl.Text) <= cnt_sheep)
+                        if (Sheep._cnt_sheep > 0)
+                            buy_sell.Play();
+                        if (Int32.Parse(amount_lbl.Text) <= Sheep._cnt_sheep)
                         {
-                            myCredit += Int32.Parse(amount_lbl.Text) * sell_sheep;
-                            cnt_sheep -= Int32.Parse(amount_lbl.Text);
-                            label33.Text = cnt_sheep.ToString();
+                            myCredit += Int32.Parse(amount_lbl.Text) * Sheep._sell_sheep;
+                            Sheep._cnt_sheep -= Int32.Parse(amount_lbl.Text);
+                            label33.Text = Sheep._cnt_sheep.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -183,9 +186,9 @@ namespace HelloWorldWinForms
                         }
                         else
                         {
-                            myCredit += cnt_sheep * sell_sheep;
-                            cnt_sheep = 0;
-                            label33.Text = cnt_sheep.ToString();
+                            myCredit += Sheep._cnt_sheep * Sheep._sell_sheep;
+                            Sheep._cnt_sheep = 0;
+                            label33.Text = Sheep._cnt_sheep.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -197,11 +200,13 @@ namespace HelloWorldWinForms
                     }
                     else if (Duck_radio.Checked == true)
                     {
-                        if (Int32.Parse(amount_lbl.Text) <= cnt_duck)
+                        if (Duck._cnt_duck > 0)
+                            buy_sell.Play();
+                        if (Int32.Parse(amount_lbl.Text) <= Duck._cnt_duck)
                         {
-                            myCredit += Int32.Parse(amount_lbl.Text) * sell_duck;
-                            cnt_duck -= Int32.Parse(amount_lbl.Text);
-                            label29.Text = cnt_duck.ToString();
+                            myCredit += Int32.Parse(amount_lbl.Text) * Duck._sell_duck;
+                            Duck._cnt_duck -= Int32.Parse(amount_lbl.Text);
+                            label29.Text = Duck._cnt_duck.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -212,9 +217,9 @@ namespace HelloWorldWinForms
                         }
                         else
                         {
-                            myCredit += cnt_duck * sell_duck;
-                            cnt_duck = 0;
-                            label29.Text = cnt_duck.ToString();
+                            myCredit += Duck._cnt_duck * Duck._sell_duck;
+                            Duck._cnt_duck = 0;
+                            label29.Text = Duck._cnt_duck.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -226,11 +231,13 @@ namespace HelloWorldWinForms
                     }
                     else if (cow_radio.Checked == true)
                     {
-                        if (Int32.Parse(amount_lbl.Text) <= cnt_cow)
+                        if (Cow._cnt_cow > 0)
+                            buy_sell.Play();
+                        if (Int32.Parse(amount_lbl.Text) <= Cow._cnt_cow)
                         {
-                            myCredit += Int32.Parse(amount_lbl.Text) * sell_cow;
-                            cnt_cow -= Int32.Parse(amount_lbl.Text);
-                            label31.Text = cnt_cow.ToString();
+                            myCredit += Int32.Parse(amount_lbl.Text) * Cow._sell_cow;
+                            Cow._cnt_cow -= Int32.Parse(amount_lbl.Text);
+                            label31.Text = Cow._cnt_cow.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -241,9 +248,9 @@ namespace HelloWorldWinForms
                         }
                         else
                         {
-                            myCredit += cnt_cow * sell_cow;
-                            cnt_cow = 0;
-                            label31.Text = cnt_cow.ToString();
+                            myCredit += Cow._cnt_cow * Cow._sell_cow;
+                            Cow._cnt_cow = 0;
+                            label31.Text = Cow._cnt_cow.ToString();
 
                             if (myCredit.get_credit() > 0)
                             {
@@ -269,11 +276,12 @@ namespace HelloWorldWinForms
                 price = Int32.Parse(label18.Text);
                 if (price > 0)
                 {
+                    buy_sell.Play();
                     if (Chicken_radio.Checked == true)
                     {
                         myCredit -= price;
-                        cnt_chicken += Int32.Parse(amount_lbl.Text);
-                        lbl_1.Text = cnt_chicken.ToString();
+                        Chicken._cnt_chicken += Int32.Parse(amount_lbl.Text);
+                        lbl_1.Text = Chicken._cnt_chicken.ToString();
 
                         if (myCredit.get_credit() < 0)
                         {
@@ -285,8 +293,8 @@ namespace HelloWorldWinForms
                     else if (goose_radio.Checked == true)
                     {
                         myCredit -= price;
-                        cnt_goose += Int32.Parse(amount_lbl.Text);
-                        label30.Text = cnt_goose.ToString();
+                        Goose._cnt_goose += Int32.Parse(amount_lbl.Text);
+                        label30.Text = Goose._cnt_goose.ToString();
 
                         if (myCredit.get_credit() < 0)
                         {
@@ -298,8 +306,8 @@ namespace HelloWorldWinForms
                     else if (pig_radio.Checked == true)
                     {
                         myCredit -= price;
-                        cnt_pig += Int32.Parse(amount_lbl.Text);
-                        label32.Text = cnt_pig.ToString();
+                        Pig._cnt_pig += Int32.Parse(amount_lbl.Text);
+                        label32.Text = Pig._cnt_pig.ToString();
 
                         if (myCredit.get_credit() < 0)
                         {
@@ -311,8 +319,8 @@ namespace HelloWorldWinForms
                     else if (sheep_radio.Checked == true)
                     {
                         myCredit -= price;
-                        cnt_sheep += Int32.Parse(amount_lbl.Text);
-                        label33.Text = cnt_sheep.ToString();
+                        Sheep._cnt_sheep += Int32.Parse(amount_lbl.Text);
+                        label33.Text = Sheep._cnt_sheep.ToString();
 
                         if (myCredit.get_credit() < 0)
                         {
@@ -324,8 +332,8 @@ namespace HelloWorldWinForms
                     else if (Duck_radio.Checked == true)
                     {
                         myCredit -= price;
-                        cnt_duck += Int32.Parse(amount_lbl.Text);
-                        label29.Text = cnt_duck.ToString();
+                        Duck._cnt_duck += Int32.Parse(amount_lbl.Text);
+                        label29.Text = Duck._cnt_duck.ToString();
 
                         if (myCredit.get_credit() < 0)
                         {
@@ -337,8 +345,8 @@ namespace HelloWorldWinForms
                     else if (cow_radio.Checked == true)
                     {
                         myCredit -= price;
-                        cnt_cow += Int32.Parse(amount_lbl.Text);
-                        label31.Text = cnt_cow.ToString();
+                        Cow._cnt_cow += Int32.Parse(amount_lbl.Text);
+                        label31.Text = Cow._cnt_cow.ToString();
 
                         if (myCredit.get_credit() < 0)
                         {
@@ -361,27 +369,27 @@ namespace HelloWorldWinForms
             int x = 0, price = 0;
             if (Chicken_radio.Checked == true)
             {
-                price = buy_chicken;
+                price = Chicken._buy_chicken;
             }
             else if (goose_radio.Checked == true)
             {
-                price = buy_goose;
+                price = Goose._buy_goose;
             }
             else if (pig_radio.Checked == true)
             {
-                price = buy_pig;
+                price = Pig._buy_pig;
             }
             else if (sheep_radio.Checked == true)
             {
-                price = buy_sheep;
+                price = Sheep._buy_sheep;
             }
             else if (Duck_radio.Checked == true)
             {
-                price = buy_duck;
+                price = Duck._buy_duck;
             }
             else if (cow_radio.Checked == true)
             {
-                price = buy_cow;
+                price = Cow._buy_cow;
             }
 
 
@@ -415,27 +423,27 @@ namespace HelloWorldWinForms
             int x = 0, price = 0;
             if (Chicken_radio.Checked == true)
             {
-                price = buy_chicken;
+                price = Chicken._buy_chicken;
             }
             else if (goose_radio.Checked == true)
             {
-                price = buy_goose;
+                price = Goose._buy_goose;
             }
             else if (pig_radio.Checked == true)
             {
-                price = buy_pig;
+                price = Pig._buy_pig;
             }
             else if (sheep_radio.Checked == true)
             {
-                price = buy_sheep;
+                price = Sheep._buy_sheep;
             }
             else if (Duck_radio.Checked == true)
             {
-                price = buy_duck;
+                price = Duck._buy_duck;
             }
             else if (cow_radio.Checked == true)
             {
-                price = buy_cow;
+                price = Cow._buy_cow;
             }
             try
             {
@@ -455,7 +463,7 @@ namespace HelloWorldWinForms
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * buy_duck;
+                x = Int32.Parse(amount_lbl.Text) * Duck._buy_duck;
                 label18.Text = x.ToString();
             }
             catch
@@ -469,7 +477,7 @@ namespace HelloWorldWinForms
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * buy_goose;
+                x = Int32.Parse(amount_lbl.Text) * Goose._buy_goose;
                 label18.Text = x.ToString();
             }
             catch
@@ -483,7 +491,7 @@ namespace HelloWorldWinForms
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * buy_chicken;
+                x = Int32.Parse(amount_lbl.Text) * Chicken._buy_chicken;
                 label18.Text = x.ToString();
             }
             catch
@@ -497,7 +505,7 @@ namespace HelloWorldWinForms
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * buy_sheep;
+                x = Int32.Parse(amount_lbl.Text) * Sheep._buy_sheep;
                 label18.Text = x.ToString();
             }
             catch
@@ -511,7 +519,7 @@ namespace HelloWorldWinForms
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * buy_pig;
+                x = Int32.Parse(amount_lbl.Text) * Pig._buy_pig;
                 label18.Text = x.ToString();
             }
             catch
@@ -525,7 +533,7 @@ namespace HelloWorldWinForms
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * buy_cow;
+                x = Int32.Parse(amount_lbl.Text) * Cow._buy_cow;
                 label18.Text = x.ToString();
             }
             catch
@@ -551,6 +559,16 @@ namespace HelloWorldWinForms
                 counter = 0;
             }
             counter++;
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            myGoose.makeNoise();
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            myChicken.makeNoise();
         }
     }
 }
