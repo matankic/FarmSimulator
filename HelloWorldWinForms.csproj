@@ -35,6 +35,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -97,6 +98,8 @@
     <None Include="Resources\grass.jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\search.png" />
+    <None Include="Resources\search_glass.bmp" />
     <None Include="Resources\woosh.wav" />
     <None Include="Resources\Pig.wav" />
     <None Include="Resources\Goose.wav" />

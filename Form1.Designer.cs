@@ -45,7 +45,6 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.buy_btn = new System.Windows.Forms.Button();
             this.sell_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +53,6 @@
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label34 = new System.Windows.Forms.Label();
             this.Chicken_radio = new System.Windows.Forms.RadioButton();
             this.Duck_radio = new System.Windows.Forms.RadioButton();
@@ -79,29 +77,39 @@
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.timer_song = new System.Windows.Forms.Timer(this.components);
+            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
+            this.label43 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
             this.label37 = new System.Windows.Forms.Label();
             this.label38 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
             this.label39 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.label41 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
+            this.HungryBar = new System.Windows.Forms.ProgressBar();
+            this.ThirstBar = new System.Windows.Forms.ProgressBar();
+            this.HpBar = new System.Windows.Forms.ProgressBar();
+            this.Animal_stats = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.label43 = new System.Windows.Forms.Label();
-            this.label44 = new System.Windows.Forms.Label();
-            this.label45 = new System.Windows.Forms.Label();
-            this.timer_song = new System.Windows.Forms.Timer(this.components);
-            this.Animal_stats = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.search_icon = new System.Windows.Forms.PictureBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            this.Animal_stats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.Animal_stats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_1
@@ -225,6 +233,7 @@
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.comboBox3);
             this.panel1.Location = new System.Drawing.Point(810, 525);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(331, 52);
@@ -261,142 +270,31 @@
             this.label13.TabIndex = 4;
             this.label13.Text = "Owned";
             // 
-            // comboBox1
-            // 
-            this.comboBox1.DropDownHeight = 60;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.IntegralHeight = false;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Select / type value",
-            "1",
-            "2",
-            "3",
-            "4",
-            "5",
-            "6",
-            "7",
-            "8",
-            "9",
-            "10",
-            "11",
-            "12",
-            "13",
-            "14",
-            "15",
-            "16",
-            "17",
-            "18",
-            "19",
-            "20",
-            "21",
-            "22",
-            "23",
-            "24",
-            "25",
-            "26",
-            "27",
-            "28",
-            "29",
-            "30",
-            "31",
-            "32",
-            "33",
-            "34",
-            "35",
-            "36",
-            "37",
-            "38",
-            "39",
-            "40",
-            "41",
-            "42",
-            "43",
-            "44",
-            "45",
-            "46",
-            "47",
-            "48",
-            "49",
-            "50",
-            "51",
-            "52",
-            "53",
-            "54",
-            "55",
-            "56",
-            "57",
-            "58",
-            "59",
-            "60",
-            "61",
-            "62",
-            "63",
-            "64",
-            "65",
-            "66",
-            "67",
-            "68",
-            "69",
-            "70",
-            "71",
-            "72",
-            "73",
-            "74",
-            "75",
-            "76",
-            "77",
-            "78",
-            "79",
-            "80",
-            "81",
-            "82",
-            "83",
-            "84",
-            "85",
-            "86",
-            "87",
-            "88",
-            "89",
-            "90",
-            "91",
-            "92",
-            "93",
-            "94",
-            "95",
-            "96",
-            "97",
-            "98",
-            "99"});
-            this.comboBox1.Location = new System.Drawing.Point(12, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(152, 21);
-            this.comboBox1.TabIndex = 14;
-            this.comboBox1.Text = "Select / type value";
-            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
-            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
-            // 
             // buy_btn
             // 
+            this.buy_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.buy_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buy_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.buy_btn.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buy_btn.ForeColor = System.Drawing.Color.Black;
             this.buy_btn.Location = new System.Drawing.Point(12, 79);
             this.buy_btn.Name = "buy_btn";
             this.buy_btn.Size = new System.Drawing.Size(74, 33);
             this.buy_btn.TabIndex = 15;
             this.buy_btn.Text = "Buy";
-            this.buy_btn.UseVisualStyleBackColor = true;
+            this.buy_btn.UseVisualStyleBackColor = false;
             this.buy_btn.Click += new System.EventHandler(this.buy_btn_Click);
             // 
             // sell_btn
             // 
+            this.sell_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.sell_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sell_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.sell_btn.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sell_btn.Location = new System.Drawing.Point(90, 79);
             this.sell_btn.Name = "sell_btn";
             this.sell_btn.Size = new System.Drawing.Size(74, 33);
             this.sell_btn.TabIndex = 15;
             this.sell_btn.Text = "Sell";
-            this.sell_btn.UseVisualStyleBackColor = true;
+            this.sell_btn.UseVisualStyleBackColor = false;
             this.sell_btn.Click += new System.EventHandler(this.sell_btn_Click);
             // 
             // label1
@@ -462,23 +360,10 @@
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label17);
             this.panel2.Controls.Add(this.amount_lbl);
-            this.panel2.Location = new System.Drawing.Point(810, 222);
+            this.panel2.Location = new System.Drawing.Point(810, 215);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(333, 138);
             this.panel2.TabIndex = 16;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox4.Location = new System.Drawing.Point(181, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(66, 69);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
             // 
             // label34
             // 
@@ -734,11 +619,33 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(817, 363);
+            this.label16.Location = new System.Drawing.Point(817, 355);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(301, 29);
             this.label16.TabIndex = 3;
             this.label16.Text = "Selected spieces properties :";
+            // 
+            // timer_song
+            // 
+            this.timer_song.Enabled = true;
+            this.timer_song.Interval = 1000;
+            this.timer_song.Tick += new System.EventHandler(this.timer_song_Tick);
+            // 
+            // directorySearcher1
+            // 
+            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label43.Location = new System.Drawing.Point(157, 59);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(144, 29);
+            this.label43.TabIndex = 3;
+            this.label43.Text = "Coordinates :";
             // 
             // label35
             // 
@@ -780,6 +687,16 @@
             this.label38.TabIndex = 5;
             this.label38.Text = "Sex :";
             // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label45.Location = new System.Drawing.Point(10, 86);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(46, 20);
+            this.label45.TabIndex = 5;
+            this.label45.Text = "Age :";
+            // 
             // label39
             // 
             this.label39.AutoSize = true;
@@ -790,15 +707,25 @@
             this.label39.TabIndex = 5;
             this.label39.Text = "y :";
             // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label44.Location = new System.Drawing.Point(159, 86);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(24, 20);
+            this.label44.TabIndex = 5;
+            this.label44.Text = "x :";
+            // 
             // label40
             // 
             this.label40.AutoSize = true;
             this.label40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label40.Location = new System.Drawing.Point(159, 6);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(70, 20);
+            this.label40.Size = new System.Drawing.Size(66, 20);
             this.label40.TabIndex = 5;
-            this.label40.Text = "Hunger :";
+            this.label40.Text = "Hunger ";
             // 
             // label41
             // 
@@ -806,9 +733,9 @@
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label41.Location = new System.Drawing.Point(159, 26);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(56, 20);
+            this.label41.Size = new System.Drawing.Size(52, 20);
             this.label41.TabIndex = 5;
-            this.label41.Text = "Thirst :";
+            this.label41.Text = "Thirst ";
             // 
             // label42
             // 
@@ -816,9 +743,178 @@
             this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.label42.Location = new System.Drawing.Point(159, 46);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(64, 20);
+            this.label42.Size = new System.Drawing.Size(60, 20);
             this.label42.TabIndex = 5;
-            this.label42.Text = "Health :";
+            this.label42.Text = "Health ";
+            // 
+            // HungryBar
+            // 
+            this.HungryBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.HungryBar.Location = new System.Drawing.Point(225, 6);
+            this.HungryBar.Name = "HungryBar";
+            this.HungryBar.Size = new System.Drawing.Size(95, 17);
+            this.HungryBar.TabIndex = 19;
+            // 
+            // ThirstBar
+            // 
+            this.ThirstBar.Location = new System.Drawing.Point(225, 26);
+            this.ThirstBar.Name = "ThirstBar";
+            this.ThirstBar.Size = new System.Drawing.Size(95, 17);
+            this.ThirstBar.TabIndex = 19;
+            // 
+            // HpBar
+            // 
+            this.HpBar.ForeColor = System.Drawing.Color.DarkRed;
+            this.HpBar.Location = new System.Drawing.Point(225, 46);
+            this.HpBar.Name = "HpBar";
+            this.HpBar.Size = new System.Drawing.Size(95, 17);
+            this.HpBar.TabIndex = 19;
+            // 
+            // Animal_stats
+            // 
+            this.Animal_stats.Controls.Add(this.HpBar);
+            this.Animal_stats.Controls.Add(this.ThirstBar);
+            this.Animal_stats.Controls.Add(this.HungryBar);
+            this.Animal_stats.Controls.Add(this.label42);
+            this.Animal_stats.Controls.Add(this.label41);
+            this.Animal_stats.Controls.Add(this.label40);
+            this.Animal_stats.Controls.Add(this.label44);
+            this.Animal_stats.Controls.Add(this.label39);
+            this.Animal_stats.Controls.Add(this.label45);
+            this.Animal_stats.Controls.Add(this.label38);
+            this.Animal_stats.Controls.Add(this.label37);
+            this.Animal_stats.Controls.Add(this.label36);
+            this.Animal_stats.Controls.Add(this.label35);
+            this.Animal_stats.Controls.Add(this.label43);
+            this.Animal_stats.Location = new System.Drawing.Point(810, 413);
+            this.Animal_stats.Name = "Animal_stats";
+            this.Animal_stats.Size = new System.Drawing.Size(328, 112);
+            this.Animal_stats.TabIndex = 18;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownHeight = 60;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.IntegralHeight = false;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Select / type value",
+            "1",
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8",
+            "9",
+            "10",
+            "11",
+            "12",
+            "13",
+            "14",
+            "15",
+            "16",
+            "17",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "23",
+            "24",
+            "25",
+            "26",
+            "27",
+            "28",
+            "29",
+            "30",
+            "31",
+            "32",
+            "33",
+            "34",
+            "35",
+            "36",
+            "37",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44",
+            "45",
+            "46",
+            "47",
+            "48",
+            "49",
+            "50",
+            "51",
+            "52",
+            "53",
+            "54",
+            "55",
+            "56",
+            "57",
+            "58",
+            "59",
+            "60",
+            "61",
+            "62",
+            "63",
+            "64",
+            "65",
+            "66",
+            "67",
+            "68",
+            "69",
+            "70",
+            "71",
+            "72",
+            "73",
+            "74",
+            "75",
+            "76",
+            "77",
+            "78",
+            "79",
+            "80",
+            "81",
+            "82",
+            "83",
+            "84",
+            "85",
+            "86",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "96",
+            "97",
+            "98",
+            "99"});
+            this.comboBox1.Location = new System.Drawing.Point(12, 52);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(152, 21);
+            this.comboBox1.TabIndex = 14;
+            this.comboBox1.Text = "Select / type value";
+            this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownHeight = 1;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.IntegralHeight = false;
+            this.comboBox2.Location = new System.Drawing.Point(824, 391);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(287, 21);
+            this.comboBox2.TabIndex = 14;
+            this.comboBox2.Text = "Search an animal by typing its correct ID";
             // 
             // pictureBox3
             // 
@@ -859,59 +955,44 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             // 
-            // label43
+            // pictureBox4
             // 
-            this.label43.AutoSize = true;
-            this.label43.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label43.Location = new System.Drawing.Point(157, 59);
-            this.label43.Name = "label43";
-            this.label43.Size = new System.Drawing.Size(144, 29);
-            this.label43.TabIndex = 3;
-            this.label43.Text = "Coordinates :";
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.Location = new System.Drawing.Point(181, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(66, 69);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
             // 
-            // label44
+            // search_icon
             // 
-            this.label44.AutoSize = true;
-            this.label44.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label44.Location = new System.Drawing.Point(159, 86);
-            this.label44.Name = "label44";
-            this.label44.Size = new System.Drawing.Size(24, 20);
-            this.label44.TabIndex = 5;
-            this.label44.Text = "x :";
+            this.search_icon.BackColor = System.Drawing.Color.White;
+            this.search_icon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.search_icon.Image = global::HelloWorldWinForms.Properties.Resources.search;
+            this.search_icon.Location = new System.Drawing.Point(1085, 394);
+            this.search_icon.Name = "search_icon";
+            this.search_icon.Size = new System.Drawing.Size(23, 15);
+            this.search_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.search_icon.TabIndex = 19;
+            this.search_icon.TabStop = false;
+            this.search_icon.Click += new System.EventHandler(this.search_icon_Click);
             // 
-            // label45
+            // comboBox3
             // 
-            this.label45.AutoSize = true;
-            this.label45.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label45.Location = new System.Drawing.Point(10, 86);
-            this.label45.Name = "label45";
-            this.label45.Size = new System.Drawing.Size(46, 20);
-            this.label45.TabIndex = 5;
-            this.label45.Text = "Age :";
-            // 
-            // timer_song
-            // 
-            this.timer_song.Enabled = true;
-            this.timer_song.Interval = 1000;
-            this.timer_song.Tick += new System.EventHandler(this.timer_song_Tick);
-            // 
-            // Animal_stats
-            // 
-            this.Animal_stats.Controls.Add(this.label42);
-            this.Animal_stats.Controls.Add(this.label41);
-            this.Animal_stats.Controls.Add(this.label40);
-            this.Animal_stats.Controls.Add(this.label44);
-            this.Animal_stats.Controls.Add(this.label39);
-            this.Animal_stats.Controls.Add(this.label45);
-            this.Animal_stats.Controls.Add(this.label38);
-            this.Animal_stats.Controls.Add(this.label37);
-            this.Animal_stats.Controls.Add(this.label36);
-            this.Animal_stats.Controls.Add(this.label35);
-            this.Animal_stats.Controls.Add(this.label43);
-            this.Animal_stats.Location = new System.Drawing.Point(810, 386);
-            this.Animal_stats.Name = "Animal_stats";
-            this.Animal_stats.Size = new System.Drawing.Size(300, 139);
-            this.Animal_stats.TabIndex = 18;
+            this.comboBox3.DropDownHeight = 1;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.IntegralHeight = false;
+            this.comboBox3.Location = new System.Drawing.Point(14, 59);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(287, 21);
+            this.comboBox3.TabIndex = 14;
+            this.comboBox3.Text = "Search an animal by typing its correct ID";
+            this.comboBox3.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
+            this.comboBox3.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
             // 
             // Form1
             // 
@@ -920,9 +1001,11 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1136, 575);
+            this.Controls.Add(this.search_icon);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.Animal_stats);
             this.Controls.Add(this.sheep_radio);
+            this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.pig_radio);
             this.Controls.Add(this.cow_radio);
             this.Controls.Add(this.goose_radio);
@@ -970,12 +1053,13 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            this.Animal_stats.ResumeLayout(false);
+            this.Animal_stats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.Animal_stats.ResumeLayout(false);
-            this.Animal_stats.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -999,7 +1083,6 @@
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buy_btn;
         private System.Windows.Forms.Button sell_btn;
         private System.Windows.Forms.Label label14;
@@ -1034,19 +1117,27 @@
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Timer timer_song;
+        private System.DirectoryServices.DirectorySearcher directorySearcher1;
+        private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
         private System.Windows.Forms.Label label37;
         private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label45;
         private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label40;
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.Label label43;
-        private System.Windows.Forms.Label label44;
-        private System.Windows.Forms.Label label45;
-        private System.Windows.Forms.Timer timer_song;
+        private System.Windows.Forms.ProgressBar HungryBar;
+        private System.Windows.Forms.ProgressBar ThirstBar;
+        private System.Windows.Forms.ProgressBar HpBar;
         private System.Windows.Forms.Panel Animal_stats;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.PictureBox search_icon;
+        private System.Windows.Forms.ComboBox comboBox3;
     }
 }
 

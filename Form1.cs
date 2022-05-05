@@ -566,6 +566,16 @@ namespace HelloWorldWinForms
             myGoose.makeNoise();
         }
 
+        private void search_icon_Click(object sender, EventArgs e)
+        {
+            comboBox2.Text = "!!!!!!!!!!!!!it's working!!";
+        }
+
+        private void comboBox2_Enter(object sender, EventArgs e)
+        {
+            comboBox2.Text = "it's working!!";
+        }
+
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             myChicken.makeNoise();
