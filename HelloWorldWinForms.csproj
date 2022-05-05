@@ -99,7 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\search.png" />
-    <None Include="Resources\search_glass.bmp" />
     <None Include="Resources\woosh.wav" />
     <None Include="Resources\Pig.wav" />
     <None Include="Resources\Goose.wav" />
