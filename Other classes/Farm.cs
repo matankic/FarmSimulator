@@ -45,42 +45,36 @@ namespace HelloWorldWinForms
                     for (int i = 0; i < amount; i++)
                     {
                         myAnimals.Add(new Chicken());
-                        _cnt_chicken++;
                     }
                     break;
                 case 1:
                     for (int i = 0; i < amount; i++)
                     {
                         myAnimals.Add(new Duck());
-                        _cnt_duck++;
+                    }
+                    break;
+                case 2:
+                    for (int i = 0; i < amount; i++)
+                    {
+                        myAnimals.Add(new Goose());
                     }
                     break;
                 case 3:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Goose());
-                        _cnt_goose++;
+                        myAnimals.Add(new Cow());
                     }
                     break;
                 case 4:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Cow());
-                        _cnt_cow++;
+                        myAnimals.Add(new Pig());
                     }
                     break;
                 case 5:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Pig());
-                        _cnt_pig++;
-                    }
-                    break;
-                case 6:
-                    for (int i = 0; i < amount; i++)
-                    {
                         myAnimals.Add(new Sheep ());
-                        _cnt_sheep++;
                     }
                     break;
                 default:
