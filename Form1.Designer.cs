@@ -960,7 +960,7 @@
             this.load_btn.Image = global::HelloWorldWinForms.Properties.Resources.upload_big_arrow;
             this.load_btn.Location = new System.Drawing.Point(12, 12);
             this.load_btn.Name = "load_btn";
-            this.load_btn.Size = new System.Drawing.Size(32, 32);
+            this.load_btn.Size = new System.Drawing.Size(27, 27);
             this.load_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.load_btn.TabIndex = 13;
             this.load_btn.TabStop = false;
@@ -971,9 +971,9 @@
             this.save_btn.BackColor = System.Drawing.Color.Transparent;
             this.save_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.save_btn.Image = global::HelloWorldWinForms.Properties.Resources.save_file;
-            this.save_btn.Location = new System.Drawing.Point(55, 12);
+            this.save_btn.Location = new System.Drawing.Point(50, 12);
             this.save_btn.Name = "save_btn";
-            this.save_btn.Size = new System.Drawing.Size(32, 32);
+            this.save_btn.Size = new System.Drawing.Size(27, 27);
             this.save_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.save_btn.TabIndex = 13;
             this.save_btn.TabStop = false;
