@@ -9,8 +9,8 @@ namespace HelloWorldWinForms
     [Serializable]
     internal class Credit
     {
-        private int _credit;
-        private double _interest;
+        protected int _credit;
+        protected  double _interest;
         public Credit()
         {
             _credit = 2000;

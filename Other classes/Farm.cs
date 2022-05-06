@@ -7,11 +7,25 @@ using System.Media;
 
 namespace HelloWorldWinForms
 {
-    public class Farm 
+    [Serializable]
+    internal class Farm 
     {
         private Credit myCredit;
         private Time myTime;
-        //public Animal[] animals= new Animal();
+       // protected Animal[] animals;
+       public Farm()
+        {
+            myCredit = new Credit();
+            myTime = new Time();
 
+        }
+        public ref Credit GetCreditRef()
+        {
+            return ref this.myCredit;
+        }
+        public ref Time GetTimeRef()
+        {
+            return ref this.myTime;
+        }
     }
 }

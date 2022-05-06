@@ -45,11 +45,12 @@ namespace HelloWorldWinForms
             {
                 _hours = 0;
                 _days++;
-                hours_lbl.Text = hoursUpdate();
+                
                 days_lbl.Text = daysUpdate();
-                return;
+                
             }
             hours_lbl.Text = hoursUpdate();
+            return;
         }
         public int get_hours() { return _hours; }
         public int get_days() { return _days; }
@@ -61,7 +62,9 @@ namespace HelloWorldWinForms
         {
             return _days.ToString();
         }
+
         public static Time operator +(Time a, int b) => new Time(a._hours + b, a._days);
         public static Time operator -(Time a, int b) => new Time(a._hours - b, a._days);
+
     }
 }
