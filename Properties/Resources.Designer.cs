@@ -177,6 +177,16 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap save_file {
+            get {
+                object obj = ResourceManager.GetObject("save_file", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
@@ -209,6 +219,16 @@ namespace HelloWorldWinForms.Properties {
         internal static System.IO.UnmanagedMemoryStream song {
             get {
                 return ResourceManager.GetStream("song", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap upload_big_arrow {
+            get {
+                object obj = ResourceManager.GetObject("upload_big_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

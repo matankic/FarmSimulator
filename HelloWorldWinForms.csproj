@@ -98,6 +98,8 @@
     <None Include="Resources\grass.jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\save-file.png" />
+    <None Include="Resources\upload-big-arrow.png" />
     <None Include="Resources\search.png" />
     <None Include="Resources\woosh.wav" />
     <None Include="Resources\Pig.wav" />

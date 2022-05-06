@@ -54,6 +54,11 @@ namespace HelloWorldWinForms
             pictureBox3.Parent = pictureBox1;
             pictureBox3.BackColor = Color.Transparent;
 
+            pictureBox5.Parent = pictureBox1;
+            pictureBox5.BackColor = Color.Transparent;
+            pictureBox6.Parent = pictureBox1;
+            pictureBox6.BackColor = Color.Transparent;
+
             label11.Text = myCredit.creditUpdate();
 
             label10.Parent = pictureBox1;
