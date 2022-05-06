@@ -619,20 +619,6 @@ namespace HelloWorldWinForms
             }
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-
-
-
-
-        }
-
         private void pictureBox2_Click(object sender, EventArgs e)
         {
             //myChicken.makeNoise();

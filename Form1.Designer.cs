@@ -194,7 +194,6 @@
             this.label7.Size = new System.Drawing.Size(88, 34);
             this.label7.TabIndex = 11;
             this.label7.Text = "Day : ";
-            this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
             // label8
             // 
@@ -215,7 +214,6 @@
             this.label10.Size = new System.Drawing.Size(30, 34);
             this.label10.TabIndex = 11;
             this.label10.Text = "1";
-            this.label10.Click += new System.EventHandler(this.label10_Click);
             // 
             // label9
             // 

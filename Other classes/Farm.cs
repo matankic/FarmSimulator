@@ -17,7 +17,6 @@ namespace HelloWorldWinForms
         {
             myCredit = new Credit();
             myTime = new Time();
-
         }
         public ref Credit GetCreditRef()
         {
