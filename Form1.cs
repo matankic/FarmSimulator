@@ -593,6 +593,11 @@ namespace HelloWorldWinForms
                     label11.ForeColor = Color.Red;
                     label12.ForeColor = Color.Red;
                 }
+                if (myFarm.GetCreditRef().get_credit() > 0)
+                {
+                    label11.ForeColor = Color.ForestGreen;
+                    label12.ForeColor = Color.ForestGreen;
+                }
                 label11.Text = myFarm.GetCreditRef().creditUpdate();
                 label10.Text = myFarm.GetTimeRef().daysUpdate();
                 label9.Text = myFarm.GetTimeRef().hoursUpdate();
