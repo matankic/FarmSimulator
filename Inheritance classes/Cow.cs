@@ -10,7 +10,7 @@ namespace HelloWorldWinForms
     [Serializable]
     internal class Cow : Mammal
     {
-        public static int _cnt_cow = 0;
+        
         public const int _buy_cow = 200;
         public const int _sell_cow = 180;
         public override void makeNoise()
@@ -20,11 +20,11 @@ namespace HelloWorldWinForms
         }
         public Cow() : base()
         {
-            _cnt_cow++;
+            
         }
         ~Cow()
         {
-            _cnt_cow--;
+            
         }
     }
 }

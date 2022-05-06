@@ -10,7 +10,7 @@ namespace HelloWorldWinForms
     [Serializable]
     internal class Goose : Bird
     {
-        public static int _cnt_goose = 0;
+       
         public const int _buy_goose = 100;
         public const int _sell_goose = 87;
         public override void makeNoise()
@@ -20,11 +20,11 @@ namespace HelloWorldWinForms
         }
         public Goose() : base()
         {
-            _cnt_goose++;
+          
         }
         ~Goose()
         {
-            _cnt_goose--;
+           
         }
     }
 }
