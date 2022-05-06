@@ -16,7 +16,6 @@ namespace HelloWorldWinForms
 {
     public partial class Form1 : Form
     { 
-        //TODO: change pts to MYfarm
         //Fields
         private int counter;
         private Farm myFarm = new Farm();
