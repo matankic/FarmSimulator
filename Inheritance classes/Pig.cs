@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace HelloWorldWinForms
 {
+    [Serializable]
     internal class Pig : Mammal
     {
         public static int _cnt_pig = 0;

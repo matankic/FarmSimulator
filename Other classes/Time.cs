@@ -7,6 +7,7 @@ using System.Windows.Forms;
 
 namespace HelloWorldWinForms
 {
+    [Serializable]
     internal class Time
     {
         private int _hours, _days;

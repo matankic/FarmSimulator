@@ -7,6 +7,7 @@ using System.Media;
 
 namespace HelloWorldWinForms
 {
+    [Serializable]
     internal class Chicken : Bird
     {
         public static int _cnt_chicken = 0;

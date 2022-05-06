@@ -18,21 +18,17 @@ namespace HelloWorldWinForms
     {
         //Fields
         private int counter;
-
         private Cow myCow;
         private Pig myPig;
         private Sheep mySheep;
         private Duck myDuck;
         private Goose myGoose;
         private Chicken myChicken;
-
         private SoundPlayer audio, buy_sell;
-
         private Credit myCredit;
-
         private Time myTime;
+        private Farm pts = new Farm();
 
-        Farm pts = new Farm();
         //Methods
         public Form1()
         {

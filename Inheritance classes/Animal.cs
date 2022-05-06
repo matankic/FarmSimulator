@@ -9,6 +9,7 @@ using System.Media;
 
 namespace HelloWorldWinForms
 {
+    [Serializable]
     internal class Animal
     {
         protected SoundPlayer noise;

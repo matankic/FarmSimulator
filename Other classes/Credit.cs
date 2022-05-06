@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace HelloWorldWinForms
 {
+    [Serializable]
     internal class Credit
     {
         private int _credit;
