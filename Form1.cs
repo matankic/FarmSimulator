@@ -31,7 +31,8 @@ namespace HelloWorldWinForms
         private Credit myCredit;
 
         private Time myTime;
-        
+
+        Farm pts = new Farm();
         //Methods
         public Form1()
         {
@@ -612,7 +613,7 @@ namespace HelloWorldWinForms
             {
                 Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
-                pts = (FigureList)binaryFormatter.Deserialize(stream);
+                pts = (Farm)binaryFormatter.Deserialize(stream);
                 pictureBox1.Invalidate();
             }
         }
