@@ -19,7 +19,7 @@ namespace HelloWorldWinForms
         }
         public Pig() : base()
         {
-           
+            _spieces = 4;
         }
         public Pig(int id) : base()
         {

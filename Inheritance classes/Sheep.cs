@@ -19,7 +19,7 @@ namespace HelloWorldWinForms
         }
         public Sheep() : base()
         {
-           
+            _spieces = 5;
         }
         public Sheep(int id) : base()
         {
