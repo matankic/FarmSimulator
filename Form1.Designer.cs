@@ -81,7 +81,6 @@
             this.label33 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.timer_song = new System.Windows.Forms.Timer(this.components);
-            this.directorySearcher1 = new System.DirectoryServices.DirectorySearcher();
             this.label43 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label36 = new System.Windows.Forms.Label();
@@ -771,12 +770,6 @@
             this.timer_song.Interval = 1000;
             this.timer_song.Tick += new System.EventHandler(this.timer_song_Tick);
             // 
-            // directorySearcher1
-            // 
-            this.directorySearcher1.ClientTimeout = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerPageTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            this.directorySearcher1.ServerTimeLimit = System.TimeSpan.Parse("-00:00:01");
-            // 
             // label43
             // 
             this.label43.AutoSize = true;
@@ -1118,7 +1111,6 @@
         private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Timer timer_song;
-        private System.DirectoryServices.DirectorySearcher directorySearcher1;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label36;
