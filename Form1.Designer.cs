@@ -96,7 +96,7 @@
             this.ThirstBar = new System.Windows.Forms.ProgressBar();
             this.HpBar = new System.Windows.Forms.ProgressBar();
             this.Animal_stats = new System.Windows.Forms.Panel();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.searchBox = new System.Windows.Forms.ComboBox();
             this.search_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.load_btn = new System.Windows.Forms.PictureBox();
@@ -928,16 +928,16 @@
             this.Animal_stats.Size = new System.Drawing.Size(328, 112);
             this.Animal_stats.TabIndex = 18;
             // 
-            // comboBox2
+            // searchBox
             // 
-            this.comboBox2.DropDownHeight = 1;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.IntegralHeight = false;
-            this.comboBox2.Location = new System.Drawing.Point(824, 391);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(287, 21);
-            this.comboBox2.TabIndex = 14;
-            this.comboBox2.Text = "Search an animal by typing its correct ID";
+            this.searchBox.DropDownHeight = 1;
+            this.searchBox.FormattingEnabled = true;
+            this.searchBox.IntegralHeight = false;
+            this.searchBox.Location = new System.Drawing.Point(824, 391);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(287, 21);
+            this.searchBox.TabIndex = 14;
+            this.searchBox.Text = "Search an animal by typing its correct ID";
             // 
             // search_icon
             // 
@@ -1028,7 +1028,7 @@
             this.Controls.Add(this.label16);
             this.Controls.Add(this.Animal_stats);
             this.Controls.Add(this.sheep_radio);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.searchBox);
             this.Controls.Add(this.pig_radio);
             this.Controls.Add(this.cow_radio);
             this.Controls.Add(this.goose_radio);
@@ -1161,7 +1161,7 @@
         private System.Windows.Forms.ProgressBar HpBar;
         private System.Windows.Forms.Panel Animal_stats;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox searchBox;
         private System.Windows.Forms.PictureBox search_icon;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.PictureBox save_btn;

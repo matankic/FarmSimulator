@@ -578,12 +578,7 @@ namespace HelloWorldWinForms
 
         private void search_icon_Click(object sender, EventArgs e)
         {
-            comboBox2.Text = "!!!!!!!!!!!!!it's working!!";
-        }
-
-        private void comboBox2_Enter(object sender, EventArgs e)
-        {
-            comboBox2.Text = "it's working!!";
+            searchBox.Text = "!!!!!!!!!!!!!it's working!!";
         }
 
         private void save_btn_Click(object sender, EventArgs e)
@@ -615,7 +610,15 @@ namespace HelloWorldWinForms
                 Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 myFarm = (Farm)binaryFormatter.Deserialize(stream);
-                pictureBox1.Invalidate();
+                //pictureBox1.Invalidate();
+                if (myFarm.GetCreditRef().get_credit() < 0)
+                {
+                    label11.ForeColor = Color.Red;
+                    label12.ForeColor = Color.Red;
+                }
+                label11.Text = myFarm.GetCreditRef().creditUpdate();
+                label10.Text = myFarm.GetTimeRef().daysUpdate();
+                label9.Text = myFarm.GetTimeRef().hoursUpdate();
             }
         }
 
