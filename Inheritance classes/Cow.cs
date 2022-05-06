@@ -19,7 +19,12 @@ namespace HelloWorldWinForms
         }
         public Cow() : base()
         {
-            
+
+        }
+        public Cow(int id) : base()
+        {
+            _id = id;
+            _spieces = 3;
         }
         ~Cow()
         {

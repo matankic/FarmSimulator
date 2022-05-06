@@ -19,7 +19,12 @@ namespace HelloWorldWinForms
         }
         public Goose() : base()
         {
-          
+
+        }
+        public Goose(int id) : base()
+        {
+            _id = id;
+            _spieces = 2;
         }
         ~Goose()
         {

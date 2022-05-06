@@ -19,7 +19,12 @@ namespace HelloWorldWinForms
         }
         public Duck() : base()
         {
-           
+
+        }
+        public Duck(int id) : base()
+        {
+            _id = id;
+            _spieces = 1;
         }
         ~Duck()
         {

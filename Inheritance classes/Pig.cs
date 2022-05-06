@@ -21,6 +21,11 @@ namespace HelloWorldWinForms
         {
            
         }
+        public Pig(int id) : base()
+        {
+            _id = id;
+            _spieces = 4;
+        }
         ~Pig()
         {
           

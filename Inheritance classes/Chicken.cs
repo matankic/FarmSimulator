@@ -19,7 +19,12 @@ namespace HelloWorldWinForms
         }
         public Chicken() : base()
         {
-          
+            _spieces = 0;
+        }
+        public Chicken(int id) : base()
+        {
+            _id = id;
+            _spieces = 0;
         }
         ~Chicken()
         {

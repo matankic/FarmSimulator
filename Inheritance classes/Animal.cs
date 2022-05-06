@@ -15,12 +15,12 @@ namespace HelloWorldWinForms
         protected SoundPlayer noise;
         public virtual string _name { get; set; }
         private Time _age;
-        private int _id,
+        protected int _id, _spieces,
             _thirst,
             _hunger,
             _health;
         private Vector _coordinates;
-        private double _speed;
+        protected double _speed;
         private bool _sex, _isFertile;
        
         public Animal() { }
