@@ -39,42 +39,41 @@ namespace HelloWorldWinForms
         }
         public void AddAnimalToList(int amount, int type) 
         {
-            _farmSize += amount;
             switch (type){
                 case 0:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Chicken());
+                        myAnimals.Add(new Chicken(_farmSize++));
                     }
                     break;
                 case 1:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Duck());
+                        myAnimals.Add(new Duck(_farmSize++));
                     }
                     break;
                 case 2:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Goose());
+                        myAnimals.Add(new Goose(_farmSize++));
                     }
                     break;
                 case 3:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Cow());
+                        myAnimals.Add(new Cow(_farmSize++));
                     }
                     break;
                 case 4:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Pig());
+                        myAnimals.Add(new Pig(_farmSize++));
                     }
                     break;
                 case 5:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Sheep ());
+                        myAnimals.Add(new Sheep (_farmSize++));
                     }
                     break;
                 default:
