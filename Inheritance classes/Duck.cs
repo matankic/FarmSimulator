@@ -10,7 +10,6 @@ namespace HelloWorldWinForms
     [Serializable]
     internal class Duck : Bird
     {
-        
         public const int _buy_duck = 75;
         public const int _sell_duck = 70;
         public override void makeNoise()

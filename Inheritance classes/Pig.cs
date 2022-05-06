@@ -10,7 +10,6 @@ namespace HelloWorldWinForms
     [Serializable]
     internal class Pig : Mammal
     {
-      
         public const int _buy_pig = 150;
         public const int _sell_pig = 70;
         public override void makeNoise()

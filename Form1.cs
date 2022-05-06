@@ -20,18 +20,6 @@ namespace HelloWorldWinForms
         private int counter;
         private Farm myFarm = new Farm();
         private SoundPlayer audio, buy_sell;
-        /*  
-          private Cow myCow;
-          private Pig myPig;
-          private Sheep mySheep;
-          private Duck myDuck;
-          private Goose myGoose;
-          private Chicken myChicken;
-          
-          private Credit myFarm.GetCreditRef();
-          private Time myFarm.GetCreditRef();
-           
-        */
 
         //Methods
         public Form1()
@@ -42,16 +30,6 @@ namespace HelloWorldWinForms
             audio = new SoundPlayer(Properties.Resources.song);
             buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
             audio.Play();
-            /* myChicken = new Chicken();
-            myCow = new Cow();
-            mySheep = new Sheep();
-            myDuck = new Duck();
-            myGoose = new Goose();
-            myPig = new Pig();
-
-           
-            myFarm.GetCreditRef() = new Credit(2000, 0.01);
-            myFarm.GetCreditRef() = new Time(5, 1); */
 
             label11.Text = myFarm.GetCreditRef().creditUpdate();
 
@@ -80,7 +58,7 @@ namespace HelloWorldWinForms
                         if (Int32.Parse(amount_lbl.Text) <=myFarm._cnt_chicken)
                         {
                             myFarm.GetCreditRef() += Int32.Parse(amount_lbl.Text) * Chicken._sell_chicken;
-                           myFarm._cnt_chicken -= Int32.Parse(amount_lbl.Text);
+                            myFarm._cnt_chicken -= Int32.Parse(amount_lbl.Text);
                             lbl_1.Text =myFarm._cnt_chicken.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -93,7 +71,7 @@ namespace HelloWorldWinForms
                         else
                         {
                             myFarm.GetCreditRef() +=myFarm._cnt_chicken * Chicken._sell_chicken;
-                           myFarm._cnt_chicken = 0;
+                            myFarm._cnt_chicken = 0;
                             lbl_1.Text =myFarm._cnt_chicken.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -111,7 +89,7 @@ namespace HelloWorldWinForms
                         if (Int32.Parse(amount_lbl.Text) <=myFarm._cnt_goose)
                         {
                             myFarm.GetCreditRef() += Int32.Parse(amount_lbl.Text) * Goose._sell_goose;
-                           myFarm._cnt_goose -= Int32.Parse(amount_lbl.Text);
+                            myFarm._cnt_goose -= Int32.Parse(amount_lbl.Text);
                             label30.Text =myFarm._cnt_goose.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -124,7 +102,7 @@ namespace HelloWorldWinForms
                         else
                         {
                             myFarm.GetCreditRef() +=myFarm._cnt_goose * Goose._sell_goose;
-                           myFarm._cnt_goose = 0;
+                            myFarm._cnt_goose = 0;
                             label30.Text =myFarm._cnt_goose.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -142,7 +120,7 @@ namespace HelloWorldWinForms
                         if (Int32.Parse(amount_lbl.Text) <=myFarm._cnt_pig)
                         {
                             myFarm.GetCreditRef() += Int32.Parse(amount_lbl.Text) * Pig._sell_pig;
-                           myFarm._cnt_pig -= Int32.Parse(amount_lbl.Text);
+                            myFarm._cnt_pig -= Int32.Parse(amount_lbl.Text);
                             label32.Text =myFarm._cnt_pig.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -155,7 +133,7 @@ namespace HelloWorldWinForms
                         else
                         {
                             myFarm.GetCreditRef() +=myFarm._cnt_pig * Pig._sell_pig;
-                           myFarm._cnt_pig = 0;
+                            myFarm._cnt_pig = 0;
                             label32.Text =myFarm._cnt_pig.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -173,7 +151,7 @@ namespace HelloWorldWinForms
                         if (Int32.Parse(amount_lbl.Text) <=myFarm._cnt_sheep)
                         {
                             myFarm.GetCreditRef() += Int32.Parse(amount_lbl.Text) * Sheep._sell_sheep;
-                           myFarm._cnt_sheep -= Int32.Parse(amount_lbl.Text);
+                            myFarm._cnt_sheep -= Int32.Parse(amount_lbl.Text);
                             label33.Text =myFarm._cnt_sheep.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -186,7 +164,7 @@ namespace HelloWorldWinForms
                         else
                         {
                             myFarm.GetCreditRef() +=myFarm._cnt_sheep * Sheep._sell_sheep;
-                           myFarm._cnt_sheep = 0;
+                            myFarm._cnt_sheep = 0;
                             label33.Text =myFarm._cnt_sheep.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -204,7 +182,7 @@ namespace HelloWorldWinForms
                         if (Int32.Parse(amount_lbl.Text) <=myFarm._cnt_duck)
                         {
                             myFarm.GetCreditRef() += Int32.Parse(amount_lbl.Text) * Duck._sell_duck;
-                           myFarm._cnt_duck -= Int32.Parse(amount_lbl.Text);
+                            myFarm._cnt_duck -= Int32.Parse(amount_lbl.Text);
                             label29.Text =myFarm._cnt_duck.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -217,7 +195,7 @@ namespace HelloWorldWinForms
                         else
                         {
                             myFarm.GetCreditRef() +=myFarm._cnt_duck * Duck._sell_duck;
-                           myFarm._cnt_duck = 0;
+                            myFarm._cnt_duck = 0;
                             label29.Text =myFarm._cnt_duck.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -235,7 +213,7 @@ namespace HelloWorldWinForms
                         if (Int32.Parse(amount_lbl.Text) <=myFarm._cnt_cow)
                         {
                             myFarm.GetCreditRef() += Int32.Parse(amount_lbl.Text) * Cow._sell_cow;
-                           myFarm._cnt_cow -= Int32.Parse(amount_lbl.Text);
+                            myFarm._cnt_cow -= Int32.Parse(amount_lbl.Text);
                             label31.Text =myFarm._cnt_cow.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -248,7 +226,7 @@ namespace HelloWorldWinForms
                         else
                         {
                             myFarm.GetCreditRef() +=myFarm._cnt_cow * Cow._sell_cow;
-                           myFarm._cnt_cow = 0;
+                            myFarm._cnt_cow = 0;
                             label31.Text =myFarm._cnt_cow.ToString();
 
                             if (myFarm.GetCreditRef().get_credit() > 0)
@@ -279,7 +257,7 @@ namespace HelloWorldWinForms
                     if (Chicken_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                       myFarm._cnt_chicken += Int32.Parse(amount_lbl.Text);
+                        myFarm._cnt_chicken += Int32.Parse(amount_lbl.Text);
                         lbl_1.Text =myFarm._cnt_chicken.ToString();
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 0);
 
@@ -293,7 +271,7 @@ namespace HelloWorldWinForms
                     else if (goose_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                       myFarm._cnt_goose += Int32.Parse(amount_lbl.Text);
+                        myFarm._cnt_goose += Int32.Parse(amount_lbl.Text);
                         label30.Text =myFarm._cnt_goose.ToString();
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 1);
 
@@ -307,7 +285,7 @@ namespace HelloWorldWinForms
                     else if (pig_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                       myFarm._cnt_pig += Int32.Parse(amount_lbl.Text);
+                        myFarm._cnt_pig += Int32.Parse(amount_lbl.Text);
                         label32.Text =myFarm._cnt_pig.ToString();
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 4);
 
@@ -321,7 +299,7 @@ namespace HelloWorldWinForms
                     else if (sheep_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                       myFarm._cnt_sheep += Int32.Parse(amount_lbl.Text);
+                        myFarm._cnt_sheep += Int32.Parse(amount_lbl.Text);
                         label33.Text =myFarm._cnt_sheep.ToString();
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 5);
 
@@ -336,7 +314,7 @@ namespace HelloWorldWinForms
                     else if (Duck_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                       myFarm._cnt_duck += Int32.Parse(amount_lbl.Text);
+                        myFarm._cnt_duck += Int32.Parse(amount_lbl.Text);
                         label29.Text =myFarm._cnt_duck.ToString();
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 2);
 
@@ -351,7 +329,7 @@ namespace HelloWorldWinForms
                     else if (cow_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                       myFarm._cnt_cow += Int32.Parse(amount_lbl.Text);
+                        myFarm._cnt_cow += Int32.Parse(amount_lbl.Text);
                         label31.Text =myFarm._cnt_cow.ToString();
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 3);
 
@@ -624,14 +602,7 @@ namespace HelloWorldWinForms
                 label31.Text = myFarm._cnt_cow.ToString();
                 label32.Text = myFarm._cnt_pig.ToString();
                 label33.Text = myFarm._cnt_sheep.ToString();
-
-
             }
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

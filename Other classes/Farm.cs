@@ -14,13 +14,12 @@ namespace HelloWorldWinForms
         private Credit myCredit;
         private Time myTime;
         public int _farmSize;          
-        public int _cnt_chicken        {get; set;}
-        public int _cnt_goose          {get; set;}
-        public int _cnt_cow            {get; set;}
-        public int _cnt_duck           {get; set;}
-        public int _cnt_pig            {get; set;}
-        public int _cnt_sheep          {get; set; }
-
+        public int _cnt_chicken {get; set;}
+        public int _cnt_goose {get; set;}
+        public int _cnt_cow {get; set;}
+        public int _cnt_duck {get; set;}
+        public int _cnt_pig {get; set;}
+        public int _cnt_sheep {get; set;}
 
         // protected Animal[] animals;
         public Farm()
@@ -28,15 +27,7 @@ namespace HelloWorldWinForms
             myCredit = new Credit();
             myTime = new Time();
             myAnimals = new List<Animal>();
-            _farmSize        = 0 ;
-            _cnt_chicken     = 0 ;
-            _cnt_goose       = 0 ;
-            _cnt_cow         = 0 ;
-            _cnt_duck        = 0 ;
-            _cnt_pig         = 0 ;
-            _cnt_sheep = 0;
-
-
+            _farmSize = _cnt_chicken = _cnt_goose = _cnt_cow = _cnt_duck = _cnt_pig = _cnt_sheep = 0;
         }
         public ref Credit GetCreditRef()
         {
@@ -57,7 +48,7 @@ namespace HelloWorldWinForms
                         _cnt_chicken++;
                     }
                     break;
-                    case 1:
+                case 1:
                     for (int i = 0; i < amount; i++)
                     {
                         myAnimals.Add(new Duck());
@@ -94,10 +85,7 @@ namespace HelloWorldWinForms
                     break;
                 default:
                     break;
-
-            }
-            
-        }
-        
+            } 
+        } 
     }
 }

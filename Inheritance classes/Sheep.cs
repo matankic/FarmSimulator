@@ -9,8 +9,7 @@ namespace HelloWorldWinForms
 {
     [Serializable]
     internal class Sheep : Mammal
-    {
-        
+    { 
         public const int _buy_sheep = 225;
         public const int _sell_sheep = 200;
         public override void makeNoise()
