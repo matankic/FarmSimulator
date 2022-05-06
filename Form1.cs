@@ -53,26 +53,16 @@ namespace HelloWorldWinForms
             myFarm.GetCreditRef() = new Credit(2000, 0.01);
             myFarm.GetCreditRef() = new Time(5, 1); */
 
-            pictureBox2.Parent = pictureBox1;
-            pictureBox2.BackColor = Color.Transparent;
-            pictureBox3.Parent = pictureBox1;
-            pictureBox3.BackColor = Color.Transparent;
-
-            save_btn.Parent = pictureBox1;
-            save_btn.BackColor = Color.Transparent;
-            load_btn.Parent = pictureBox1;
-            load_btn.BackColor = Color.Transparent;
-
             label11.Text = myFarm.GetCreditRef().creditUpdate();
 
+            pictureBox2.Parent = pictureBox1;
+            pictureBox3.Parent = pictureBox1;
+            save_btn.Parent = pictureBox1;
+            load_btn.Parent = pictureBox1;
             label10.Parent = pictureBox1;
-            label10.BackColor = Color.Transparent;
             label9.Parent = pictureBox1;
-            label9.BackColor = Color.Transparent;
             label8.Parent = pictureBox1;
-            label8.BackColor = Color.Transparent;
             label7.Parent = pictureBox1;
-            label7.BackColor = Color.Transparent;
         }
 
         private void sell_btn_Click(object sender, EventArgs e)
