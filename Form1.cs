@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Media;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace HelloWorldWinForms
 {
@@ -54,10 +57,10 @@ namespace HelloWorldWinForms
             pictureBox3.Parent = pictureBox1;
             pictureBox3.BackColor = Color.Transparent;
 
-            pictureBox5.Parent = pictureBox1;
-            pictureBox5.BackColor = Color.Transparent;
-            pictureBox6.Parent = pictureBox1;
-            pictureBox6.BackColor = Color.Transparent;
+            save_btn.Parent = pictureBox1;
+            save_btn.BackColor = Color.Transparent;
+            load_btn.Parent = pictureBox1;
+            load_btn.BackColor = Color.Transparent;
 
             label11.Text = myCredit.creditUpdate();
 
@@ -579,6 +582,39 @@ namespace HelloWorldWinForms
         private void comboBox2_Enter(object sender, EventArgs e)
         {
             comboBox2.Text = "it's working!!";
+        }
+
+        private void save_btn_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog1 = new SaveFileDialog();
+            saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
+            saveFileDialog1.Filter = "farm files (*.frm)|*.frm|All files (*.*)|*.*";
+            saveFileDialog1.FilterIndex = 1;
+            saveFileDialog1.RestoreDirectory = true;
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                IFormatter formatter = new BinaryFormatter();
+                using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
+                {
+                    formatter.Serialize(stream, pts);
+                }
+            }
+        }
+
+        private void load_btn_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog1 = new OpenFileDialog();
+            openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
+            openFileDialog1.Filter = "farm files (*.frm)|*.frm|All files (*.*)|*.*";
+            openFileDialog1.FilterIndex = 1;
+            openFileDialog1.RestoreDirectory = true;
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
+                var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
+                pts = (FigureList)binaryFormatter.Deserialize(stream);
+                pictureBox1.Invalidate();
+            }
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

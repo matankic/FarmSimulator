@@ -98,8 +98,8 @@
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.search_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.load_btn = new System.Windows.Forms.PictureBox();
+            this.save_btn = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
@@ -108,8 +108,8 @@
             this.Animal_stats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.load_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.save_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -953,31 +953,31 @@
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
             // 
-            // pictureBox6
+            // load_btn
             // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox6.Image = global::HelloWorldWinForms.Properties.Resources.upload_big_arrow;
-            this.pictureBox6.Location = new System.Drawing.Point(12, 12);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.load_btn.BackColor = System.Drawing.Color.Transparent;
+            this.load_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.load_btn.Image = global::HelloWorldWinForms.Properties.Resources.upload_big_arrow;
+            this.load_btn.Location = new System.Drawing.Point(12, 12);
+            this.load_btn.Name = "load_btn";
+            this.load_btn.Size = new System.Drawing.Size(32, 32);
+            this.load_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.load_btn.TabIndex = 13;
+            this.load_btn.TabStop = false;
+            this.load_btn.Click += new System.EventHandler(this.load_btn_Click);
             // 
-            // pictureBox5
+            // save_btn
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox5.Image = global::HelloWorldWinForms.Properties.Resources.save_file;
-            this.pictureBox5.Location = new System.Drawing.Point(55, 12);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.save_btn.BackColor = System.Drawing.Color.Transparent;
+            this.save_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.save_btn.Image = global::HelloWorldWinForms.Properties.Resources.save_file;
+            this.save_btn.Location = new System.Drawing.Point(55, 12);
+            this.save_btn.Name = "save_btn";
+            this.save_btn.Size = new System.Drawing.Size(32, 32);
+            this.save_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.save_btn.TabIndex = 13;
+            this.save_btn.TabStop = false;
+            this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
             // pictureBox2
             // 
@@ -1035,8 +1035,8 @@
             this.Controls.Add(this.Duck_radio);
             this.Controls.Add(this.Chicken_radio);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.load_btn);
+            this.Controls.Add(this.save_btn);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -1082,8 +1082,8 @@
             this.Animal_stats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.load_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.save_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
@@ -1164,8 +1164,8 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.PictureBox search_icon;
         private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.PictureBox save_btn;
+        private System.Windows.Forms.PictureBox load_btn;
     }
 }
 
