@@ -1025,6 +1025,12 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1136, 575);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.load_btn);
+            this.Controls.Add(this.save_btn);
             this.Controls.Add(this.search_icon);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.Animal_stats);
@@ -1036,13 +1042,7 @@
             this.Controls.Add(this.Duck_radio);
             this.Controls.Add(this.Chicken_radio);
             this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.load_btn);
-            this.Controls.Add(this.save_btn);
             this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label10);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label27);

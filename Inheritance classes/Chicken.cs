@@ -14,6 +14,7 @@ namespace HelloWorldWinForms
     {
         public const int _buy_chicken = 50;
         public const int _sell_chicken = 47;
+        private Random rand = new Random();
         public override void makeNoise()
         {
             noise = new SoundPlayer(Properties.Resources.ChickenSound);
@@ -41,7 +42,7 @@ namespace HelloWorldWinForms
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
             visual.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
             visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            visual.Location = new System.Drawing.Point(200, 389);
+            visual.Location = new System.Drawing.Point(rand.Next(2, 760), rand.Next(2, 540));
             visual.Name = "visual";
             visual.Size = new System.Drawing.Size(32, 32);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
