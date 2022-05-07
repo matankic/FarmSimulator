@@ -13,18 +13,20 @@ namespace HelloWorldWinForms
     internal class Animal
     {
         protected SoundPlayer noise;
+        protected PictureBox visual;
         public virtual string _name { get; set; }
         private Time _age;
         protected int _id, _spieces,
             _thirst,
             _hunger,
             _health;
-        private Vector _coordinates;
+        protected Vector _coordinates;
         protected double _speed;
         private bool _sex, _isFertile;
        
         public Animal() { }
         public virtual void makeNoise() { }
+        public virtual void displayAnimal(Form1 form1) { }
         public void updateAnimal()
         {
             _age += 10; //TODO : adjust to the amount of world time

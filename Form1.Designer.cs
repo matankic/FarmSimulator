@@ -1,6 +1,6 @@
 ﻿namespace HelloWorldWinForms
 {
-    partial class Form1
+    internal partial class Form1
     {
         /// <summary>
         /// Required designer variable.
@@ -957,7 +957,7 @@
             // 
             this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::HelloWorldWinForms.Properties.Resources.goose;
+            this.pictureBox3.Image = global::HelloWorldWinForms.Properties.Resources.duck;
             this.pictureBox3.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
             this.pictureBox3.Location = new System.Drawing.Point(320, 259);
             this.pictureBox3.Name = "pictureBox3";
@@ -1043,7 +1043,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label27);
@@ -1066,6 +1065,7 @@
             this.Controls.Add(this.label29);
             this.Controls.Add(this.lbl_1);
             this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -1098,7 +1098,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label11;
@@ -1167,6 +1166,7 @@
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.PictureBox save_btn;
         private System.Windows.Forms.PictureBox load_btn;
+        public System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 
