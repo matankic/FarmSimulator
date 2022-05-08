@@ -98,20 +98,16 @@
             this.Animal_stats = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.ComboBox();
             this.search_icon = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.load_btn = new System.Windows.Forms.PictureBox();
             this.save_btn = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.Animal_stats.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -953,20 +949,6 @@
             this.search_icon.TabStop = false;
             this.search_icon.Click += new System.EventHandler(this.search_icon_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox3.Image = global::HelloWorldWinForms.Properties.Resources.duck;
-            this.pictureBox3.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox3.Location = new System.Drawing.Point(320, 259);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(61, 58);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
             // load_btn
             // 
             this.load_btn.BackColor = System.Drawing.Color.Transparent;
@@ -992,20 +974,6 @@
             this.save_btn.TabIndex = 13;
             this.save_btn.TabStop = false;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pictureBox2.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox2.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox2.Location = new System.Drawing.Point(439, 222);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // pictureBox1
             // 
@@ -1041,8 +1009,6 @@
             this.Controls.Add(this.goose_radio);
             this.Controls.Add(this.Duck_radio);
             this.Controls.Add(this.Chicken_radio);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label27);
@@ -1083,10 +1049,8 @@
             this.Animal_stats.ResumeLayout(false);
             this.Animal_stats.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -1106,8 +1070,6 @@
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button buy_btn;
