@@ -13,7 +13,7 @@ namespace HelloWorldWinForms
         protected  double _interest;
         public Credit()
         {
-            _credit = 2000;
+            _credit = 500;
             _interest = 0.01;
         }
         public Credit(int x, double y)

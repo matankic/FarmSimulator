@@ -42,6 +42,7 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label46 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
@@ -161,7 +162,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.Location = new System.Drawing.Point(-1, 12);
+            this.label5.Location = new System.Drawing.Point(-1, 18);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(212, 34);
             this.label5.TabIndex = 11;
@@ -174,9 +175,9 @@
             this.label11.ForeColor = System.Drawing.Color.ForestGreen;
             this.label11.Location = new System.Drawing.Point(226, 12);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(75, 34);
+            this.label11.Size = new System.Drawing.Size(60, 34);
             this.label11.TabIndex = 11;
-            this.label11.Text = "2000";
+            this.label11.Text = "500";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label7
@@ -229,6 +230,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.panel1.Controls.Add(this.label46);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
@@ -238,6 +240,16 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(331, 52);
             this.panel1.TabIndex = 12;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label46.Location = new System.Drawing.Point(2, 12);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(196, 13);
+            this.label46.TabIndex = 8;
+            this.label46.Text = "•Cannot buy with higher debt  to $-200 .";
             // 
             // label14
             // 
@@ -1129,6 +1141,7 @@
         private System.Windows.Forms.PictureBox save_btn;
         private System.Windows.Forms.PictureBox load_btn;
         public System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label46;
     }
 }
 

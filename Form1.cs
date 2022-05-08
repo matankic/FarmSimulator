@@ -248,7 +248,7 @@ namespace HelloWorldWinForms
             try
             {
                 price = Int32.Parse(label18.Text);
-                if (price > 0)
+                if (myFarm.GetCreditRef().get_credit() - price > -200)
                 {
                     buy_sell.Play();
                     if (Chicken_radio.Checked == true)
