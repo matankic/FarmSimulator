@@ -584,11 +584,11 @@ namespace HelloWorldWinForms
                 if (moveTickCount == 60)
                 {
                     moveTickCount = 0;
-                    myFarm.myAnimals.ElementAt(i).updateLocation(true);
+                    myFarm.myAnimals[i].updateLocation(true);
                 }
                 else
-                    myFarm.myAnimals.ElementAt(i).updateLocation(false);
-                myFarm.myAnimals.ElementAt(i).visual.Location = new System.Drawing.Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
+                    myFarm.myAnimals[i].updateLocation(false);
+                myFarm.myAnimals[i].visual.Location = new System.Drawing.Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
                
 
             }
