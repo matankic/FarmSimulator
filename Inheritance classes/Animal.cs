@@ -14,6 +14,7 @@ namespace HelloWorldWinForms
     {
         protected SoundPlayer noise;
         protected PictureBox visual;
+        private Random rand = new Random();
         public virtual string _name { get; set; }
         private Time _age;
         protected int _id, _spieces,
@@ -24,7 +25,10 @@ namespace HelloWorldWinForms
         protected double _speed;
         private bool _sex, _isFertile;
        
-        public Animal() { }
+        public Animal() {
+            _coordinates.X = rand.Next(2, 760);
+            _coordinates.Y = rand.Next(2, 540);
+        }
         public virtual void makeNoise() { }
         public virtual void displayAnimal(Form1 form1) { }
         public void updateAnimal()
