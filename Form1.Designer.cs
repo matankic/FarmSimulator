@@ -56,7 +56,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label34 = new System.Windows.Forms.Label();
             this.Chicken_radio = new System.Windows.Forms.RadioButton();
             this.Duck_radio = new System.Windows.Forms.RadioButton();
@@ -98,18 +97,20 @@
             this.HpBar = new System.Windows.Forms.ProgressBar();
             this.Animal_stats = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.ComboBox();
-            this.search_icon = new System.Windows.Forms.PictureBox();
             this.load_btn = new System.Windows.Forms.PictureBox();
             this.save_btn = new System.Windows.Forms.PictureBox();
+            this.search_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.moveAnimal = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.Animal_stats.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_1
@@ -503,19 +504,6 @@
             this.comboBox1.Text = "Select / type value";
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox4.Location = new System.Drawing.Point(181, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(66, 69);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
             // 
             // label34
             // 
@@ -948,19 +936,6 @@
             this.searchBox.TabIndex = 14;
             this.searchBox.Text = "Search an animal by typing its correct ID";
             // 
-            // search_icon
-            // 
-            this.search_icon.BackColor = System.Drawing.Color.White;
-            this.search_icon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.search_icon.Image = global::HelloWorldWinForms.Properties.Resources.search;
-            this.search_icon.Location = new System.Drawing.Point(1085, 394);
-            this.search_icon.Name = "search_icon";
-            this.search_icon.Size = new System.Drawing.Size(23, 15);
-            this.search_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.search_icon.TabIndex = 19;
-            this.search_icon.TabStop = false;
-            this.search_icon.Click += new System.EventHandler(this.search_icon_Click);
-            // 
             // load_btn
             // 
             this.load_btn.BackColor = System.Drawing.Color.Transparent;
@@ -987,6 +962,19 @@
             this.save_btn.TabStop = false;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
+            // search_icon
+            // 
+            this.search_icon.BackColor = System.Drawing.Color.White;
+            this.search_icon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.search_icon.Image = global::HelloWorldWinForms.Properties.Resources.search;
+            this.search_icon.Location = new System.Drawing.Point(1085, 394);
+            this.search_icon.Name = "search_icon";
+            this.search_icon.Size = new System.Drawing.Size(23, 15);
+            this.search_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.search_icon.TabIndex = 19;
+            this.search_icon.TabStop = false;
+            this.search_icon.Click += new System.EventHandler(this.search_icon_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::HelloWorldWinForms.Properties.Resources.grass_jpg;
@@ -997,6 +985,25 @@
             this.pictureBox1.Size = new System.Drawing.Size(818, 586);
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.Location = new System.Drawing.Point(181, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(66, 69);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
+            // moveAnimal
+            // 
+            this.moveAnimal.Enabled = true;
+            this.moveAnimal.Interval = 20;
+            this.moveAnimal.Tick += new System.EventHandler(this.moveAnimal_Tick);
             // 
             // Form1
             // 
@@ -1057,13 +1064,13 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.Animal_stats.ResumeLayout(false);
             this.Animal_stats.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1142,6 +1149,7 @@
         private System.Windows.Forms.PictureBox load_btn;
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Timer moveAnimal;
     }
 }
 

@@ -13,15 +13,15 @@ namespace HelloWorldWinForms
     internal class Animal
     {
         protected SoundPlayer noise;
-        protected PictureBox visual;
+        public PictureBox visual;
         private Random rand = new Random();
         public virtual string _name { get; set; }
         private Time _age;
-        protected int _id, _spieces,
+        protected int _id, _spieces, 
             _thirst,
             _hunger,
             _health;
-        protected Vector _coordinates;
+        protected Vector _coordinates, _direction;
         protected double _speed;
         private bool _sex, _isFertile;
        
@@ -67,6 +67,23 @@ namespace HelloWorldWinForms
             lbl8.Text = _coordinates.X.ToString();
             lbl9.Text = _coordinates.Y.ToString();
         }
+        public Vector updateLocation(bool changeDirection)
+        {
+            if (changeDirection)
+                createDirection();
+            return _direction + _coordinates;
+            
+        }
+        public void createDirection()
+        {
+            _direction.X = rand.Next(-100, 100);
+            _direction.Y = rand.Next(-100, 100);
+            _direction.Normalize();
+            _direction *= 5;
+
+        }
+        public double getX() { return _coordinates.X; }
+        public double getY() { return _coordinates.Y; }
 
     }
 }

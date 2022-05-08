@@ -20,11 +20,15 @@ namespace HelloWorldWinForms
         private int counter;
         private Farm myFarm = new Farm();
         private SoundPlayer audio, buy_sell;
+        private int moveTickCount;
         //Methods
         public Form1()
         {
+            
             InitializeComponent();
             timer1.Start();
+            moveAnimal.Start();
+            moveTickCount = 0; 
             counter = 0;
             audio = new SoundPlayer(Properties.Resources.song);
             buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
@@ -569,6 +573,26 @@ namespace HelloWorldWinForms
                 {
                     formatter.Serialize(stream, myFarm);
                 }
+            }
+        }
+
+        private void moveAnimal_Tick(object sender, EventArgs e)
+        {
+            moveTickCount++;
+            for (int i = 0; i < myFarm._farmSize; i++)
+            {
+                if (moveTickCount == 60)
+                {
+                    moveTickCount = 0;
+                    myFarm.myAnimals[i].updateLocation(true);
+                   
+
+                }
+                else
+                    myFarm.myAnimals[i].updateLocation(false);
+                myFarm.myAnimals[i].visual.Location = new System.Drawing.Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
+
+
             }
         }
 
