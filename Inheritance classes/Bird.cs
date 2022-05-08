@@ -10,6 +10,10 @@ namespace HelloWorldWinForms
     internal class Bird : Animal
     {
         private int _eggs;
-        
+        public Bird() : base()
+        {
+            _eggs = 0;
+        }
+
     }
 }
