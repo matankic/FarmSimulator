@@ -76,8 +76,8 @@ namespace HelloWorldWinForms
         }
         public void createDirection()
         {
-            _direction.X = rand.Next(-100, 100);
-            _direction.Y = rand.Next(-100, 100);
+            _direction.X = rand.Next(0, 200) -100;
+            _direction.Y = rand.Next(0, 200) -100;
             _direction.Normalize();
             _direction *= 5;
 
