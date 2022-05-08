@@ -1002,6 +1002,7 @@
             // moveAnimal
             // 
             this.moveAnimal.Enabled = true;
+            this.moveAnimal.Interval = 20;
             this.moveAnimal.Tick += new System.EventHandler(this.moveAnimal_Tick);
             // 
             // Form1

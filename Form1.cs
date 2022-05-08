@@ -252,7 +252,7 @@ namespace HelloWorldWinForms
             try
             {
                 price = Int32.Parse(label18.Text);
-                if (myFarm.GetCreditRef().get_credit() - price >= -200)
+                if (price > 0 && myFarm.GetCreditRef().get_credit() - price >= -200)
                 {
                     buy_sell.Play();
                     if (Chicken_radio.Checked == true)
@@ -579,6 +579,10 @@ namespace HelloWorldWinForms
         private void moveAnimal_Tick(object sender, EventArgs e)
         {
             moveTickCount++;
+            ////////
+            if(moveTickCount == 400)
+                moveTickCount = 0;
+            ////////
             int i;
             for (i = 0; i < myFarm._farmSize / 2; i++)
             {
@@ -590,7 +594,7 @@ namespace HelloWorldWinForms
                 //else
                 //    myFarm.myAnimals[i].updateLocation(false);
                 //myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
-                myFarm.myAnimals[i].visual.Location = new Point(moveTickCount * 3, moveTickCount * 3);
+                myFarm.myAnimals[i].visual.Location = new Point(moveTickCount*2, moveTickCount);
             }
         }
 
