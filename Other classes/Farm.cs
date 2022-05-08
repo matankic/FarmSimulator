@@ -43,37 +43,43 @@ namespace HelloWorldWinForms
                 case 0:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Chicken(_farmSize++, form1));
+                        myAnimals.Add(new Chicken(_farmSize, form1));
+                        _farmSize++;
                     }
                     break;
                 case 1:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Duck(_farmSize++, form1));
+                        myAnimals.Add(new Duck(_farmSize, form1));
+                        _farmSize++;
                     }
                     break;
                 case 2:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Goose(_farmSize++, form1));
+                        myAnimals.Add(new Goose(_farmSize, form1));
+                        _farmSize++;
                     }
                     break;
                 case 3:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Cow(_farmSize++, form1));
+                        myAnimals.Add(new Cow(_farmSize, form1));
+                        _farmSize++;
                     }
                     break;
                 case 4:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Pig(_farmSize++, form1));
+                        myAnimals.Add(new Pig(_farmSize, form1));
+                        _farmSize++;
                     }
                     break;
                 case 5:
                     for (int i = 0; i < amount; i++)
                     {
-                        myAnimals.Add(new Sheep (_farmSize++, form1));
+                        myAnimals.Add(new Sheep (_farmSize, form1));
+                        _farmSize++;
                     }
                     break;
                 default:
