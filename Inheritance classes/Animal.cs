@@ -79,7 +79,7 @@ namespace HelloWorldWinForms
             _direction.X = rand.Next(0, 200) -100;
             _direction.Y = rand.Next(0, 200) -100;
             _direction.Normalize();
-            _direction *= 5;
+            _direction *= 10;
 
         }
         public double getX() { return _coordinates.X; }
