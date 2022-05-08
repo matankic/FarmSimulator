@@ -31,11 +31,7 @@ namespace HelloWorldWinForms
             audio.Play();
 
             label11.Text = myFarm.GetCreditRef().creditUpdate();
-            /*================================*/
 
-            /*================================*/
-            pictureBox2.Parent = pictureBox1;
-            pictureBox3.Parent = pictureBox1;
             save_btn.Parent = pictureBox1;
             load_btn.Parent = pictureBox1;
             label10.Parent = pictureBox1;
@@ -609,11 +605,6 @@ namespace HelloWorldWinForms
                 label32.Text = myFarm._cnt_pig.ToString();
                 label33.Text = myFarm._cnt_sheep.ToString();
             }
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-            //myChicken.makeNoise();
         }
     }
 }
