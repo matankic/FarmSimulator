@@ -15,6 +15,7 @@ namespace HelloWorldWinForms
         {
             _isLactating = false;
             _Pragnancy = 0;
+            _speed = 10;
         }
     }
 }

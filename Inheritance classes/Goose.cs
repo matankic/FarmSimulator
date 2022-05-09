@@ -14,6 +14,7 @@ namespace HelloWorldWinForms
     {  
         public const int _buy_goose = 100;
         public const int _sell_goose = 87;
+        private Random rand = new Random();
         public override void makeNoise()
         {
             noise = new SoundPlayer(Properties.Resources.GooseSound);
@@ -51,6 +52,20 @@ namespace HelloWorldWinForms
             ((System.ComponentModel.ISupportInitialize)(this.visual)).EndInit();
             //visual.Click += new System.EventHandler(this.visual_Click);
             visual.Parent = form1.pictureBox1;
+        }
+        public override void updateLocation(bool changeDirection)
+        {
+            if (changeDirection)
+                createDirection();
+            _coordinates += _direction;
+
+        }
+        public override void createDirection()
+        {
+            _direction.X = rand.Next(0, 200) - 100;
+            _direction.Y = rand.Next(0, 200) - 100;
+            _direction.Normalize();
+            _direction *= _speed;
         }
     }
 }
