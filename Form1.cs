@@ -342,7 +342,6 @@ namespace HelloWorldWinForms
                         }
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                     }
-                   myFarm._farmSize+= Int32.Parse(amount_lbl.Text);
                 }
             }
             catch
@@ -580,9 +579,9 @@ namespace HelloWorldWinForms
         {
             moveTickCount++;
             int i;
-            for (i = 0; i < myFarm._farmSize / 2; i++)
+            for (i = 0; i < myFarm._farmSize; i++)
             {
-                if (moveTickCount == 10)
+                if (moveTickCount == 20)
                 {
                     moveTickCount = 0;
                     myFarm.myAnimals[i].updateLocation(true);
