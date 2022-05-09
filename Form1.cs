@@ -579,22 +579,17 @@ namespace HelloWorldWinForms
         private void moveAnimal_Tick(object sender, EventArgs e)
         {
             moveTickCount++;
-            ////////
-            if(moveTickCount == 400)
-                moveTickCount = 0;
-            ////////
             int i;
             for (i = 0; i < myFarm._farmSize / 2; i++)
             {
-                //if (moveTickCount == 60)
-                //{
-                //    moveTickCount = 0;
-                //    myFarm.myAnimals[i].updateLocation(true);
-                //}
-                //else
-                //    myFarm.myAnimals[i].updateLocation(false);
-                //myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
-                myFarm.myAnimals[i].visual.Location = new Point(moveTickCount*2, moveTickCount);
+                if (moveTickCount == 10)
+                {
+                    moveTickCount = 0;
+                    myFarm.myAnimals[i].updateLocation(true);
+                }
+                else
+                    myFarm.myAnimals[i].updateLocation(false);
+                myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
             }
         }
 

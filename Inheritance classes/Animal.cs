@@ -28,6 +28,7 @@ namespace HelloWorldWinForms
         public Animal() {
             _coordinates.X = rand.Next(2, 760);
             _coordinates.Y = rand.Next(2, 540);
+            createDirection();
         }
         public virtual void makeNoise() { }
         public virtual void displayAnimal(Form1 form1) { }
@@ -67,11 +68,11 @@ namespace HelloWorldWinForms
             lbl8.Text = _coordinates.X.ToString();
             lbl9.Text = _coordinates.Y.ToString();
         }
-        public Vector updateLocation(bool changeDirection)
+        public void updateLocation(bool changeDirection)
         {
             if (changeDirection)
                 createDirection();
-            return _direction + _coordinates;
+            _coordinates += _direction;
             
         }
         public void createDirection()
@@ -79,7 +80,7 @@ namespace HelloWorldWinForms
             _direction.X = rand.Next(0, 200) -100;
             _direction.Y = rand.Next(0, 200) -100;
             _direction.Normalize();
-            _direction *= 10;
+            _direction *= 5;
 
         }
         public double getX() { return _coordinates.X; }
