@@ -43,7 +43,7 @@ namespace HelloWorldWinForms
             visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.goose;
             visual.Location = new System.Drawing.Point((int)_coordinates.X, (int)_coordinates.Y);
             visual.Name = "visual";
-            visual.Size = new System.Drawing.Size(61, 58);
+            visual.Size = new System.Drawing.Size(60, 60);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             visual.TabIndex = 13;
             visual.TabStop = false;
