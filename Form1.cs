@@ -598,6 +598,28 @@ namespace HelloWorldWinForms
             }
 
         }
+        private void displayAnimal(PictureBox visual, object sender, EventArgs e)
+        {
+            {
+                visual = new PictureBox();
+                ((System.ComponentModel.ISupportInitialize)(this.visual)).BeginInit();
+                visual.BackColor = System.Drawing.Color.Transparent;
+                visual.Cursor = System.Windows.Forms.Cursors.Hand;
+                visual.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+                visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+                visual.Location = new System.Drawing.Point((int)_coordinates.X, (int)_coordinates.Y);
+                visual.Name = "visual";
+                visual.Size = new System.Drawing.Size(32, 32);
+                visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+                visual.TabIndex = 13;
+                visual.TabStop = false;
+                this.Controls.Add(visual);
+                ((System.ComponentModel.ISupportInitialize)(visual)).EndInit();
+                visual.Click += new System.EventHandler(this.visual_Click);
+                visual.Parent = this.pictureBox1;
+            }
+        }
+
 
         private void load_btn_Click(object sender, EventArgs e)
         {
@@ -612,7 +634,7 @@ namespace HelloWorldWinForms
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 myFarm = (Farm)binaryFormatter.Deserialize(stream);
                 //pictureBox1.Invalidate();
-                if (myFarm.GetCreditRef().get_credit() < 0)
+                if (myFarm.GetCreditRef().get_credit() < 0) // COLOR CREDIT 
                 {
                     label11.ForeColor = Color.Red;
                     label12.ForeColor = Color.Red;
@@ -631,6 +653,7 @@ namespace HelloWorldWinForms
                 label31.Text = myFarm._cnt_cow.ToString();
                 label32.Text = myFarm._cnt_pig.ToString();
                 label33.Text = myFarm._cnt_sheep.ToString();
+
             }
         }
     }
