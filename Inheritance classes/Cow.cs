@@ -15,6 +15,7 @@ namespace HelloWorldWinForms
         public const int _buy_cow = 200;
         public const int _sell_cow = 180;
         private Random rand = new Random();
+        
         public override void makeNoise()
         {
             noise = new SoundPlayer(Properties.Resources.CowSound);
@@ -26,6 +27,8 @@ namespace HelloWorldWinForms
         }
         public Cow(int id, Form1 form1) : base()
         {
+            _coordinates.X = rand.Next(100, 700);
+            _coordinates.Y = rand.Next(100, 500);
             displayAnimal(form1);
             _id = id;
             _spieces = 3;
@@ -57,7 +60,11 @@ namespace HelloWorldWinForms
         {
             if (changeDirection)
                 createDirection();
+            if (_coordinates.X + _direction.X <= 0 || _coordinates.X + _direction.X >= 760 ||
+                _coordinates.Y + _direction.Y <= 0 || _coordinates.Y + _direction.Y >= 540)
+                _direction = -_direction;
             _coordinates += _direction;
+           
 
         }
         public override void createDirection()

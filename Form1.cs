@@ -579,17 +579,24 @@ namespace HelloWorldWinForms
         {
             moveTickCount++;
             int i;
-            for (i = 0; i < myFarm._farmSize; i++)
+            if (moveTickCount == 20)
             {
-                if (moveTickCount == 20)
+                moveTickCount = 0;
+                for (i = 0; i < myFarm._farmSize; i++)
                 {
-                    moveTickCount = 0;
                     myFarm.myAnimals[i].updateLocation(true);
+                    myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
                 }
-                else
-                    myFarm.myAnimals[i].updateLocation(false);
-                myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
             }
+            else
+            {
+                for (i = 0; i < myFarm._farmSize; i++)
+                {
+                    myFarm.myAnimals[i].updateLocation(false);
+                    myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
+                }
+            }
+
         }
 
         private void load_btn_Click(object sender, EventArgs e)

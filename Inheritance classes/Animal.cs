@@ -26,10 +26,6 @@ namespace HelloWorldWinForms
         private bool _sex, _isFertile;
        
         public Animal() {
-            _coordinates.X = rand.Next(2, 760);
-            _coordinates.Y = rand.Next(2, 540);
-            _coordinates.X = 0;
-            _coordinates.Y = 0;
             _speed = 3;
             createDirection();
         }
