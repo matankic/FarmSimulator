@@ -71,7 +71,7 @@ namespace HelloWorldWinForms
         }
         public override bool isInside(int X, int Y)
         {
-            return Math.Abs(X - _coordinates.X) <= 32 && Math.Abs(Y - _coordinates.Y) <= 32;
+            return Math.Abs(X - _coordinates.X) <= 64 && Math.Abs(Y - _coordinates.Y) <= 64;
         }
     }
 }
