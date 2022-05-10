@@ -1009,7 +1009,7 @@
             // 
             // panelBar
             // 
-            this.panelBar.BackColor = System.Drawing.SystemColors.Control;
+            this.panelBar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelBar.Location = new System.Drawing.Point(244, 533);
             this.panelBar.Name = "panelBar";
