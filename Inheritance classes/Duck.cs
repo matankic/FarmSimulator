@@ -58,12 +58,19 @@ namespace HelloWorldWinForms
         public override void updateLocation(bool changeDirection)
         {
             if (changeDirection)
-                createDirection(); 
+                createDirection();
             if (_coordinates.X + _direction.X <= 130 || _coordinates.X + _direction.X >= 760 ||
-                 _coordinates.Y + _direction.Y <= 0 || _coordinates.Y + _direction.Y >= 540)
+                _coordinates.Y + _direction.Y <= 0 || _coordinates.Y + _direction.Y >= 540)
+            {
+                if (_coordinates.X + _direction.X <= 130 && _coordinates.X + _direction.X > 0 &&
+                    _coordinates.Y + _direction.Y > 30 && _coordinates.Y + _direction.Y < 480)
+                {
+                    _coordinates += _direction;
+                    return;
+                }
                 _direction = -_direction;
+            }
             _coordinates += _direction;
-
         }
         public override void createDirection()
         {
