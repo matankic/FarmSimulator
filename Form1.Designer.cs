@@ -1011,6 +1011,7 @@
             // 
             this.panelBar.BackColor = System.Drawing.SystemColors.ControlLight;
             this.panelBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panelBar.Cursor = System.Windows.Forms.Cursors.Cross;
             this.panelBar.Location = new System.Drawing.Point(244, 533);
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(317, 50);
