@@ -1074,7 +1074,15 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
-
+            //
+            // others, added by developer
+            //
+            this.save_btn.Parent = pictureBox1;
+            this.load_btn.Parent = pictureBox1;
+            this.label10.Parent = pictureBox1;
+            this.label9.Parent = pictureBox1;
+            this.label8.Parent = pictureBox1;
+            this.label7.Parent = pictureBox1;
         }
 
         #endregion

@@ -36,25 +36,6 @@ namespace HelloWorldWinForms
         {
 
         }
-        public override void displayAnimal(Form1 form1)
-        {
-            visual = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.visual)).BeginInit();
-            visual.BackColor = System.Drawing.Color.Transparent;
-            visual.Cursor = System.Windows.Forms.Cursors.Hand;
-            visual.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            visual.Location = new System.Drawing.Point((int)_coordinates.X, (int)_coordinates.Y);
-            visual.Name = "visual";
-            visual.Size = new System.Drawing.Size(32, 32);
-            visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            visual.TabIndex = 13;
-            visual.TabStop = false;
-            form1.Controls.Add(this.visual);
-            ((System.ComponentModel.ISupportInitialize)(this.visual)).EndInit();
-            //visual.Click += new System.EventHandler(this.visual_Click);
-            visual.Parent = form1.pictureBox1;
-        }
         public override void updateLocation(bool changeDirection)
         {
             if (changeDirection)

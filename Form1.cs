@@ -36,12 +36,6 @@ namespace HelloWorldWinForms
 
             label11.Text = myFarm.GetCreditRef().creditUpdate();
 
-            save_btn.Parent = pictureBox1;
-            load_btn.Parent = pictureBox1;
-            label10.Parent = pictureBox1;
-            label9.Parent = pictureBox1;
-            label8.Parent = pictureBox1;
-            label7.Parent = pictureBox1;
         }
 
         private void sell_btn_Click(object sender, EventArgs e)
@@ -548,11 +542,6 @@ namespace HelloWorldWinForms
             counter++;
         }
         
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            //myGoose.makeNoise();
-        }
-
         private void search_icon_Click(object sender, EventArgs e)
         {
             searchBox.Text = "!!!!!!!!!!!!!it's working!!";
