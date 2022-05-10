@@ -72,6 +72,16 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap chicken_rice {
+            get {
+                object obj = ResourceManager.GetObject("chicken_rice", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Chicken_Strut {
             get {
                 object obj = ResourceManager.GetObject("Chicken_Strut", resourceCulture);
@@ -129,6 +139,16 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap egg {
+            get {
+                object obj = ResourceManager.GetObject("egg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap goose {
             get {
                 object obj = ResourceManager.GetObject("goose", resourceCulture);
@@ -151,6 +171,26 @@ namespace HelloWorldWinForms.Properties {
         internal static System.Drawing.Bitmap grass_jpg {
             get {
                 object obj = ResourceManager.GetObject("grass.jpg", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap meat {
+            get {
+                object obj = ResourceManager.GetObject("meat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap milking {
+            get {
+                object obj = ResourceManager.GetObject("milking", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -225,9 +265,29 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap syringe {
+            get {
+                object obj = ResourceManager.GetObject("syringe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap upload_big_arrow {
             get {
                 object obj = ResourceManager.GetObject("upload_big_arrow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap water_drop {
+            get {
+                object obj = ResourceManager.GetObject("water_drop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
