@@ -7,6 +7,7 @@ using System.Media;
 using System.Windows.Forms;
 using System.Drawing;
 
+
 namespace HelloWorldWinForms
 {
     [Serializable]
@@ -69,6 +70,10 @@ namespace HelloWorldWinForms
             _direction.Y = rand.Next(0, _id * 100) - 100 - _id * 50;
             _direction.Normalize();
             _direction *= _speed;
+        }
+        public override bool isInside(int X, int Y)
+        {
+            return Math.Abs(X - _coordinates.X) <= 30 && Math.Abs(Y - _coordinates.Y) <= 30; 
         }
     }
 }

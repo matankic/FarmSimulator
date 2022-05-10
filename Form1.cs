@@ -18,6 +18,7 @@ namespace HelloWorldWinForms
     { 
         //Fields
         private int counter, moveTickCount, curIndex;
+        private double rememberSpeed;
         private Farm myFarm = new Farm();
         private SoundPlayer audio = new SoundPlayer(Properties.Resources.song)
             , buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
@@ -26,7 +27,9 @@ namespace HelloWorldWinForms
         //Methods
         public Form1()
         {
+           
             InitializeComponent();
+            curIndex = 0;
             moveTickCount = counter = 0;
             timer1.Start();
             moveAnimal.Start();
@@ -659,7 +662,7 @@ namespace HelloWorldWinForms
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            int i, remeberSpeed;
+            int i;
             for (i=0;i<myFarm._farmSize;i++)
             {
                 if(myFarm.myAnimals[i].isInside(e.X,e.Y))
@@ -667,7 +670,7 @@ namespace HelloWorldWinForms
                     string s = e.Button.ToString();
                     if(s== "Left")
                     {
-                        remeberSpeed = myFarm.myAnimals[i].getSpeed(); //fix
+                        rememberSpeed = myFarm.myAnimals[i].getSpeed(); //fix
                         myFarm.myAnimals[i].setSpeed(0);
                         curIndex = i;
                         break;
@@ -679,8 +682,10 @@ namespace HelloWorldWinForms
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
-            Animal a = (Animal)myFarm.myAnimals[curIndex];
-            a.SetX(e.X); a.SetY(e.Y);
+            myFarm.myAnimals[curIndex].SetX(e.X);
+            myFarm.myAnimals[curIndex].SetY(e.Y);
+           
+           // pictureBox1.Invalidate();
         }
 
         private void displayAnimals() // For load button only!

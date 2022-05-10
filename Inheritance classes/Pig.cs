@@ -69,5 +69,9 @@ namespace HelloWorldWinForms
             _direction.Normalize();
             _direction *= _speed;
         }
+        public override bool isInside(int X, int Y)
+        {
+            return Math.Abs(X - _coordinates.X) <= 30 && Math.Abs(Y - _coordinates.Y) <= 30;
+        }
     }
 }
