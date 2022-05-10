@@ -39,31 +39,49 @@ namespace HelloWorldWinForms
         }
         public void AddAnimalToList(int amount, int type) 
         {
-            switch (type){
+            switch (type) {
                 case 0:
                     for (int i = 0; i < amount; i++)
-                        myAnimals.Add(new Chicken(_farmSize++));
+                    {
+                        myAnimals.Add(new Chicken(_farmSize));
+                        _farmSize++;
+                    }
                     break;
                 case 1:
                     for (int i = 0; i < amount; i++)
-                        myAnimals.Add(new Duck(_farmSize++));
+                    {
+                        myAnimals.Add(new Duck(_farmSize));
+                        _farmSize++;
+                    }
+
                     break;
                 case 2:
                     for (int i = 0; i < amount; i++)
-                        myAnimals.Add(new Goose(_farmSize++));
+                    {
+                        myAnimals.Add(new Goose(_farmSize));
+                        _farmSize++;
+                    }
                     break;
                 case 3:
                     for (int i = 0; i < amount; i++)
-                        myAnimals.Add(new Cow(_farmSize++));
+                    {
+                        myAnimals.Add(new Cow(_farmSize));
+                        _farmSize++;
 
-                    break;
+                    }                    break;
                 case 4:
                     for (int i = 0; i < amount; i++)
-                        myAnimals.Add(new Pig(_farmSize++));
+                    {
+                        myAnimals.Add(new Pig(_farmSize));
+                        _farmSize++;
+                    }
                     break;
                 case 5:
                     for (int i = 0; i < amount; i++)
-                        myAnimals.Add(new Sheep (_farmSize++));
+                    {
+                        myAnimals.Add(new Sheep(_farmSize));
+                        _farmSize++;
+                    }
                     break;
                 default:
                     break;

@@ -22,10 +22,12 @@ namespace HelloWorldWinForms
         }
         public Duck() : base()
         {
+            visual = new PictureBox();
             _spieces = 1;
         }
         public Duck(int id) : base()
         {
+            visual = new PictureBox();
             _coordinates.X = rand.Next(140, 700);
             _coordinates.Y = rand.Next(100, 500);
             _id = id;

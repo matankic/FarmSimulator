@@ -254,7 +254,10 @@ namespace HelloWorldWinForms
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_chicken += Int32.Parse(amount_lbl.Text);
                         lbl_1.Text =myFarm._cnt_chicken.ToString();
+                        int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 0);
+
+                        displayAnimals(begin, myFarm._farmSize);
 
                         if (myFarm.GetCreditRef().get_credit() < 0)
                         {
@@ -268,7 +271,10 @@ namespace HelloWorldWinForms
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_goose += Int32.Parse(amount_lbl.Text);
                         label30.Text =myFarm._cnt_goose.ToString();
+                        int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 2);
+
+                        displayAnimals(begin, myFarm._farmSize);
 
                         if (myFarm.GetCreditRef().get_credit() < 0)
                         {
@@ -282,7 +288,10 @@ namespace HelloWorldWinForms
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_pig += Int32.Parse(amount_lbl.Text);
                         label32.Text =myFarm._cnt_pig.ToString();
+                        int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 4);
+
+                        displayAnimals(begin, myFarm._farmSize);
 
                         if (myFarm.GetCreditRef().get_credit() < 0)
                         {
@@ -296,8 +305,10 @@ namespace HelloWorldWinForms
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_sheep += Int32.Parse(amount_lbl.Text);
                         label33.Text =myFarm._cnt_sheep.ToString();
+                        int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 5);
 
+                        displayAnimals(begin, myFarm._farmSize);
 
                         if (myFarm.GetCreditRef().get_credit() < 0)
                         {
@@ -311,8 +322,10 @@ namespace HelloWorldWinForms
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_duck += Int32.Parse(amount_lbl.Text);
                         label29.Text =myFarm._cnt_duck.ToString();
+                        int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 1);
 
+                        displayAnimals(begin, myFarm._farmSize);
 
                         if (myFarm.GetCreditRef().get_credit() < 0)
                         {
@@ -326,8 +339,10 @@ namespace HelloWorldWinForms
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_cow += Int32.Parse(amount_lbl.Text);
                         label31.Text =myFarm._cnt_cow.ToString();
+                        int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 3);
 
+                        displayAnimals(begin, myFarm._farmSize);
 
                         if (myFarm.GetCreditRef().get_credit() < 0)
                         {
@@ -587,7 +602,22 @@ namespace HelloWorldWinForms
             }
 
         }
-        private void displayAnimals()
+
+        private void displayAnimals(int begin, int end)
+        {
+            int i;
+            for (i = begin; i < end; i++)
+            {
+                ((System.ComponentModel.ISupportInitialize)(myFarm.myAnimals[i].visual)).BeginInit();
+                myFarm.myAnimals[i].displayAnimal();
+                myFarm.myAnimals[i].visual.Name = "visual" + i;
+                this.Controls.Add(myFarm.myAnimals[i].visual);
+                ((System.ComponentModel.ISupportInitialize)(myFarm.myAnimals[i].visual)).EndInit();
+                myFarm.myAnimals[i].visual.Parent = this.pictureBox1;
+            }
+        }
+
+        private void displayAnimals() // For load button
         {
             int i;
             for (i = 0; i < myFarm._farmSize; i++)
