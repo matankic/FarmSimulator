@@ -613,7 +613,7 @@ namespace HelloWorldWinForms
             }
         }
 
-        private void displayAnimals() // For load button
+        private void displayAnimals() // For load button only!
         {
             int i;
             for (i = 0; i < myFarm._farmSize; i++)

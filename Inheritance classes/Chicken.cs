@@ -35,7 +35,7 @@ namespace HelloWorldWinForms
         {
 
         }
-        public override void displayAnimal(PictureBox visual)
+        public override void displayAnimal(ref PictureBox visual)
         {
             visual.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
             visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
