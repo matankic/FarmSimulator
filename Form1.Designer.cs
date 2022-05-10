@@ -103,6 +103,7 @@
             this.save_btn = new System.Windows.Forms.PictureBox();
             this.search_icon = new System.Windows.Forms.PictureBox();
             this.moveAnimal = new System.Windows.Forms.Timer(this.components);
+            this.panelBar = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -1005,6 +1006,13 @@
             this.moveAnimal.Interval = 20;
             this.moveAnimal.Tick += new System.EventHandler(this.moveAnimal_Tick);
             // 
+            // panelBar
+            // 
+            this.panelBar.Location = new System.Drawing.Point(169, 534);
+            this.panelBar.Name = "panelBar";
+            this.panelBar.Size = new System.Drawing.Size(499, 48);
+            this.panelBar.TabIndex = 20;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1012,6 +1020,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1136, 575);
+            this.Controls.Add(this.panelBar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
@@ -1151,6 +1160,7 @@
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Timer moveAnimal;
+        private System.Windows.Forms.Panel panelBar;
     }
 }
 
