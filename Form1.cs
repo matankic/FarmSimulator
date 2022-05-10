@@ -31,6 +31,13 @@ namespace HelloWorldWinForms
             moveAnimal.Start();
             audio.Play();
             label11.Text = myFarm.GetCreditRef().creditUpdate();
+
+            this.save_btn.Parent = pictureBox1;
+            this.load_btn.Parent = pictureBox1;
+            this.label10.Parent = pictureBox1;
+            this.label9.Parent = pictureBox1;
+            this.label8.Parent = pictureBox1;
+            this.label7.Parent = pictureBox1;
         }
 
         private void sell_btn_Click(object sender, EventArgs e)
