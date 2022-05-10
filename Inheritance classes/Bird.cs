@@ -13,7 +13,7 @@ namespace HelloWorldWinForms
         public Bird() : base()
         {
             _eggs = 0;
-            _speed = 3;
+            _speed = 5;
         }
 
     }
