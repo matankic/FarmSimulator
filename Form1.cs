@@ -17,11 +17,12 @@ namespace HelloWorldWinForms
     internal partial class Form1 : Form
     { 
         //Fields
-        private int counter, moveTickCount;
+        private int counter, moveTickCount, curIndex;
         private Farm myFarm = new Farm();
         private SoundPlayer audio = new SoundPlayer(Properties.Resources.song)
             , buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
         public List<PictureBox> visualAnimals = new List<PictureBox>();
+        
         //Methods
         public Form1()
         {
@@ -654,6 +655,32 @@ namespace HelloWorldWinForms
         private void pictureBox7_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            int i, remeberSpeed;
+            for (i=0;i<myFarm._farmSize;i++)
+            {
+                if(myFarm.myAnimals[i].isInside(e.X,e.Y))
+                {
+                    string s = e.Button.ToString();
+                    if(s== "Left")
+                    {
+                        remeberSpeed = myFarm.myAnimals[i].getSpeed(); //fix
+                        myFarm.myAnimals[i].setSpeed(0);
+                        curIndex = i;
+                        break;
+                    }
+                }
+            }
+            
+        }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            Animal a = (Animal)myFarm.myAnimals[curIndex];
+            a.SetX(e.X); a.SetY(e.Y);
         }
 
         private void displayAnimals() // For load button only!

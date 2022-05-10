@@ -32,6 +32,7 @@ namespace HelloWorldWinForms
         }
         public virtual void makeNoise() { }
         public virtual void displayAnimal(PictureBox visual) { }
+        public virtual bool isInside(int X, int Y) { }
         public void updateAnimal()
         {
             _age += 10; //TODO : adjust to the amount of world time
@@ -72,6 +73,9 @@ namespace HelloWorldWinForms
         public virtual void createDirection() { }
         public double getX() { return _coordinates.X; }
         public double getY() { return _coordinates.Y; }
+        public void SetX(int val) { _coordinates.X=(double)val} 
+        public void SetY(int val) { _coordinates.Y=(double)val} 
+        
 
     }
 }
