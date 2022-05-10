@@ -30,7 +30,6 @@ namespace HelloWorldWinForms
             visual = new PictureBox();
             _coordinates.X = rand.Next(140, 700);
             _coordinates.Y = rand.Next(100, 500);
-            displayAnimal();
             _id = id;
             _spieces = 0;
         }
