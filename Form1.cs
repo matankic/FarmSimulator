@@ -621,6 +621,11 @@ namespace HelloWorldWinForms
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void displayAnimals() // For load button only!
         {
             int i;

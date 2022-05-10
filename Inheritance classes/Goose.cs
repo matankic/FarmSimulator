@@ -64,8 +64,8 @@ namespace HelloWorldWinForms
         }
         public override void createDirection()
         {
-            _direction.X = rand.Next(0, 200) - 100;
-            _direction.Y = rand.Next(0, 200) - 100;
+            _direction.X = rand.Next(0, 200 + (_id + 1) * 100) - 100 - (_id + 1) * 50;
+            _direction.Y = rand.Next(0, 200 + (_id + 1) * 100) - 100 - (_id + 1) * 50;
             _direction.Normalize();
             _direction *= _speed;
         }
