@@ -56,7 +56,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label34 = new System.Windows.Forms.Label();
             this.Chicken_radio = new System.Windows.Forms.RadioButton();
             this.Duck_radio = new System.Windows.Forms.RadioButton();
@@ -99,31 +98,33 @@
             this.Animal_stats = new System.Windows.Forms.Panel();
             this.searchBox = new System.Windows.Forms.ComboBox();
             this.moveAnimal = new System.Windows.Forms.Timer(this.components);
-            this.panelBar = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.tools_pnl = new System.Windows.Forms.Panel();
+            this.heal_btn = new System.Windows.Forms.PictureBox();
+            this.egg_btn = new System.Windows.Forms.PictureBox();
+            this.milk_btn = new System.Windows.Forms.PictureBox();
+            this.water_btn = new System.Windows.Forms.PictureBox();
+            this.feed_btn = new System.Windows.Forms.PictureBox();
+            this.meat_btn = new System.Windows.Forms.PictureBox();
             this.load_btn = new System.Windows.Forms.PictureBox();
             this.save_btn = new System.Windows.Forms.PictureBox();
             this.search_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.Animal_stats.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            this.tools_pnl.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.heal_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.egg_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.water_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meat_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_1
@@ -517,19 +518,6 @@
             this.comboBox1.Text = "Select / type value";
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox4.Location = new System.Drawing.Point(181, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(66, 69);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
             // 
             // label34
             // 
@@ -968,29 +956,105 @@
             this.moveAnimal.Interval = 20;
             this.moveAnimal.Tick += new System.EventHandler(this.moveAnimal_Tick);
             // 
-            // panelBar
+            // tools_pnl
             // 
-            this.panelBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(34)))), ((int)(((byte)(54)))));
-            this.panelBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelBar.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.panelBar.Location = new System.Drawing.Point(244, 533);
-            this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(317, 50);
-            this.panelBar.TabIndex = 20;
+            this.tools_pnl.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.tools_pnl.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(30)))), ((int)(((byte)(60)))));
+            this.tools_pnl.BackgroundImage = global::HelloWorldWinForms.Properties.Resources.planel;
+            this.tools_pnl.Controls.Add(this.heal_btn);
+            this.tools_pnl.Controls.Add(this.egg_btn);
+            this.tools_pnl.Controls.Add(this.milk_btn);
+            this.tools_pnl.Controls.Add(this.water_btn);
+            this.tools_pnl.Controls.Add(this.feed_btn);
+            this.tools_pnl.Controls.Add(this.meat_btn);
+            this.tools_pnl.Location = new System.Drawing.Point(180, 489);
+            this.tools_pnl.Name = "tools_pnl";
+            this.tools_pnl.Size = new System.Drawing.Size(440, 80);
+            this.tools_pnl.TabIndex = 20;
             // 
-            // pictureBox2
+            // heal_btn
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox2.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox2.Image = global::HelloWorldWinForms.Properties.Resources.syringe;
-            this.pictureBox2.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox2.Location = new System.Drawing.Point(190, 505);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(66, 68);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 13;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.heal_btn.BackColor = System.Drawing.Color.Transparent;
+            this.heal_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.heal_btn.Image = global::HelloWorldWinForms.Properties.Resources.syringe;
+            this.heal_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.heal_btn.Location = new System.Drawing.Point(6, 10);
+            this.heal_btn.Name = "heal_btn";
+            this.heal_btn.Size = new System.Drawing.Size(66, 60);
+            this.heal_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.heal_btn.TabIndex = 13;
+            this.heal_btn.TabStop = false;
+            this.heal_btn.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // egg_btn
+            // 
+            this.egg_btn.BackColor = System.Drawing.Color.Transparent;
+            this.egg_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.egg_btn.Image = global::HelloWorldWinForms.Properties.Resources.egg;
+            this.egg_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.egg_btn.Location = new System.Drawing.Point(366, 10);
+            this.egg_btn.Name = "egg_btn";
+            this.egg_btn.Size = new System.Drawing.Size(66, 60);
+            this.egg_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.egg_btn.TabIndex = 13;
+            this.egg_btn.TabStop = false;
+            this.egg_btn.Click += new System.EventHandler(this.pictureBox8_Click);
+            // 
+            // milk_btn
+            // 
+            this.milk_btn.BackColor = System.Drawing.Color.Transparent;
+            this.milk_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.milk_btn.Image = global::HelloWorldWinForms.Properties.Resources.milking;
+            this.milk_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.milk_btn.Location = new System.Drawing.Point(294, 10);
+            this.milk_btn.Name = "milk_btn";
+            this.milk_btn.Size = new System.Drawing.Size(66, 60);
+            this.milk_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.milk_btn.TabIndex = 13;
+            this.milk_btn.TabStop = false;
+            this.milk_btn.Click += new System.EventHandler(this.pictureBox7_Click);
+            // 
+            // water_btn
+            // 
+            this.water_btn.BackColor = System.Drawing.Color.Transparent;
+            this.water_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.water_btn.Image = global::HelloWorldWinForms.Properties.Resources.water_drop;
+            this.water_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.water_btn.Location = new System.Drawing.Point(150, 10);
+            this.water_btn.Name = "water_btn";
+            this.water_btn.Size = new System.Drawing.Size(66, 60);
+            this.water_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.water_btn.TabIndex = 13;
+            this.water_btn.TabStop = false;
+            this.water_btn.Click += new System.EventHandler(this.pictureBox5_Click);
+            // 
+            // feed_btn
+            // 
+            this.feed_btn.BackColor = System.Drawing.Color.Transparent;
+            this.feed_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.feed_btn.Image = global::HelloWorldWinForms.Properties.Resources.chicken_rice;
+            this.feed_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.feed_btn.Location = new System.Drawing.Point(78, 10);
+            this.feed_btn.Name = "feed_btn";
+            this.feed_btn.Size = new System.Drawing.Size(66, 60);
+            this.feed_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.feed_btn.TabIndex = 13;
+            this.feed_btn.TabStop = false;
+            this.feed_btn.Click += new System.EventHandler(this.pictureBox3_Click);
+            // 
+            // meat_btn
+            // 
+            this.meat_btn.BackColor = System.Drawing.Color.Transparent;
+            this.meat_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.meat_btn.Image = global::HelloWorldWinForms.Properties.Resources.meat;
+            this.meat_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.meat_btn.Location = new System.Drawing.Point(222, 10);
+            this.meat_btn.Name = "meat_btn";
+            this.meat_btn.Size = new System.Drawing.Size(66, 60);
+            this.meat_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.meat_btn.TabIndex = 13;
+            this.meat_btn.TabStop = false;
+            this.meat_btn.Click += new System.EventHandler(this.pictureBox6_Click);
             // 
             // load_btn
             // 
@@ -1044,75 +1108,18 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
-            // pictureBox3
+            // pictureBox4
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox3.Image = global::HelloWorldWinForms.Properties.Resources.chicken_rice;
-            this.pictureBox3.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox3.Location = new System.Drawing.Point(262, 505);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(66, 68);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 13;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Click += new System.EventHandler(this.pictureBox3_Click);
-            // 
-            // pictureBox5
-            // 
-            this.pictureBox5.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox5.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox5.Image = global::HelloWorldWinForms.Properties.Resources.water_drop;
-            this.pictureBox5.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox5.Location = new System.Drawing.Point(334, 505);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(66, 68);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox5.TabIndex = 13;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Click += new System.EventHandler(this.pictureBox5_Click);
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox6.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox6.Image = global::HelloWorldWinForms.Properties.Resources.meat;
-            this.pictureBox6.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox6.Location = new System.Drawing.Point(406, 505);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(66, 68);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 13;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Click += new System.EventHandler(this.pictureBox6_Click);
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox7.Image = global::HelloWorldWinForms.Properties.Resources.milking;
-            this.pictureBox7.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox7.Location = new System.Drawing.Point(478, 505);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(66, 68);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 13;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Click += new System.EventHandler(this.pictureBox7_Click);
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox8.Image = global::HelloWorldWinForms.Properties.Resources.egg;
-            this.pictureBox8.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox8.Location = new System.Drawing.Point(550, 505);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(66, 68);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox8.TabIndex = 13;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.Location = new System.Drawing.Point(181, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(66, 69);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
             // 
             // Form1
             // 
@@ -1121,13 +1128,7 @@
             this.BackColor = System.Drawing.SystemColors.Control;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1136, 575);
-            this.Controls.Add(this.pictureBox8);
-            this.Controls.Add(this.pictureBox7);
-            this.Controls.Add(this.pictureBox6);
-            this.Controls.Add(this.pictureBox5);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.panelBar);
+            this.Controls.Add(this.tools_pnl);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label10);
@@ -1182,19 +1183,20 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.Animal_stats.ResumeLayout(false);
             this.Animal_stats.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            this.tools_pnl.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.heal_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.egg_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.water_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meat_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1274,13 +1276,13 @@
         public System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label46;
         private System.Windows.Forms.Timer moveAnimal;
-        private System.Windows.Forms.Panel panelBar;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.PictureBox pictureBox6;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox heal_btn;
+        private System.Windows.Forms.PictureBox feed_btn;
+        private System.Windows.Forms.PictureBox water_btn;
+        private System.Windows.Forms.PictureBox meat_btn;
+        private System.Windows.Forms.PictureBox milk_btn;
+        private System.Windows.Forms.PictureBox egg_btn;
+        private System.Windows.Forms.Panel tools_pnl;
     }
 }
 

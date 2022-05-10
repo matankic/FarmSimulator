@@ -217,6 +217,26 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap planel {
+            get {
+                object obj = ResourceManager.GetObject("planel", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap planel1 {
+            get {
+                object obj = ResourceManager.GetObject("planel1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_file {
             get {
                 object obj = ResourceManager.GetObject("save_file", resourceCulture);
