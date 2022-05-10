@@ -61,10 +61,6 @@ namespace HelloWorldWinForms
                 createDirection();
             if (_coordinates.X + _direction.X <= 130 || _coordinates.X + _direction.X >= 760 ||
                 _coordinates.Y + _direction.Y <= 0 || _coordinates.Y + _direction.Y >= 540)
-            {
-
-
-            }
                 _direction = -_direction;
             _coordinates += _direction;
 
