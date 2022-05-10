@@ -29,7 +29,7 @@ namespace HelloWorldWinForms
             createDirection();
         }
         public virtual void makeNoise() { }
-        public virtual void displayAnimal(ref PictureBox visual) { }
+        public virtual void displayAnimal(PictureBox visual) { }
         public void updateAnimal()
         {
             _age += 10; //TODO : adjust to the amount of world time

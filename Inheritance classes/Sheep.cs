@@ -35,7 +35,7 @@ namespace HelloWorldWinForms
         {
 
         }
-        public override void displayAnimal(ref PictureBox visual)
+        public override void displayAnimal(PictureBox visual)
         {
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
