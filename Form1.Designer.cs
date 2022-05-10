@@ -967,6 +967,7 @@
             this.tools_pnl.Controls.Add(this.water_btn);
             this.tools_pnl.Controls.Add(this.feed_btn);
             this.tools_pnl.Controls.Add(this.meat_btn);
+            this.tools_pnl.Cursor = System.Windows.Forms.Cursors.Cross;
             this.tools_pnl.Location = new System.Drawing.Point(180, 489);
             this.tools_pnl.Name = "tools_pnl";
             this.tools_pnl.Size = new System.Drawing.Size(440, 80);
