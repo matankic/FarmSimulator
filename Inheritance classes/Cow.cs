@@ -27,8 +27,6 @@ namespace HelloWorldWinForms
         }
         public Cow(int id) : base()
         {
-            _coordinates.X = rand.Next(140, 700);
-            _coordinates.Y = rand.Next(100, 500);
             _id = id;
             _spieces = 3;
         }
