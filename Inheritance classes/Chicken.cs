@@ -22,13 +22,15 @@ namespace HelloWorldWinForms
         }
         public Chicken() : base()
         {
+            visual = new PictureBox();
             _spieces = 0;
         }
-        public Chicken(int id, Form1 form1) : base()
+        public Chicken(int id) : base()
         {
+            visual = new PictureBox();
             _coordinates.X = rand.Next(140, 700);
             _coordinates.Y = rand.Next(100, 500);
-            displayAnimal(form1);
+            displayAnimal();
             _id = id;
             _spieces = 0;
         }
@@ -36,24 +38,17 @@ namespace HelloWorldWinForms
         {
 
         }
-        public override void displayAnimal(Form1 form1)
+        public override void displayAnimal()
         {
-            visual = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.visual)).BeginInit();
-            visual.BackColor = System.Drawing.Color.Transparent;
-            visual.Cursor = System.Windows.Forms.Cursors.Hand;
             visual.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
             visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            visual.Location = new System.Drawing.Point((int)_coordinates.X, (int)_coordinates.Y);
-            visual.Name = "visual";
             visual.Size = new System.Drawing.Size(32, 32);
+            visual.BackColor = System.Drawing.Color.Transparent;
+            visual.Cursor = System.Windows.Forms.Cursors.Hand;
+            visual.Location = new System.Drawing.Point((int)getX(), (int)getY());
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             visual.TabIndex = 13;
             visual.TabStop = false;
-            form1.Controls.Add(this.visual);
-            ((System.ComponentModel.ISupportInitialize)(this.visual)).EndInit();
-            //visual.Click += new System.EventHandler(this.visual_Click);
-            visual.Parent = form1.pictureBox1;
         }
         public override void updateLocation(bool changeDirection)
         {

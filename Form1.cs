@@ -587,25 +587,18 @@ namespace HelloWorldWinForms
             }
 
         }
-        private void displayAnimal(object sender, EventArgs e)
+        private void displayAnimals(object sender, EventArgs e)
         {
+            int i;
+            for (i = 0; i < myFarm._farmSize; i++)
             {
-                visual = new PictureBox();
-                ((System.ComponentModel.ISupportInitialize)(this.visual)).BeginInit();
-                visual.BackColor = System.Drawing.Color.Transparent;
-                visual.Cursor = System.Windows.Forms.Cursors.Hand;
-                visual.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-                visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-                visual.Location = new System.Drawing.Point((int)_coordinates.X, (int)_coordinates.Y);
-                visual.Name = "visual";
-                visual.Size = new System.Drawing.Size(32, 32);
-                visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-                visual.TabIndex = 13;
-                visual.TabStop = false;
-                this.Controls.Add(visual);
-                ((System.ComponentModel.ISupportInitialize)(visual)).EndInit();
-                visual.Click += new System.EventHandler(this.visual_Click);
-                visual.Parent = this.pictureBox1;
+                ((System.ComponentModel.ISupportInitialize)(myFarm.myAnimals[i].visual)).BeginInit();
+
+
+                myFarm.myAnimals[i].visual.Name = "visual" + i;
+                this.Controls.Add(myFarm.myAnimals[i].visual);
+                ((System.ComponentModel.ISupportInitialize)(myFarm.myAnimals[i].visual)).EndInit();
+                myFarm.myAnimals[i].visual.Parent = this.pictureBox1;
             }
         }
 

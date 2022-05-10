@@ -24,11 +24,11 @@ namespace HelloWorldWinForms
         {
             _spieces = 1;
         }
-        public Duck(int id, Form1 form1) : base()
+        public Duck(int id) : base()
         {
             _coordinates.X = rand.Next(140, 700);
             _coordinates.Y = rand.Next(100, 500);
-            displayAnimal(form1);
+            displayAnimal();
             _id = id;
             _spieces = 1;
         }
@@ -36,24 +36,18 @@ namespace HelloWorldWinForms
         {
            
         }
-        public override void displayAnimal(Form1 form1)
+        public override void displayAnimal()
         {
-            visual = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.visual)).BeginInit();
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
             visual.Image = global::HelloWorldWinForms.Properties.Resources.duck;
             visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.duck;
-            visual.Location = new System.Drawing.Point((int)_coordinates.X, (int)_coordinates.Y);
-            visual.Name = "visual";
+            visual.Location = new System.Drawing.Point((int)getX(), (int)getY());
             visual.Size = new System.Drawing.Size(50, 40);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             visual.TabIndex = 13;
             visual.TabStop = false;
-            form1.Controls.Add(this.visual);
-            ((System.ComponentModel.ISupportInitialize)(this.visual)).EndInit();
-            //visual.Click += new System.EventHandler(this.visual_Click);
-            visual.Parent = form1.pictureBox1;
+
         }
         public override void updateLocation(bool changeDirection)
         {

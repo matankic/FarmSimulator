@@ -30,7 +30,7 @@ namespace HelloWorldWinForms
             createDirection();
         }
         public virtual void makeNoise() { }
-        public virtual void displayAnimal(Form1 form1) { }
+        public virtual void displayAnimal() { }
         public void updateAnimal()
         {
             _age += 10; //TODO : adjust to the amount of world time
