@@ -1008,9 +1008,10 @@
             // 
             // panelBar
             // 
-            this.panelBar.Location = new System.Drawing.Point(169, 534);
+            this.panelBar.BackColor = System.Drawing.SystemColors.Control;
+            this.panelBar.Location = new System.Drawing.Point(244, 533);
             this.panelBar.Name = "panelBar";
-            this.panelBar.Size = new System.Drawing.Size(499, 48);
+            this.panelBar.Size = new System.Drawing.Size(317, 50);
             this.panelBar.TabIndex = 20;
             // 
             // Form1
