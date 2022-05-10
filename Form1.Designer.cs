@@ -197,6 +197,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::HelloWorldWinForms.Properties.Resources.grass_jpg;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.Cursor = System.Windows.Forms.Cursors.Cross;
             this.pictureBox1.InitialImage = null;
             this.pictureBox1.Location = new System.Drawing.Point(-7, -3);
@@ -1009,6 +1010,7 @@
             // panelBar
             // 
             this.panelBar.BackColor = System.Drawing.SystemColors.Control;
+            this.panelBar.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panelBar.Location = new System.Drawing.Point(244, 533);
             this.panelBar.Name = "panelBar";
             this.panelBar.Size = new System.Drawing.Size(317, 50);
@@ -1030,7 +1032,6 @@
             this.Controls.Add(this.save_btn);
             this.Controls.Add(this.search_icon);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.Animal_stats);
             this.Controls.Add(this.sheep_radio);
             this.Controls.Add(this.searchBox);
             this.Controls.Add(this.pig_radio);
@@ -1059,9 +1060,10 @@
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.lbl_1);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.Animal_stats);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
