@@ -39,53 +39,33 @@ namespace HelloWorldWinForms
         }
         public void AddAnimalToList(int amount, int type) 
         {
-            switch (type) {
-                case 0:
-                    for (int i = 0; i < amount; i++)
-                    {
+            int i;
+            for (i = 0; i < amount; i++, _farmSize++)
+            {
+                switch (type)
+                {
+                    case 0:
                         myAnimals.Add(new Chicken(_farmSize));
-                        _farmSize++;
-                    }
-                    break;
-                case 1:
-                    for (int i = 0; i < amount; i++)
-                    {
+                        break;
+                    case 1:
                         myAnimals.Add(new Duck(_farmSize));
-                        _farmSize++;
-                    }
-
-                    break;
-                case 2:
-                    for (int i = 0; i < amount; i++)
-                    {
+                        break;
+                    case 2:
                         myAnimals.Add(new Goose(_farmSize));
-                        _farmSize++;
-                    }
-                    break;
-                case 3:
-                    for (int i = 0; i < amount; i++)
-                    {
+                        break;
+                    case 3:
                         myAnimals.Add(new Cow(_farmSize));
-                        _farmSize++;
-
-                    }                    break;
-                case 4:
-                    for (int i = 0; i < amount; i++)
-                    {
+                        break;
+                    case 4:
                         myAnimals.Add(new Pig(_farmSize));
-                        _farmSize++;
-                    }
-                    break;
-                case 5:
-                    for (int i = 0; i < amount; i++)
-                    {
+                        break;
+                    case 5:
                         myAnimals.Add(new Sheep(_farmSize));
-                        _farmSize++;
-                    }
-                    break;
-                default:
-                    break;
-            } 
+                        break;
+                    default:
+                        break;
+                }
+            }
         } 
     }
 }
