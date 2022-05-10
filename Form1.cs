@@ -586,8 +586,8 @@ namespace HelloWorldWinForms
                 }
             }
 
-        }/*
-        private void displayAnimal(PictureBox visual, object sender, EventArgs e)
+        }
+        private void displayAnimal(object sender, EventArgs e)
         {
             {
                 visual = new PictureBox();
@@ -608,7 +608,6 @@ namespace HelloWorldWinForms
                 visual.Parent = this.pictureBox1;
             }
         }
-        */
 
         private void load_btn_Click(object sender, EventArgs e)
         {
