@@ -17,25 +17,20 @@ namespace HelloWorldWinForms
     internal partial class Form1 : Form
     { 
         //Fields
-        private int counter;
+        private int counter, moveTickCount;
         private Farm myFarm = new Farm();
-        private SoundPlayer audio, buy_sell;
-        private int moveTickCount;
+        private SoundPlayer audio = new SoundPlayer(Properties.Resources.song)
+            , buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
+        public List<PictureBox> visualAnimals = new List<PictureBox>();
         //Methods
         public Form1()
         {
-            
             InitializeComponent();
+            moveTickCount = counter = 0;
             timer1.Start();
             moveAnimal.Start();
-            moveTickCount = 0; 
-            counter = 0;
-            audio = new SoundPlayer(Properties.Resources.song);
-            buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
             audio.Play();
-
             label11.Text = myFarm.GetCreditRef().creditUpdate();
-
         }
 
         private void sell_btn_Click(object sender, EventArgs e)
@@ -589,7 +584,7 @@ namespace HelloWorldWinForms
                 for (i = 0; i < myFarm._farmSize; i++)
                 {
                     myFarm.myAnimals[i].updateLocation(true);
-                    //myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
+                    visualAnimals[i].Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
                 }
             }
             else
@@ -597,7 +592,7 @@ namespace HelloWorldWinForms
                 for (i = 0; i < myFarm._farmSize; i++)
                 {
                     myFarm.myAnimals[i].updateLocation(false);
-                    //myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
+                    visualAnimals[i].Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
                 }
             }
 
@@ -608,13 +603,13 @@ namespace HelloWorldWinForms
             int i;
             for (i = begin; i < end; i++)
             {
-                PictureBox visual = new PictureBox();
-                ((System.ComponentModel.ISupportInitialize)(visual)).BeginInit();
-                myFarm.myAnimals[i].displayAnimal(visual);
-                visual.Name = "visual" + i;
-                this.Controls.Add(visual);
-                ((System.ComponentModel.ISupportInitialize)(visual)).EndInit();
-                visual.Parent = this.pictureBox1;
+                visualAnimals.Add(new PictureBox());
+                ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).BeginInit();
+                myFarm.myAnimals[i].displayAnimal(visualAnimals[i]);
+                visualAnimals[i].Name = "visual" + i;
+                this.Controls.Add(visualAnimals[i]);
+                ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).EndInit();
+                visualAnimals[i].Parent = this.pictureBox1;
             }
         }
 
@@ -623,13 +618,13 @@ namespace HelloWorldWinForms
             int i;
             for (i = 0; i < myFarm._farmSize; i++)
             {
-                PictureBox visual = new PictureBox();
-                ((System.ComponentModel.ISupportInitialize)(visual)).BeginInit();
-                myFarm.myAnimals[i].displayAnimal(visual);
-                visual.Name = "visual" + i;
-                this.Controls.Add(visual);
-                ((System.ComponentModel.ISupportInitialize)(visual)).EndInit();
-                visual.Parent = this.pictureBox1;
+                visualAnimals.Add(new PictureBox());
+                ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).BeginInit();
+                myFarm.myAnimals[i].displayAnimal(visualAnimals[i]);
+                visualAnimals[i].Name = "visual" + i;
+                this.Controls.Add(visualAnimals[i]);
+                ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).EndInit();
+                visualAnimals[i].Parent = this.pictureBox1;
             }
         }
 
