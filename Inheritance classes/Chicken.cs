@@ -22,12 +22,10 @@ namespace HelloWorldWinForms
         }
         public Chicken() : base()
         {
-            visual = new PictureBox();
             _spieces = 0;
         }
         public Chicken(int id) : base()
         {
-            visual = new PictureBox();
             _coordinates.X = rand.Next(140, 700);
             _coordinates.Y = rand.Next(100, 500);
             _id = id;
@@ -37,7 +35,7 @@ namespace HelloWorldWinForms
         {
 
         }
-        public override void displayAnimal()
+        public override void displayAnimal(PictureBox visual)
         {
             visual.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
             visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;

@@ -589,7 +589,7 @@ namespace HelloWorldWinForms
                 for (i = 0; i < myFarm._farmSize; i++)
                 {
                     myFarm.myAnimals[i].updateLocation(true);
-                    myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
+                    //myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
                 }
             }
             else
@@ -597,7 +597,7 @@ namespace HelloWorldWinForms
                 for (i = 0; i < myFarm._farmSize; i++)
                 {
                     myFarm.myAnimals[i].updateLocation(false);
-                    myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
+                    //myFarm.myAnimals[i].visual.Location = new Point((int)myFarm.myAnimals[i].getX(), (int)myFarm.myAnimals[i].getY());
                 }
             }
 
@@ -608,12 +608,13 @@ namespace HelloWorldWinForms
             int i;
             for (i = begin; i < end; i++)
             {
-                ((System.ComponentModel.ISupportInitialize)(myFarm.myAnimals[i].visual)).BeginInit();
-                myFarm.myAnimals[i].displayAnimal();
-                myFarm.myAnimals[i].visual.Name = "visual" + i;
-                this.Controls.Add(myFarm.myAnimals[i].visual);
-                ((System.ComponentModel.ISupportInitialize)(myFarm.myAnimals[i].visual)).EndInit();
-                myFarm.myAnimals[i].visual.Parent = this.pictureBox1;
+                PictureBox visual = new PictureBox();
+                ((System.ComponentModel.ISupportInitialize)(visual)).BeginInit();
+                myFarm.myAnimals[i].displayAnimal(visual);
+                visual.Name = "visual" + i;
+                this.Controls.Add(visual);
+                ((System.ComponentModel.ISupportInitialize)(visual)).EndInit();
+                visual.Parent = this.pictureBox1;
             }
         }
 
@@ -622,12 +623,13 @@ namespace HelloWorldWinForms
             int i;
             for (i = 0; i < myFarm._farmSize; i++)
             {
-                ((System.ComponentModel.ISupportInitialize)(myFarm.myAnimals[i].visual)).BeginInit();
-                myFarm.myAnimals[i].displayAnimal();
-                myFarm.myAnimals[i].visual.Name = "visual" + i;
-                this.Controls.Add(myFarm.myAnimals[i].visual);
-                ((System.ComponentModel.ISupportInitialize)(myFarm.myAnimals[i].visual)).EndInit();
-                myFarm.myAnimals[i].visual.Parent = this.pictureBox1;
+                PictureBox visual = new PictureBox();
+                ((System.ComponentModel.ISupportInitialize)(visual)).BeginInit();
+                myFarm.myAnimals[i].displayAnimal(visual);
+                visual.Name = "visual" + i;
+                this.Controls.Add(visual);
+                ((System.ComponentModel.ISupportInitialize)(visual)).EndInit();
+                visual.Parent = this.pictureBox1;
             }
         }
 

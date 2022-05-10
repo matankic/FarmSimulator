@@ -13,7 +13,6 @@ namespace HelloWorldWinForms
     internal class Animal
     {
         protected SoundPlayer noise;
-        public PictureBox visual;
         private Random rand = new Random();
         public virtual string _name { get; set; }
         private Time _age;
@@ -30,7 +29,7 @@ namespace HelloWorldWinForms
             createDirection();
         }
         public virtual void makeNoise() { }
-        public virtual void displayAnimal() { }
+        public virtual void displayAnimal(PictureBox visual) { }
         public void updateAnimal()
         {
             _age += 10; //TODO : adjust to the amount of world time

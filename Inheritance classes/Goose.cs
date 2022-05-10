@@ -22,12 +22,10 @@ namespace HelloWorldWinForms
         }
         public Goose() : base()
         {
-            visual = new PictureBox();
             _spieces = 2;
         }
         public Goose(int id) : base()
         {
-            visual = new PictureBox();
             _coordinates.X = rand.Next(140, 700);
             _coordinates.Y = rand.Next(100, 500);
             _id = id;
@@ -37,7 +35,7 @@ namespace HelloWorldWinForms
         {
 
         }
-        public override void displayAnimal()
+        public override void displayAnimal(PictureBox visual)
         {
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
