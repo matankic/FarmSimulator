@@ -350,6 +350,46 @@ namespace HelloWorldWinForms
             myFarm.GetTimeRef().tick(label9, label10);
             for (int i = 0; i < myFarm._farmSize; i++)
             {
+                if(myFarm.myAnimals[i]._isAlive==false)
+                {
+                    switch(myFarm.myAnimals[i]._spieces)
+                    {
+                        case 0:
+                            myFarm._cnt_chicken--;
+                            lbl_1.Text = myFarm._cnt_chicken.ToString();
+                            break;
+                        case 1:
+                            myFarm._cnt_duck--;
+                            label29.Text = myFarm._cnt_duck.ToString();
+                            break;
+                        case 2:
+                            myFarm._cnt_goose--;
+                            label30.Text = myFarm._cnt_goose.ToString();
+                            break;
+                        case 3:
+                            myFarm._cnt_cow--;
+                            label31.Text = myFarm._cnt_cow.ToString();
+                            break;
+                        case 4:
+                            myFarm._cnt_pig--;
+                            label32.Text = myFarm._cnt_pig.ToString();
+                            break;
+                        case 5:
+                            myFarm._cnt_sheep--;
+                            label33.Text = myFarm._cnt_sheep.ToString();
+                            break;
+                        default:
+                            break;
+                    }
+                    this.Controls.Remove(visualAnimals[i]);
+                    visualAnimals[i].Dispose();
+                    myFarm.myAnimals.Remove(myFarm.myAnimals[i]);
+                    visualAnimals.Remove(visualAnimals[i]);
+                    prevIndex = -1;
+                    clearStats();
+                    myFarm._farmSize--;
+                    continue;
+                }
                 myFarm.myAnimals[i]._age += 1;
                 myFarm.myAnimals[i].updateStats();
             }
@@ -614,15 +654,19 @@ namespace HelloWorldWinForms
 
         private void milk_btn_Click(object sender, EventArgs e)
         {
+            
             if (prevIndex >= 0)
             {
-                if (myFarm.myAnimals[prevIndex].doesLactate())
-                {
-                    buy_sell.Play();
-                    myFarm.GetCreditRef() += 40;
-                    Mammal m = (Mammal)myFarm.myAnimals[prevIndex];
-                    m.updateLactate(false);
-                }
+                
+                    if (myFarm.myAnimals[prevIndex].doesLactate())
+                    {
+                        buy_sell.Play();
+                        myFarm.GetCreditRef() += 40;
+                        Mammal m = (Mammal)myFarm.myAnimals[prevIndex];
+                        m.updateLactate(false);
+                    }
+                
+               
             }
         }
 

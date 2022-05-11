@@ -16,16 +16,19 @@ namespace HelloWorldWinForms
         private static Random rand = new Random();
         readonly private string _name;
         public Time _age;
-        protected int _id, _spieces, 
-            _thirst,
+        public  int _id, _spieces;
+
+         protected int _thirst,
             _hunger,
             _health;
         protected Vector _coordinates, _direction;
         protected double _speed;
         private readonly bool _sex;
+        public bool _isAlive;
         
        
         public Animal() {
+            _isAlive = true;
             _coordinates.X = rand.Next(140, 700);
             _coordinates.Y = rand.Next(100, 465);
             _speed = 3;
@@ -90,6 +93,7 @@ namespace HelloWorldWinForms
                 default: break;
             }
         }
+        
         public virtual void updateLocation(bool changeDirection) { }
         public virtual void createDirection() { }
         public double getX() { return _coordinates.X; }

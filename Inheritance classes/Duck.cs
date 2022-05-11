@@ -76,9 +76,13 @@ namespace HelloWorldWinForms
         }
         public override void updateStats()
         {
-            _hunger -= 3;
-            _thirst -= 1;
-            _health -= 2;
+            if (_hunger - 3 <= 0 || _health - 2 <= 0 || _thirst - 1 <= 0)
+                _isAlive = false;
+            else {
+                _hunger -= 3;
+                _thirst -= 1;
+                _health -= 2;
+            }
         }
     }
 }
