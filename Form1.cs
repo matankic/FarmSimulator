@@ -614,12 +614,15 @@ namespace HelloWorldWinForms
 
         private void milk_btn_Click(object sender, EventArgs e)
         {
-            if (prevIndex >= 0 && myFarm.myAnimals[prevIndex].doesLactate())
+            if (prevIndex >= 0)
             {
-                buy_sell.Play();
-                myFarm.GetCreditRef() += 40;
-                Mammal m = (Mammal)myFarm.myAnimals[prevIndex];
-                m.updateLactate(false);
+                if (myFarm.myAnimals[prevIndex].doesLactate())
+                {
+                    buy_sell.Play();
+                    myFarm.GetCreditRef() += 40;
+                    Mammal m = (Mammal)myFarm.myAnimals[prevIndex];
+                    m.updateLactate(false);
+                }
             }
         }
 
