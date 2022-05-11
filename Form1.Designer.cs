@@ -56,7 +56,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label34 = new System.Windows.Forms.Label();
             this.Chicken_radio = new System.Windows.Forms.RadioButton();
             this.Duck_radio = new System.Windows.Forms.RadioButton();
             this.goose_radio = new System.Windows.Forms.RadioButton();
@@ -183,7 +182,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Comic Sans MS", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
-            this.label5.Location = new System.Drawing.Point(-1, 18);
+            this.label5.Location = new System.Drawing.Point(-1, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(212, 34);
             this.label5.TabIndex = 11;
@@ -251,7 +250,6 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.panel1.Controls.Add(this.label46);
             this.panel1.Controls.Add(this.label14);
             this.panel1.Controls.Add(this.label12);
             this.panel1.Controls.Add(this.label11);
@@ -266,7 +264,7 @@
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label46.Location = new System.Drawing.Point(2, 12);
+            this.label46.Location = new System.Drawing.Point(3, 122);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(196, 13);
             this.label46.TabIndex = 8;
@@ -383,11 +381,11 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel2.Controls.Add(this.label46);
             this.panel2.Controls.Add(this.label15);
             this.panel2.Controls.Add(this.buy_btn);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.label34);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label18);
             this.panel2.Controls.Add(this.label17);
@@ -523,16 +521,6 @@
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 13;
             this.pictureBox4.TabStop = false;
-            // 
-            // label34
-            // 
-            this.label34.AutoSize = true;
-            this.label34.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.label34.Location = new System.Drawing.Point(191, 116);
-            this.label34.Name = "label34";
-            this.label34.Size = new System.Drawing.Size(125, 17);
-            this.label34.TabIndex = 8;
-            this.label34.Text = "Buying : Total cost";
             // 
             // Chicken_radio
             // 
@@ -1319,7 +1307,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label34;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Timer timer_song;
         private System.Windows.Forms.Label label43;
