@@ -18,7 +18,6 @@ namespace HelloWorldWinForms
     { 
         //Fields
         private int counter, moveTickCount, curIndex;
-        private double rememberSpeed;
         private Farm myFarm = new Farm();
         private SoundPlayer audio = new SoundPlayer(Properties.Resources.song)
             , buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
@@ -626,17 +625,16 @@ namespace HelloWorldWinForms
 
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
-            int i;
-            for (i=0;i<myFarm._farmSize;i++)
+            curIndex = -1;
+            for (int i = 0 ; i < myFarm._farmSize ; i++)
             {
                 if(myFarm.myAnimals[i].isInside(e.X,e.Y))
                 {
+                    curIndex = i;
                     string s = e.Button.ToString();
                     if(s== "Left")
                     {
-                        rememberSpeed = myFarm.myAnimals[i].getSpeed();
                         myFarm.myAnimals[i].setSpeed(0);
-                        curIndex = i;
                         break;
                     }
                 }
@@ -655,7 +653,8 @@ namespace HelloWorldWinForms
 
         private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
         {
-            myFarm.myAnimals[curIndex].gainSpeed();
+            if (curIndex >= 0)
+                myFarm.myAnimals[curIndex].gainSpeed();
             curIndex = -1;
         }
 
