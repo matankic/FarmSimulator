@@ -28,8 +28,8 @@ namespace HelloWorldWinForms
             _coordinates.X = rand.Next(140, 700);
             _coordinates.Y = rand.Next(100, 465);
             _speed = 3;
-            int val = rand.Next(0, 1);
-            if (val == 0)
+            int val = rand.Next(0, 100);
+            if (val < 55)
                 _sex = false; // female
             else
                 _sex = true; // male

@@ -1185,9 +1185,9 @@
             this.search_icon.BackColor = System.Drawing.Color.White;
             this.search_icon.Cursor = System.Windows.Forms.Cursors.Hand;
             this.search_icon.Image = global::HelloWorldWinForms.Properties.Resources.search;
-            this.search_icon.Location = new System.Drawing.Point(1085, 394);
+            this.search_icon.Location = new System.Drawing.Point(1088, 393);
             this.search_icon.Name = "search_icon";
-            this.search_icon.Size = new System.Drawing.Size(23, 15);
+            this.search_icon.Size = new System.Drawing.Size(20, 17);
             this.search_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.search_icon.TabIndex = 19;
             this.search_icon.TabStop = false;
