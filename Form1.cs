@@ -553,7 +553,7 @@ namespace HelloWorldWinForms
             if(prevIndex >= 0)
                 myFarm.myAnimals[prevIndex].updateStats();
             for(int i = 0; i < myFarm._farmSize; i++)
-                myFarm.myAnimals[prevIndex]._age += 1;
+                myFarm.myAnimals[i]._age += 1;
         }
         private void timer_song_Tick(object sender, EventArgs e)
         {
