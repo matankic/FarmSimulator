@@ -10,11 +10,9 @@ namespace HelloWorldWinForms
     internal class Mammal : Animal
     {
         protected bool _isLactating;
-        private int _Pragnancy;
         public Mammal() : base()
         {
             _isLactating = false;
-            _Pragnancy = 0;
             _speed = 2;
         }
         public override void gainSpeed() { _speed = 2; }

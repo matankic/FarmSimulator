@@ -617,8 +617,7 @@ namespace HelloWorldWinForms
             if (prevIndex >= 0 && myFarm.myAnimals[prevIndex].doesLactate())
             {
                 buy_sell.Play();
-                
-                //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
+                myFarm.GetCreditRef() += 40;
                 // myFarm.myAnimals[prevIndex].waterAnimal();
             }
         }
