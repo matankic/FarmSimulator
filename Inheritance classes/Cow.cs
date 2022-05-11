@@ -15,7 +15,7 @@ namespace HelloWorldWinForms
     {  
         public const int _buy_cow = 200;
         public const int _sell_cow = 180;
-        private Random rand = new Random();
+        private static Random rand = new Random();
         
         public override void makeNoise()
         {
@@ -66,8 +66,8 @@ namespace HelloWorldWinForms
         }
         public override void createDirection()
         {
-            _direction.X = rand.Next(0, 200 + _id * _id * 100) - 100 - _id * _id * 50;
-            _direction.Y = rand.Next(0, 200 + _id * _id * 100) - 100 - _id * _id * 50;
+            _direction.X = rand.Next(0, 200) - 100;
+            _direction.Y = rand.Next(0, 200) - 100;
             _direction.Normalize();
             _direction *= _speed;
         }

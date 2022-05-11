@@ -13,7 +13,7 @@ namespace HelloWorldWinForms
     internal class Animal
     {
         protected SoundPlayer noise;
-        private Random rand = new Random();
+        private static Random rand = new Random();
         public virtual string _name { get; set; }
         private Time _age;
         protected int _id, _spieces, 
