@@ -350,8 +350,11 @@ namespace HelloWorldWinForms
             myFarm.GetTimeRef().tick(label9, label10);
             if(prevIndex >= 0)
                 myFarm.myAnimals[prevIndex].updateStats();
-            for(int i = 0; i < myFarm._farmSize; i++)
+            for (int i = 0; i < myFarm._farmSize; i++)
+            {
                 myFarm.myAnimals[i]._age += 1;
+                myFarm.myAnimals[i].updateStats();
+            }
         }
         private void timer_song_Tick(object sender, EventArgs e)
         {

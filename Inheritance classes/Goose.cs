@@ -75,9 +75,9 @@ namespace HelloWorldWinForms
         }
         public override void updateStats()
         {
-            _hunger -= 6;
-            _thirst -= 6;
-            _health -= 6;
+            _hunger -= 4;
+            _thirst -= 2;
+            _health -= 2;
         }
     }
 }
