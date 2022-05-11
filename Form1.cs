@@ -460,6 +460,7 @@ namespace HelloWorldWinForms
                     if(s== "Left")
                     {
                         myFarm.myAnimals[i].setSpeed(0);
+                        myFarm.myAnimals[i].makeNoise();
                         break;
                     }
                 }
@@ -534,7 +535,7 @@ namespace HelloWorldWinForms
 
         private void meat_btn_Click(object sender, EventArgs e)
         {
-            if (prevIndex >= 0)
+            if (myFarm.myAnimals[prevIndex].doesLactate() && prevIndex >= 0)
             {
                 buy_sell.Play();
                 switch (myFarm.myAnimals[prevIndex].getSpieces())
@@ -616,6 +617,7 @@ namespace HelloWorldWinForms
             if (prevIndex >= 0)
             {
                 buy_sell.Play();
+                
                 //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
                 // myFarm.myAnimals[prevIndex].waterAnimal();
             }

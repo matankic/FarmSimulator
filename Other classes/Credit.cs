@@ -10,7 +10,7 @@ namespace HelloWorldWinForms
     internal class Credit
     {
         protected int _credit;
-        protected  double _interest;
+        protected  readonly double _interest;
         public Credit()
         {
             _credit = 500;

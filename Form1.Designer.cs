@@ -310,9 +310,9 @@
             this.label13.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(1037, 5);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(76, 29);
+            this.label13.Size = new System.Drawing.Size(53, 29);
             this.label13.TabIndex = 4;
-            this.label13.Text = "Owned";
+            this.label13.Text = "Own";
             // 
             // buy_btn
             // 

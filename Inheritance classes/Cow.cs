@@ -80,6 +80,9 @@ namespace HelloWorldWinForms
             _hunger -= 3;
             _thirst -= 5;
             _health -= 1;
+            if (_age.get_days() > 4)
+                updateLactate();
+               
         }
     }
 }

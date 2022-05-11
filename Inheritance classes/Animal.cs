@@ -14,7 +14,7 @@ namespace HelloWorldWinForms
     {
         protected SoundPlayer noise;
         private static Random rand = new Random();
-        private string _name;
+        readonly private string _name;
         public Time _age;
         protected int _id, _spieces, 
             _thirst,
@@ -22,7 +22,8 @@ namespace HelloWorldWinForms
             _health;
         protected Vector _coordinates, _direction;
         protected double _speed;
-        private bool _sex;
+        private readonly bool _sex;
+        
        
         public Animal() {
             _coordinates.X = rand.Next(140, 700);
@@ -39,6 +40,7 @@ namespace HelloWorldWinForms
             createDirection();
         }
         public virtual void makeNoise() { }
+        public virtual bool doesLactate() { return false; }
         public virtual void displayAnimal(PictureBox visual) { }
         public virtual bool isInside(int X, int Y) { return true; }
         public void feedAnimal()

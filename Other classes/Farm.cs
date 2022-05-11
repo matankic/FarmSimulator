@@ -29,7 +29,7 @@ namespace HelloWorldWinForms
             myAnimals = new List<Animal>();
             _farmSize = _cnt_chicken = _cnt_goose = _cnt_cow = _cnt_duck = _cnt_pig = _cnt_sheep = 0;
         }
-        public ref Credit GetCreditRef()
+        public ref Credit GetCreditRef() 
         {
             return ref this.myCredit;
         }
@@ -37,7 +37,7 @@ namespace HelloWorldWinForms
         {
             return ref this.myTime;
         }
-        public void AddAnimalToList(int amount, int type) 
+        public void AddAnimalToList(int amount,int type) 
         {
             int i;
             for (i = 0; i < amount; i++, _farmSize++)

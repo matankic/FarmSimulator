@@ -9,7 +9,7 @@ namespace HelloWorldWinForms
     [Serializable]
     internal class Mammal : Animal
     {
-        private bool _isLactating; //?
+        protected bool _isLactating;
         private int _Pragnancy;
         public Mammal() : base()
         {
@@ -18,6 +18,9 @@ namespace HelloWorldWinForms
             _speed = 2;
         }
         public override void gainSpeed() { _speed = 2; }
+        public void updateLactate() { _isLactating = true; }
+        public override bool  doesLactate() { return _isLactating; }
+      
     }
 }
 
