@@ -43,15 +43,15 @@ namespace HelloWorldWinForms
         public virtual bool isInside(int X, int Y) { return true; }
         public void feedAnimal()
         {
-            if (_hunger + 100 <= 300)
-                _hunger += 100;
+            if (_hunger + 50 <= 300)
+                _hunger += 50;
             else
                 _hunger = 300;
         }
         public void waterAnimal()
         {
-            if (_thirst + 100 <= 300)
-                _thirst += 100;
+            if (_thirst + 30 <= 300)
+                _thirst += 30;
             else
                 _thirst = 300;
         }
