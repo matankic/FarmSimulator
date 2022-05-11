@@ -34,7 +34,7 @@ namespace HelloWorldWinForms
             else
                 _sex = true; // male
             _age = new Time(0, 1);
-            _thirst = _hunger = _health = 100;
+            _thirst = _hunger = _health = 300;
             _name = generateName(rand.Next(0, 20));
             createDirection();
         }
@@ -43,23 +43,18 @@ namespace HelloWorldWinForms
         public virtual bool isInside(int X, int Y) { return true; }
         public void updateAnimal()
         {
-            _age += 10; //TODO : adjust to the amount of world time
-
-            _thirst -= 10;
-            _hunger -= 10;
-            _health -= 5;
         }
         public void feedAnimal()
         {
-            _hunger = 100;
+            _hunger += 100;
         }
         public void waterAnimal()
         {
-            _thirst = 100;
+            _thirst += 100;
         }
         public void healAnimal()
         {
-            _health = 100;
+            _health += 100;
         }
         public void displayAnimalStats(Label lbl1, Label lbl2, Label lbl3, ProgressBar bar1, ProgressBar bar2,
             ProgressBar bar3, Label lbl5, Label lbl6, Label lbl7, Label lbl8)

@@ -42,10 +42,10 @@
             this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label46 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label46 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.buy_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -260,16 +260,6 @@
             this.panel1.Size = new System.Drawing.Size(331, 52);
             this.panel1.TabIndex = 12;
             // 
-            // label46
-            // 
-            this.label46.AutoSize = true;
-            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
-            this.label46.Location = new System.Drawing.Point(3, 122);
-            this.label46.Name = "label46";
-            this.label46.Size = new System.Drawing.Size(196, 13);
-            this.label46.TabIndex = 8;
-            this.label46.Text = "•Cannot buy with higher debt  to $-200 .";
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -303,6 +293,16 @@
             this.comboBox3.Text = "Search an animal by typing its correct ID";
             this.comboBox3.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             this.comboBox3.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F);
+            this.label46.Location = new System.Drawing.Point(3, 122);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(196, 13);
+            this.label46.TabIndex = 8;
+            this.label46.Text = "•Cannot buy with higher debt  to $-200 .";
             // 
             // label13
             // 
@@ -892,6 +892,7 @@
             // 
             this.HungryBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.HungryBar.Location = new System.Drawing.Point(225, 6);
+            this.HungryBar.Maximum = 300;
             this.HungryBar.Name = "HungryBar";
             this.HungryBar.Size = new System.Drawing.Size(95, 17);
             this.HungryBar.TabIndex = 19;
@@ -899,6 +900,7 @@
             // ThirstBar
             // 
             this.ThirstBar.Location = new System.Drawing.Point(225, 26);
+            this.ThirstBar.Maximum = 300;
             this.ThirstBar.Name = "ThirstBar";
             this.ThirstBar.Size = new System.Drawing.Size(95, 17);
             this.ThirstBar.TabIndex = 19;
@@ -907,6 +909,7 @@
             // 
             this.HpBar.ForeColor = System.Drawing.Color.DarkRed;
             this.HpBar.Location = new System.Drawing.Point(225, 46);
+            this.HpBar.Maximum = 300;
             this.HpBar.Name = "HpBar";
             this.HpBar.Size = new System.Drawing.Size(95, 17);
             this.HpBar.TabIndex = 19;
