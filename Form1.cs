@@ -734,6 +734,7 @@ namespace HelloWorldWinForms
                 visualAnimals.Remove(visualAnimals[prevIndex]);
                 prevIndex = -1;
                 myFarm._farmSize--;
+                clearStats();
                 //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
                 // myFarm.myAnimals[prevIndex].waterAnimal();
             }
@@ -810,5 +811,19 @@ namespace HelloWorldWinForms
                 displayAnimals();
             }
         }
+        private void clearStats()
+        {
+            name_lbl.Text = "-----";
+            id_lbl.Text = "-------";
+            spieces_lbl.Text = "----";
+            HungryBar.Value = 0;
+            ThirstBar.Value = 0;
+            HpBar.Value = 0;
+            sex_lbl.Text = "------";
+            age_lbl.Text = "------";
+            x_lbl.Text = "----";
+            y_lbl.Text ="----";
+        }
     }
+
 }
