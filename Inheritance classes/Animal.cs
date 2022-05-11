@@ -26,7 +26,7 @@ namespace HelloWorldWinForms
        
         public Animal() {
             _coordinates.X = rand.Next(140, 700);
-            _coordinates.Y = rand.Next(100, 500);
+            _coordinates.Y = rand.Next(100, 465);
             _speed = 3;
             createDirection();
         }
