@@ -51,15 +51,15 @@ namespace HelloWorldWinForms
         }
         public void feedAnimal()
         {
-            _hunger += 200;
+            _hunger = 100;
         }
         public void waterAnimal()
         {
-            _thirst += 200;
+            _thirst = 100;
         }
         public void healAnimal()
         {
-            _health += 200;
+            _health = 100;
         }
         public void displayAnimalStats(Label lbl1, Label lbl2, Label lbl3, ProgressBar bar1, ProgressBar bar2,
             ProgressBar bar3, Label lbl5, Label lbl6, Label lbl7, Label lbl8)

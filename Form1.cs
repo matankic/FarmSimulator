@@ -667,32 +667,80 @@ namespace HelloWorldWinForms
 
         private void heal_btn_Click(object sender, EventArgs e)
         {
-
+            if (prevIndex >= 0)
+            {
+                buy_sell.Play();
+                myFarm.GetCreditRef() -= 10;
+                if (myFarm.GetCreditRef().get_credit() < 0)
+                {
+                    label11.ForeColor = Color.Red;
+                    label12.ForeColor = Color.Red;
+                }
+                label11.Text = myFarm.GetCreditRef().creditUpdate();
+                myFarm.myAnimals[prevIndex].healAnimal();
+            }
         }
 
         private void feed_btn_Click(object sender, EventArgs e)
         {
-
+            if (prevIndex >= 0)
+            {
+                buy_sell.Play();
+                myFarm.GetCreditRef() -= 10;
+                if (myFarm.GetCreditRef().get_credit() < 0)
+                {
+                    label11.ForeColor = Color.Red;
+                    label12.ForeColor = Color.Red;
+                }
+                label11.Text = myFarm.GetCreditRef().creditUpdate();
+                myFarm.myAnimals[prevIndex].feedAnimal();
+            }
         }
 
         private void water_btn_Click(object sender, EventArgs e)
         {
-
+            if (prevIndex >= 0)
+            {
+                buy_sell.Play();
+                myFarm.GetCreditRef() -= 5;
+                if (myFarm.GetCreditRef().get_credit() < 0)
+                {
+                    label11.ForeColor = Color.Red;
+                    label12.ForeColor = Color.Red;
+                }
+                label11.Text = myFarm.GetCreditRef().creditUpdate();
+                myFarm.myAnimals[prevIndex].waterAnimal();
+            }
         }
 
         private void meat_btn_Click(object sender, EventArgs e)
         {
-
+            if (prevIndex >= 0)
+            {
+                buy_sell.Play();
+                //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
+                // myFarm.myAnimals[prevIndex].waterAnimal();
+            }
         }
 
         private void milk_btn_Click(object sender, EventArgs e)
         {
-
+            if (prevIndex >= 0)
+            {
+                buy_sell.Play();
+                //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
+                // myFarm.myAnimals[prevIndex].waterAnimal();
+            }
         }
 
         private void egg_btn_Click(object sender, EventArgs e)
         {
-
+            if (prevIndex >= 0)
+            {
+                buy_sell.Play();
+                //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
+               // myFarm.myAnimals[prevIndex].waterAnimal();
+            }
         }
 
 
