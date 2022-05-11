@@ -48,7 +48,6 @@
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label13 = new System.Windows.Forms.Label();
             this.buy_btn = new System.Windows.Forms.Button();
-            this.sell_btn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.amount_lbl = new System.Windows.Forms.Label();
@@ -331,19 +330,6 @@
             this.buy_btn.UseVisualStyleBackColor = false;
             this.buy_btn.Click += new System.EventHandler(this.buy_btn_Click);
             // 
-            // sell_btn
-            // 
-            this.sell_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.sell_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.sell_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sell_btn.Location = new System.Drawing.Point(90, 79);
-            this.sell_btn.Name = "sell_btn";
-            this.sell_btn.Size = new System.Drawing.Size(74, 33);
-            this.sell_btn.TabIndex = 15;
-            this.sell_btn.Text = "Sell";
-            this.sell_btn.UseVisualStyleBackColor = false;
-            this.sell_btn.Click += new System.EventHandler(this.sell_btn_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -398,7 +384,6 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel2.Controls.Add(this.label15);
-            this.panel2.Controls.Add(this.sell_btn);
             this.panel2.Controls.Add(this.buy_btn);
             this.panel2.Controls.Add(this.comboBox1);
             this.panel2.Controls.Add(this.pictureBox4);
@@ -1304,7 +1289,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button buy_btn;
-        private System.Windows.Forms.Button sell_btn;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox4;

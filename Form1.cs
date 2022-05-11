@@ -725,26 +725,62 @@ namespace HelloWorldWinForms
                     case 0: 
                         myFarm._cnt_chicken--; lbl_1.Text = myFarm._cnt_chicken.ToString();
                         myFarm.GetCreditRef() += Chicken._sell_chicken * myFarm.myAnimals[prevIndex]._age.get_days();
+                        if (myFarm.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 1: 
                         myFarm._cnt_duck--; label29.Text = myFarm._cnt_duck.ToString();
                         myFarm.GetCreditRef() += Duck._sell_duck * myFarm.myAnimals[prevIndex]._age.get_days();
+                        if (myFarm.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 2:
                         myFarm._cnt_goose--; label30.Text = myFarm._cnt_goose.ToString();
                         myFarm.GetCreditRef() += Goose._sell_goose * myFarm.myAnimals[prevIndex]._age.get_days();
+                        if (myFarm.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 3: 
                         myFarm._cnt_cow--; label31.Text = myFarm._cnt_cow.ToString();
                         myFarm.GetCreditRef() += Cow._sell_cow * myFarm.myAnimals[prevIndex]._age.get_days();
+                        if (myFarm.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 4: 
                         myFarm._cnt_pig--; label32.Text = myFarm._cnt_pig.ToString();
                         myFarm.GetCreditRef() += Pig._sell_pig * myFarm.myAnimals[prevIndex]._age.get_days();
+                        if (myFarm.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 5: 
                         myFarm._cnt_sheep--; label33.Text = myFarm._cnt_sheep.ToString();
                         myFarm.GetCreditRef() += Sheep._sell_sheep * myFarm.myAnimals[prevIndex]._age.get_days();
+                        if (myFarm.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     default: break;
                 }
