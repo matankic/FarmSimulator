@@ -718,7 +718,17 @@ namespace HelloWorldWinForms
             if (prevIndex >= 0)
             {
                 buy_sell.Play();
-                myFarm.myAnimals.Remove(myFarm.myAnimals[prevIndex]);
+                switch (myFarm.myAnimals[prevIndex].getSpieces())
+                { 
+                    case 0: myFarm._cnt_chicken--; break;
+                    case 1: myFarm._cnt_duck--; break;
+                    case 2: myFarm._cnt_goose--; break;
+                    case 3: myFarm._cnt_cow--; break;
+                    case 4: myFarm._cnt_pig--; break;
+                    case 5: myFarm._cnt_sheep--; break;
+                    default: break;
+                }
+                        myFarm.myAnimals.Remove(myFarm.myAnimals[prevIndex]);
                 visualAnimals.Remove(visualAnimals[prevIndex]);
                 prevIndex = -1;
                 myFarm._farmSize--;

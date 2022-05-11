@@ -97,6 +97,7 @@ namespace HelloWorldWinForms
         public void setSpeed(int val) { _speed = val; }
         public virtual void gainSpeed() { }
         public virtual void updateStats() { }
+        public int getSpieces() { return _spieces; }
         private string generateName(int val)
         {
             switch (val)
