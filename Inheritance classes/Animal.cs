@@ -77,7 +77,6 @@ namespace HelloWorldWinForms
         public void SetY(int val) { _coordinates.Y = (double)val; } 
         public double getSpeed() { return _speed; }
         public void setSpeed(int val) { _speed = val; }
-        
-
+        public virtual void gainSpeed() { }
     }
 }

@@ -15,6 +15,6 @@ namespace HelloWorldWinForms
             _eggs = 0;
             _speed = 5;
         }
-
+        public override void gainSpeed() { _speed = 5; }
     }
 }

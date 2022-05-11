@@ -29,7 +29,7 @@ namespace HelloWorldWinForms
         {
            
             InitializeComponent();
-            curIndex = 0;
+            curIndex = -1;
             moveTickCount = counter = 0;
             timer1.Start();
             moveAnimal.Start();
@@ -634,7 +634,7 @@ namespace HelloWorldWinForms
                     string s = e.Button.ToString();
                     if(s== "Left")
                     {
-                        rememberSpeed = myFarm.myAnimals[i].getSpeed(); //fix
+                        rememberSpeed = myFarm.myAnimals[i].getSpeed();
                         myFarm.myAnimals[i].setSpeed(0);
                         curIndex = i;
                         break;
@@ -643,6 +643,22 @@ namespace HelloWorldWinForms
             }
             
         }
+
+        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (curIndex >= 0)
+            {
+                myFarm.myAnimals[curIndex].SetX(e.X);
+                myFarm.myAnimals[curIndex].SetY(e.Y);
+            }
+        }
+
+        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
+        {
+            myFarm.myAnimals[curIndex].gainSpeed();
+            curIndex = -1;
+        }
+
 
         private void heal_btn_Click(object sender, EventArgs e)
         {
@@ -674,13 +690,6 @@ namespace HelloWorldWinForms
 
         }
 
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
-        {
-            myFarm.myAnimals[curIndex].SetX(e.X);
-            myFarm.myAnimals[curIndex].SetY(e.Y);
-           
-           // pictureBox1.Invalidate();
-        }
 
         private void displayAnimals() // For load button only!
         {

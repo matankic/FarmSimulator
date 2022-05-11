@@ -17,6 +17,7 @@ namespace HelloWorldWinForms
             _Pragnancy = 0;
             _speed = 2;
         }
+        public override void gainSpeed() { _speed = 2; }
     }
 }
 
