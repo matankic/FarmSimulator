@@ -718,6 +718,11 @@ namespace HelloWorldWinForms
             if (prevIndex >= 0)
             {
                 buy_sell.Play();
+                myFarm.myAnimals.Remove(myFarm.myAnimals[prevIndex]);
+                visualAnimals.Remove(visualAnimals[prevIndex]);
+                prevIndex = -1;
+                myFarm._farmSize--;
+                
                 //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
                 // myFarm.myAnimals[prevIndex].waterAnimal();
             }
