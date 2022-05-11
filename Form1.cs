@@ -17,7 +17,7 @@ namespace HelloWorldWinForms
     internal partial class Form1 : Form
     { 
         //Fields
-        private int counter, moveTickCount, curIndex;
+        private int counter, moveTickCount, curIndex, prevIndex;
         private Farm myFarm = new Farm();
         private SoundPlayer audio = new SoundPlayer(Properties.Resources.song)
             , buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
@@ -28,7 +28,7 @@ namespace HelloWorldWinForms
         {
            
             InitializeComponent();
-            curIndex = -1;
+            prevIndex = curIndex = -1;
             moveTickCount = counter = 0;
             timer1.Start();
             moveAnimal.Start();
@@ -550,6 +550,8 @@ namespace HelloWorldWinForms
             label11.Text = myFarm.GetCreditRef().creditUpdate();
 
             myFarm.GetTimeRef().tick(label9, label10);
+            if(prevIndex >= 0)
+                myFarm.myAnimals[prevIndex].updateStats();
         }
         private void timer_song_Tick(object sender, EventArgs e)
         {
@@ -587,6 +589,9 @@ namespace HelloWorldWinForms
         private void moveAnimal_Tick(object sender, EventArgs e)
         {
             moveTickCount++;
+            if (prevIndex >= 0)
+                myFarm.myAnimals[prevIndex].displayAnimalStats(name_lbl, id_lbl, spieces_lbl,
+                    HungryBar, ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
             int i;
             if (moveTickCount == 20)
             {
@@ -630,8 +635,8 @@ namespace HelloWorldWinForms
             {
                 if(myFarm.myAnimals[i].isInside(e.X,e.Y))
                 {
-                    myFarm.myAnimals[i].displayAnimalStats(name_lbl, id_lbl, HungryBar, ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
-                    curIndex = i;
+                    myFarm.myAnimals[i].displayAnimalStats(name_lbl, id_lbl, spieces_lbl, HungryBar, ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
+                    prevIndex = curIndex = i;
                     string s = e.Button.ToString();
                     if(s== "Left")
                     {

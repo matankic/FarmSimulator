@@ -73,5 +73,11 @@ namespace HelloWorldWinForms
         {
             return Math.Abs(X - _coordinates.X) <= 32 && Math.Abs(Y - _coordinates.Y) <= 32;
         }
+        public override void updateStats()
+        {
+            _hunger -= 10;
+            _thirst -= 10;
+            _health -= 10;
+        }
     }
 }

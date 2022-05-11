@@ -61,8 +61,8 @@ namespace HelloWorldWinForms
         {
             _health += 200;
         }
-        public void displayAnimalStats(Label lbl1, Label lbl2, ProgressBar bar1, ProgressBar bar2,
-            ProgressBar bar3, Label lbl6, Label lbl7, Label lbl8, Label lbl9)
+        public void displayAnimalStats(Label lbl1, Label lbl2, Label lbl3, ProgressBar bar1, ProgressBar bar2,
+            ProgressBar bar3, Label lbl5, Label lbl6, Label lbl7, Label lbl8)
         {
             lbl1.Text = _name;
             lbl2.Text = _id.ToString();
@@ -70,12 +70,22 @@ namespace HelloWorldWinForms
             bar2.Value = _thirst;
             bar3.Value = _health;
             if (_sex)
-                lbl6.Text = "Female";
+                lbl5.Text = "Female";
             else
-                lbl6.Text = "Male";
-            lbl7.Text = _age.daysUpdate() + " days";
-            lbl8.Text = ((int)_coordinates.X).ToString();
-            lbl9.Text = ((int)_coordinates.Y).ToString();
+                lbl5.Text = "Male";
+            lbl6.Text = _age.daysUpdate() + " days";
+            lbl7.Text = ((int)_coordinates.X).ToString();
+            lbl8.Text = ((int)_coordinates.Y).ToString();
+            switch (_spieces)
+            {
+                case 0: lbl3.Text = "Chicken"; break;
+                case 1: lbl3.Text = "Duck"; break;
+                case 2: lbl3.Text = "Goose"; break;
+                case 3: lbl3.Text = "Cow"; break;
+                case 4: lbl3.Text = "Pig"; break;
+                case 5: lbl3.Text = "Sheep"; break;
+                default: break;
+            }
         }
         public virtual void updateLocation(bool changeDirection) { }
         public virtual void createDirection() { }
@@ -86,6 +96,7 @@ namespace HelloWorldWinForms
         public double getSpeed() { return _speed; }
         public void setSpeed(int val) { _speed = val; }
         public virtual void gainSpeed() { }
+        public virtual void updateStats() { }
         private string generateName(int val)
         {
             switch (val)

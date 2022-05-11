@@ -73,7 +73,13 @@ namespace HelloWorldWinForms
         }
         public override bool isInside(int X, int Y)
         {
-            return Math.Abs(X - _coordinates.X) <= 60 && Math.Abs(Y - _coordinates.Y) <= 60; 
+            return Math.Abs(X - _coordinates.X) <= 60 && Math.Abs(Y - _coordinates.Y) <= 60;
+        }
+        public override void updateStats()
+        {
+            _hunger -= 5;
+            _thirst -= 15;
+            _health -= 5;
         }
     }
 }
