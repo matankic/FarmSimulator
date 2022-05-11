@@ -15,6 +15,7 @@ namespace HelloWorldWinForms
     {  
         public const int _buy_cow = 200;
         public const int _sell_cow = 180;
+        private int _lactatingCounter;
         private static Random rand = new Random();
         
         public override void makeNoise()
@@ -24,10 +25,12 @@ namespace HelloWorldWinForms
         }
         public Cow() : base()
         {
+            _lactatingCounter = 0;
             _spieces = 3;
         }
         public Cow(int id) : base()
         {
+            _lactatingCounter = 0;
             _id = id;
             _spieces = 3;
         }
@@ -77,11 +80,15 @@ namespace HelloWorldWinForms
         }
         public override void updateStats()
         {
+            _lactatingCounter++;
             _hunger -= 3;
             _thirst -= 5;
             _health -= 1;
-            if (_age.get_days() > 4)
-                updateLactate();
+            if (_lactatingCounter == 24)
+            {
+                updateLactate(true);
+                _lactatingCounter = 0;
+            }
                
         }
     }

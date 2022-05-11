@@ -16,7 +16,7 @@ namespace HelloWorldWinForms
             _speed = 2;
         }
         public override void gainSpeed() { _speed = 2; }
-        public void updateLactate() { _isLactating = true; }
+        public void updateLactate(bool val) { _isLactating = val; }
         public override bool  doesLactate() { return _isLactating; }
     }
 }
