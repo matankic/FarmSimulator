@@ -348,8 +348,6 @@ namespace HelloWorldWinForms
             label11.Text = myFarm.GetCreditRef().creditUpdate();
 
             myFarm.GetTimeRef().tick(label9, label10);
-            if(prevIndex >= 0)
-                myFarm.myAnimals[prevIndex].updateStats();
             for (int i = 0; i < myFarm._farmSize; i++)
             {
                 myFarm.myAnimals[i]._age += 1;
@@ -369,7 +367,22 @@ namespace HelloWorldWinForms
         
         private void search_icon_Click(object sender, EventArgs e)
         {
-            searchBox.Text = "!!!!!!!!!!!!!it's working!!";
+            int id = -1;
+            try
+            {
+                id = Int32.Parse(searchBox.Text);
+                if (id >= 0 && id < myFarm._farmSize)
+                    myFarm.myAnimals[id].displayAnimalStats(name_lbl, id_lbl, spieces_lbl, HungryBar,
+                        ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
+                else
+                {
+
+                }
+            }
+            catch
+            {
+
+            }
         }
 
         private void save_btn_Click(object sender, EventArgs e)
