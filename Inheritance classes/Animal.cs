@@ -41,20 +41,26 @@ namespace HelloWorldWinForms
         public virtual void makeNoise() { }
         public virtual void displayAnimal(PictureBox visual) { }
         public virtual bool isInside(int X, int Y) { return true; }
-        public void updateAnimal()
-        {
-        }
         public void feedAnimal()
         {
-            _hunger += 100;
+            if (_hunger + 100 <= 300)
+                _hunger += 100;
+            else
+                _hunger = 300;
         }
         public void waterAnimal()
         {
-            _thirst += 100;
+            if (_thirst + 100 <= 300)
+                _thirst += 100;
+            else
+                _thirst = 300;
         }
         public void healAnimal()
         {
-            _health += 100;
+            if (_health + 100 <= 300)
+                _health += 100;
+            else
+                _health = 300;
         }
         public void displayAnimalStats(Label lbl1, Label lbl2, Label lbl3, ProgressBar bar1, ProgressBar bar2,
             ProgressBar bar3, Label lbl5, Label lbl6, Label lbl7, Label lbl8)
