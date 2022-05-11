@@ -372,8 +372,11 @@ namespace HelloWorldWinForms
             {
                 id = Int32.Parse(searchBox.Text);
                 if (id >= 0 && id < myFarm._farmSize)
+                {
                     myFarm.myAnimals[id].displayAnimalStats(name_lbl, id_lbl, spieces_lbl, HungryBar,
                         ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
+                    prevIndex = id;
+                }
                 else
                 {
                     searchBox.Text = "Entered ID doesnot exist";
