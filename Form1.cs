@@ -728,8 +728,8 @@ namespace HelloWorldWinForms
                     case 5: myFarm._cnt_sheep--; label33.Text = myFarm._cnt_sheep.ToString(); break;
                     default: break;
                 }
-                visualAnimals[prevIndex].Dispose();
                 this.Controls.Remove(visualAnimals[prevIndex]);
+                visualAnimals[prevIndex].Dispose();
                 myFarm.myAnimals.Remove(myFarm.myAnimals[prevIndex]);
                 visualAnimals.Remove(visualAnimals[prevIndex]);
                 prevIndex = -1;
