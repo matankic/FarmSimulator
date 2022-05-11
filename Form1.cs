@@ -376,12 +376,12 @@ namespace HelloWorldWinForms
                         ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
                 else
                 {
-
+                    searchBox.Text = "Entered ID doesnot exist";
                 }
             }
             catch
             {
-
+                searchBox.Text = "Not an ID..";
             }
         }
 
