@@ -535,7 +535,7 @@ namespace HelloWorldWinForms
 
         private void meat_btn_Click(object sender, EventArgs e)
         {
-            if (myFarm.myAnimals[prevIndex].doesLactate() && prevIndex >= 0)
+            if (prevIndex >= 0)
             {
                 buy_sell.Play();
                 switch (myFarm.myAnimals[prevIndex].getSpieces())
@@ -614,7 +614,7 @@ namespace HelloWorldWinForms
 
         private void milk_btn_Click(object sender, EventArgs e)
         {
-            if (prevIndex >= 0)
+            if (prevIndex >= 0 && myFarm.myAnimals[prevIndex].doesLactate())
             {
                 buy_sell.Play();
                 
