@@ -720,19 +720,20 @@ namespace HelloWorldWinForms
                 buy_sell.Play();
                 switch (myFarm.myAnimals[prevIndex].getSpieces())
                 { 
-                    case 0: myFarm._cnt_chicken--; break;
-                    case 1: myFarm._cnt_duck--; break;
-                    case 2: myFarm._cnt_goose--; break;
-                    case 3: myFarm._cnt_cow--; break;
-                    case 4: myFarm._cnt_pig--; break;
-                    case 5: myFarm._cnt_sheep--; break;
+                    case 0: myFarm._cnt_chicken--; lbl_1.Text = myFarm._cnt_chicken.ToString(); break;
+                    case 1: myFarm._cnt_duck--; label29.Text = myFarm._cnt_duck.ToString(); break;
+                    case 2: myFarm._cnt_goose--; label30.Text = myFarm._cnt_goose.ToString(); break;
+                    case 3: myFarm._cnt_cow--; label31.Text = myFarm._cnt_cow.ToString(); break;
+                    case 4: myFarm._cnt_pig--; label32.Text = myFarm._cnt_pig.ToString(); break;
+                    case 5: myFarm._cnt_sheep--; label33.Text = myFarm._cnt_sheep.ToString(); break;
                     default: break;
                 }
-                        myFarm.myAnimals.Remove(myFarm.myAnimals[prevIndex]);
+                visualAnimals[prevIndex].Dispose();
+                this.Controls.Remove(visualAnimals[prevIndex]);
+                myFarm.myAnimals.Remove(myFarm.myAnimals[prevIndex]);
                 visualAnimals.Remove(visualAnimals[prevIndex]);
                 prevIndex = -1;
                 myFarm._farmSize--;
-                
                 //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
                 // myFarm.myAnimals[prevIndex].waterAnimal();
             }
