@@ -618,7 +618,8 @@ namespace HelloWorldWinForms
             {
                 buy_sell.Play();
                 myFarm.GetCreditRef() += 40;
-                myFarm.myAnimals[prevIndex].updateLactate(false);
+                Mammal m = (Mammal)myFarm.myAnimals[prevIndex];
+                m.updateLactate(false);
             }
         }
 
