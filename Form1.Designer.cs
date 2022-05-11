@@ -110,6 +110,13 @@
             this.save_btn = new System.Windows.Forms.PictureBox();
             this.search_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.name_lbl = new System.Windows.Forms.Label();
+            this.spieces_lbl = new System.Windows.Forms.Label();
+            this.id_lbl = new System.Windows.Forms.Label();
+            this.sex_lbl = new System.Windows.Forms.Label();
+            this.age_lbl = new System.Windows.Forms.Label();
+            this.x_lbl = new System.Windows.Forms.Label();
+            this.y_lbl = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -933,6 +940,13 @@
             // 
             // Animal_stats
             // 
+            this.Animal_stats.Controls.Add(this.y_lbl);
+            this.Animal_stats.Controls.Add(this.x_lbl);
+            this.Animal_stats.Controls.Add(this.age_lbl);
+            this.Animal_stats.Controls.Add(this.sex_lbl);
+            this.Animal_stats.Controls.Add(this.id_lbl);
+            this.Animal_stats.Controls.Add(this.spieces_lbl);
+            this.Animal_stats.Controls.Add(this.name_lbl);
             this.Animal_stats.Controls.Add(this.HpBar);
             this.Animal_stats.Controls.Add(this.ThirstBar);
             this.Animal_stats.Controls.Add(this.HungryBar);
@@ -1122,6 +1136,76 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
             // 
+            // name_lbl
+            // 
+            this.name_lbl.AutoSize = true;
+            this.name_lbl.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.name_lbl.Location = new System.Drawing.Point(65, 4);
+            this.name_lbl.Name = "name_lbl";
+            this.name_lbl.Size = new System.Drawing.Size(60, 23);
+            this.name_lbl.TabIndex = 3;
+            this.name_lbl.Text = "-----";
+            // 
+            // spieces_lbl
+            // 
+            this.spieces_lbl.AutoSize = true;
+            this.spieces_lbl.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.spieces_lbl.Location = new System.Drawing.Point(77, 24);
+            this.spieces_lbl.Name = "spieces_lbl";
+            this.spieces_lbl.Size = new System.Drawing.Size(50, 23);
+            this.spieces_lbl.TabIndex = 3;
+            this.spieces_lbl.Text = "----";
+            // 
+            // id_lbl
+            // 
+            this.id_lbl.AutoSize = true;
+            this.id_lbl.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.id_lbl.Location = new System.Drawing.Point(47, 44);
+            this.id_lbl.Name = "id_lbl";
+            this.id_lbl.Size = new System.Drawing.Size(80, 23);
+            this.id_lbl.TabIndex = 3;
+            this.id_lbl.Text = "-------";
+            // 
+            // sex_lbl
+            // 
+            this.sex_lbl.AutoSize = true;
+            this.sex_lbl.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sex_lbl.Location = new System.Drawing.Point(55, 63);
+            this.sex_lbl.Name = "sex_lbl";
+            this.sex_lbl.Size = new System.Drawing.Size(70, 23);
+            this.sex_lbl.TabIndex = 3;
+            this.sex_lbl.Text = "------";
+            // 
+            // age_lbl
+            // 
+            this.age_lbl.AutoSize = true;
+            this.age_lbl.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.age_lbl.Location = new System.Drawing.Point(55, 83);
+            this.age_lbl.Name = "age_lbl";
+            this.age_lbl.Size = new System.Drawing.Size(70, 23);
+            this.age_lbl.TabIndex = 3;
+            this.age_lbl.Text = "------";
+            // 
+            // x_lbl
+            // 
+            this.x_lbl.AutoSize = true;
+            this.x_lbl.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.x_lbl.Location = new System.Drawing.Point(177, 84);
+            this.x_lbl.Name = "x_lbl";
+            this.x_lbl.Size = new System.Drawing.Size(50, 23);
+            this.x_lbl.TabIndex = 3;
+            this.x_lbl.Text = "----";
+            // 
+            // y_lbl
+            // 
+            this.y_lbl.AutoSize = true;
+            this.y_lbl.Font = new System.Drawing.Font("Comic Sans MS", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.y_lbl.Location = new System.Drawing.Point(254, 84);
+            this.y_lbl.Name = "y_lbl";
+            this.y_lbl.Size = new System.Drawing.Size(50, 23);
+            this.y_lbl.TabIndex = 3;
+            this.y_lbl.Text = "----";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1283,6 +1367,13 @@
         private System.Windows.Forms.PictureBox milk_btn;
         private System.Windows.Forms.PictureBox egg_btn;
         private System.Windows.Forms.Panel tools_pnl;
+        private System.Windows.Forms.Label y_lbl;
+        private System.Windows.Forms.Label x_lbl;
+        private System.Windows.Forms.Label age_lbl;
+        private System.Windows.Forms.Label sex_lbl;
+        private System.Windows.Forms.Label id_lbl;
+        private System.Windows.Forms.Label spieces_lbl;
+        private System.Windows.Forms.Label name_lbl;
     }
 }
 
