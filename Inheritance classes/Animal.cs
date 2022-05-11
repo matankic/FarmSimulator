@@ -15,7 +15,7 @@ namespace HelloWorldWinForms
         protected SoundPlayer noise;
         private static Random rand = new Random();
         private string _name;
-        private Time _age;
+        public Time _age;
         protected int _id, _spieces, 
             _thirst,
             _hunger,
@@ -33,7 +33,7 @@ namespace HelloWorldWinForms
                 _sex = false; // female
             else
                 _sex = true; // male
-            _age = new Time();
+            _age = new Time(0, 1);
             _thirst = _hunger = _health = 100;
             _name = generateName(rand.Next(0, 20));
             createDirection();

@@ -552,6 +552,8 @@ namespace HelloWorldWinForms
             myFarm.GetTimeRef().tick(label9, label10);
             if(prevIndex >= 0)
                 myFarm.myAnimals[prevIndex].updateStats();
+            for(int i = 0; i < myFarm._farmSize; i++)
+                myFarm.myAnimals[prevIndex]._age += 1;
         }
         private void timer_song_Tick(object sender, EventArgs e)
         {
@@ -720,12 +722,30 @@ namespace HelloWorldWinForms
                 buy_sell.Play();
                 switch (myFarm.myAnimals[prevIndex].getSpieces())
                 { 
-                    case 0: myFarm._cnt_chicken--; lbl_1.Text = myFarm._cnt_chicken.ToString(); break;
-                    case 1: myFarm._cnt_duck--; label29.Text = myFarm._cnt_duck.ToString(); break;
-                    case 2: myFarm._cnt_goose--; label30.Text = myFarm._cnt_goose.ToString(); break;
-                    case 3: myFarm._cnt_cow--; label31.Text = myFarm._cnt_cow.ToString(); break;
-                    case 4: myFarm._cnt_pig--; label32.Text = myFarm._cnt_pig.ToString(); break;
-                    case 5: myFarm._cnt_sheep--; label33.Text = myFarm._cnt_sheep.ToString(); break;
+                    case 0: 
+                        myFarm._cnt_chicken--; lbl_1.Text = myFarm._cnt_chicken.ToString();
+                        myFarm.GetCreditRef() += Chicken._sell_chicken * myFarm.myAnimals[prevIndex]._age.get_days();
+                        break;
+                    case 1: 
+                        myFarm._cnt_duck--; label29.Text = myFarm._cnt_duck.ToString();
+                        myFarm.GetCreditRef() += Duck._sell_duck * myFarm.myAnimals[prevIndex]._age.get_days();
+                        break;
+                    case 2:
+                        myFarm._cnt_goose--; label30.Text = myFarm._cnt_goose.ToString();
+                        myFarm.GetCreditRef() += Goose._sell_goose * myFarm.myAnimals[prevIndex]._age.get_days();
+                        break;
+                    case 3: 
+                        myFarm._cnt_cow--; label31.Text = myFarm._cnt_cow.ToString();
+                        myFarm.GetCreditRef() += Cow._sell_cow * myFarm.myAnimals[prevIndex]._age.get_days();
+                        break;
+                    case 4: 
+                        myFarm._cnt_pig--; label32.Text = myFarm._cnt_pig.ToString();
+                        myFarm.GetCreditRef() += Pig._sell_pig * myFarm.myAnimals[prevIndex]._age.get_days();
+                        break;
+                    case 5: 
+                        myFarm._cnt_sheep--; label33.Text = myFarm._cnt_sheep.ToString();
+                        myFarm.GetCreditRef() += Sheep._sell_sheep * myFarm.myAnimals[prevIndex]._age.get_days();
+                        break;
                     default: break;
                 }
                 this.Controls.Remove(visualAnimals[prevIndex]);
@@ -735,8 +755,6 @@ namespace HelloWorldWinForms
                 prevIndex = -1;
                 myFarm._farmSize--;
                 clearStats();
-                //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
-                // myFarm.myAnimals[prevIndex].waterAnimal();
             }
         }
 
