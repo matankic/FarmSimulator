@@ -56,6 +56,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.label34 = new System.Windows.Forms.Label();
             this.Chicken_radio = new System.Windows.Forms.RadioButton();
             this.Duck_radio = new System.Windows.Forms.RadioButton();
@@ -109,9 +110,9 @@
             this.save_btn = new System.Windows.Forms.PictureBox();
             this.search_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.Animal_stats.SuspendLayout();
             this.tools_pnl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.heal_btn)).BeginInit();
@@ -124,7 +125,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_1
@@ -518,6 +518,19 @@
             this.comboBox1.Text = "Select / type value";
             this.comboBox1.SelectedValueChanged += new System.EventHandler(this.comboBox1_SelectedValueChanged);
             this.comboBox1.TextChanged += new System.EventHandler(this.comboBox1_TextChanged);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
+            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.Location = new System.Drawing.Point(181, 12);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(66, 69);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
             // 
             // label34
             // 
@@ -985,7 +998,7 @@
             this.heal_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.heal_btn.TabIndex = 13;
             this.heal_btn.TabStop = false;
-            this.heal_btn.Click += new System.EventHandler(this.pictureBox2_Click);
+            this.heal_btn.Click += new System.EventHandler(this.heal_btn_Click);
             // 
             // egg_btn
             // 
@@ -999,7 +1012,7 @@
             this.egg_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.egg_btn.TabIndex = 13;
             this.egg_btn.TabStop = false;
-            this.egg_btn.Click += new System.EventHandler(this.pictureBox8_Click);
+            this.egg_btn.Click += new System.EventHandler(this.egg_btn_Click);
             // 
             // milk_btn
             // 
@@ -1013,7 +1026,7 @@
             this.milk_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.milk_btn.TabIndex = 13;
             this.milk_btn.TabStop = false;
-            this.milk_btn.Click += new System.EventHandler(this.pictureBox7_Click);
+            this.milk_btn.Click += new System.EventHandler(this.milk_btn_Click);
             // 
             // water_btn
             // 
@@ -1027,7 +1040,7 @@
             this.water_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.water_btn.TabIndex = 13;
             this.water_btn.TabStop = false;
-            this.water_btn.Click += new System.EventHandler(this.pictureBox5_Click);
+            this.water_btn.Click += new System.EventHandler(this.water_btn_Click);
             // 
             // feed_btn
             // 
@@ -1041,7 +1054,7 @@
             this.feed_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.feed_btn.TabIndex = 13;
             this.feed_btn.TabStop = false;
-            this.feed_btn.Click += new System.EventHandler(this.pictureBox3_Click);
+            this.feed_btn.Click += new System.EventHandler(this.feed_btn_Click);
             // 
             // meat_btn
             // 
@@ -1055,7 +1068,7 @@
             this.meat_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.meat_btn.TabIndex = 13;
             this.meat_btn.TabStop = false;
-            this.meat_btn.Click += new System.EventHandler(this.pictureBox6_Click);
+            this.meat_btn.Click += new System.EventHandler(this.meat_btn_Click);
             // 
             // load_btn
             // 
@@ -1108,19 +1121,6 @@
             this.pictureBox1.TabIndex = 9;
             this.pictureBox1.TabStop = false;
             this.pictureBox1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            this.pictureBox4.Location = new System.Drawing.Point(181, 12);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(66, 69);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
             // 
             // Form1
             // 
@@ -1179,11 +1179,11 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Farm Simulator™";
             this.TopMost = true;
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.Animal_stats.ResumeLayout(false);
             this.Animal_stats.PerformLayout();
             this.tools_pnl.ResumeLayout(false);
@@ -1197,7 +1197,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

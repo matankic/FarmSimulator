@@ -624,41 +624,6 @@ namespace HelloWorldWinForms
             }
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox7_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
             int i;
@@ -677,6 +642,36 @@ namespace HelloWorldWinForms
                 }
             }
             
+        }
+
+        private void heal_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void feed_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void water_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void meat_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void milk_btn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void egg_btn_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
