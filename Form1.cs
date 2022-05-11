@@ -630,6 +630,7 @@ namespace HelloWorldWinForms
             {
                 if(myFarm.myAnimals[i].isInside(e.X,e.Y))
                 {
+                    myFarm.myAnimals[i].displayAnimalStats(name_lbl, id_lbl, HungryBar, ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
                     curIndex = i;
                     string s = e.Button.ToString();
                     if(s== "Left")
