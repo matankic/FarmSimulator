@@ -504,13 +504,13 @@ namespace HelloWorldWinForms
             {
                 if (myFarm.myAnimals[i].isInside(visual.Location.X + e.X, visual.Location.Y + e.Y))
                 {
-                    myFarm.myAnimals[i].displayAnimalStats(name_lbl, id_lbl, spieces_lbl, HungryBar, ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
-                    prevIndex = curIndex = i;
                     string s = e.Button.ToString();
                     if (s == "Left")
                     {
+                        myFarm.myAnimals[i].displayAnimalStats(name_lbl, id_lbl, spieces_lbl, HungryBar, ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
+                        prevIndex = curIndex = i;
                         myFarm.myAnimals[i].setSpeed(0);
-                        myFarm.myAnimals[i].makeNoise();
+                        //myFarm.myAnimals[i].makeNoise();
                         break;
                     }
                 }

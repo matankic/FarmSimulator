@@ -19,6 +19,7 @@ namespace HelloWorldWinForms
         {
             noise = new SoundPlayer(Properties.Resources.ChickenSound);
             noise.Play();
+            noise.Dispose();
         }
         public Chicken() : base()
         {
