@@ -26,7 +26,6 @@ namespace HelloWorldWinForms
         private readonly bool _sex;
         public bool _isAlive;
         
-       
         public Animal() {
             _isAlive = true;
             _coordinates.X = rand.Next(140, 700);

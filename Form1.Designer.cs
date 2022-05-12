@@ -891,6 +891,7 @@
             // 
             // HungryBar
             // 
+            this.HungryBar.BackColor = System.Drawing.SystemColors.Control;
             this.HungryBar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
             this.HungryBar.Location = new System.Drawing.Point(225, 6);
             this.HungryBar.Maximum = 300;

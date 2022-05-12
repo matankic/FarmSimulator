@@ -515,7 +515,7 @@ namespace HelloWorldWinForms
             PictureBox visual = (PictureBox)sender;
             if (curIndex >= 0)
             {
-                myFarm.myAnimals[curIndex].SetX(visual.Location.X + e.X -30);
+                myFarm.myAnimals[curIndex].SetX(visual.Location.X + e.X - 30);
                 myFarm.myAnimals[curIndex].SetY(visual.Location.Y + e.Y - 30);
             }
         }
