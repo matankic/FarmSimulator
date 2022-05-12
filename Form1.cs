@@ -432,6 +432,7 @@ namespace HelloWorldWinForms
 
         private void save_btn_Click(object sender, EventArgs e)
         {
+            
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
             saveFileDialog1.Filter = "farm files (*.frm)|*.frm|All files (*.*)|*.*";
@@ -442,7 +443,10 @@ namespace HelloWorldWinForms
                 IFormatter formatter = new BinaryFormatter();
                 using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
                 {
+                    //for(int i = 0; i < myFarm._farmSize; i++)
+                    //    visualAnimals[i].Dispose();
                     formatter.Serialize(stream, myFarm);
+                    //this.Close();
                 }
             }
         }
@@ -493,7 +497,8 @@ namespace HelloWorldWinForms
 
         private void visual_MouseDown(object sender, MouseEventArgs e)
         {
-            PictureBox visual = (PictureBox)sender;
+            PictureBox visual = new PictureBox();
+            visual = (PictureBox)sender;
             curIndex = -1;
             for (int i = 0; i < myFarm._farmSize; i++)
             {
@@ -514,13 +519,15 @@ namespace HelloWorldWinForms
 
         private void visual_MouseMove(object sender, MouseEventArgs e)
         {
-            PictureBox visual = (PictureBox)sender;
+            PictureBox visual = new PictureBox();
+            visual = (PictureBox)sender;
             if (curIndex >= 0)
             {
                 myFarm.myAnimals[curIndex].SetX(visual.Location.X + e.X - 30);
                 myFarm.myAnimals[curIndex].SetY(visual.Location.Y + e.Y - 30);
             }
         }
+
         private void visual_MouseUp(object sender, MouseEventArgs e)
         {
             if (curIndex >= 0)
@@ -677,6 +684,7 @@ namespace HelloWorldWinForms
             }
         }
 
+
         private void egg_btn_Click(object sender, EventArgs e)
         {
             if (prevIndex >= 0)
@@ -698,9 +706,9 @@ namespace HelloWorldWinForms
                 myFarm.myAnimals[i].displayAnimal(visualAnimals[i]);
                 visualAnimals[i].Name = "visual" + i;
                 this.Controls.Add(visualAnimals[i]);
-                visualAnimals[i].MouseDown += new System.Windows.Forms.MouseEventHandler(this.visual_MouseDown);
-                visualAnimals[i].MouseMove += new System.Windows.Forms.MouseEventHandler(this.visual_MouseMove);
-                visualAnimals[i].MouseUp += new System.Windows.Forms.MouseEventHandler(this.visual_MouseUp);
+                visualAnimals[i].MouseDown += new MouseEventHandler(this.visual_MouseDown);
+                visualAnimals[i].MouseMove += new MouseEventHandler(this.visual_MouseMove);
+                visualAnimals[i].MouseUp += new MouseEventHandler(this.visual_MouseUp);
                 ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).EndInit();
                 visualAnimals[i].Parent = this.pictureBox1;
             }
