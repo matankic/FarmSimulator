@@ -350,9 +350,9 @@ namespace HelloWorldWinForms
             myFarm.GetTimeRef().tick(label9, label10);
             for (int i = 0; i < myFarm._farmSize; i++)
             {
-                if(myFarm.myAnimals[i]._isAlive==false)
+                if (myFarm.myAnimals[i]._isAlive == false)
                 {
-                    switch(myFarm.myAnimals[i]._spieces)
+                    switch (myFarm.myAnimals[i]._spieces)
                     {
                         case 0:
                             myFarm._cnt_chicken--;
@@ -480,15 +480,40 @@ namespace HelloWorldWinForms
                 visualAnimals.Add(new PictureBox());
                 ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).BeginInit();
                 myFarm.myAnimals[i].displayAnimal(visualAnimals[i]);
-                visualAnimals[i].Name = "visual" + i;
+                visualAnimals[i].Name = "visual"+i.ToString();
+                visualAnimals[i].Padding = new Padding(0 , 0, 0, i);
+                visualAnimals[i].MouseDown += new MouseEventHandler(this.visual_MouseDown);
+                visualAnimals[i].MouseMove += new MouseEventHandler(this.visual_MouseMove);
+                visualAnimals[i].MouseUp += new MouseEventHandler(this.visual_MouseUp);
                 this.Controls.Add(visualAnimals[i]);
                 ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).EndInit();
                 visualAnimals[i].Parent = this.pictureBox1;
             }
         }
 
+        private void visual_MouseDown(object sender, MouseEventArgs e)
+        {
+            curIndex = -1;
+            for (int i = 0; i < myFarm._farmSize; i++)
+            {
+                if (myFarm.myAnimals[i].isInside(e.X, e.Y))
+                {
+                    myFarm.myAnimals[i].displayAnimalStats(name_lbl, id_lbl, spieces_lbl, HungryBar, ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
+                    prevIndex = curIndex = i;
+                    string s = e.Button.ToString();
+                    if (s == "Left")
+                    {
+                        myFarm.myAnimals[i].setSpeed(0);
+                        myFarm.myAnimals[i].makeNoise();
+                        break;
+                    }
+                }
+            }
+        }
+
         private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
         {
+
             curIndex = -1;
             for (int i = 0 ; i < myFarm._farmSize ; i++)
             {
@@ -507,6 +532,21 @@ namespace HelloWorldWinForms
             }
             
         }
+        private void visual_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (curIndex >= 0)
+            {
+                myFarm.myAnimals[curIndex].SetX(e.X);
+                myFarm.myAnimals[curIndex].SetY(e.Y);
+            }
+        }
+        private void visual_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (curIndex >= 0)
+                myFarm.myAnimals[curIndex].gainSpeed();
+            curIndex = -1;
+        }
+
 
         private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
         {
@@ -653,20 +693,22 @@ namespace HelloWorldWinForms
         }
 
         private void milk_btn_Click(object sender, EventArgs e)
-        {
-            
+        {   
             if (prevIndex >= 0)
             {
-                
-                    if (myFarm.myAnimals[prevIndex].doesLactate())
+                if (myFarm.myAnimals[prevIndex].doesLactate())
+                {
+                    buy_sell.Play();
+                    myFarm.GetCreditRef() += 40;
+                    if (myFarm.GetCreditRef().get_credit() > 0)
                     {
-                        buy_sell.Play();
-                        myFarm.GetCreditRef() += 40;
-                        Mammal m = (Mammal)myFarm.myAnimals[prevIndex];
-                        m.updateLactate(false);
+                        label11.ForeColor = Color.ForestGreen;
+                        label12.ForeColor = Color.ForestGreen;
                     }
-                
-               
+                    label11.Text = myFarm.GetCreditRef().creditUpdate();
+                    Mammal m = (Mammal)myFarm.myAnimals[prevIndex];
+                    m.updateLactate(false);
+                }    
             }
         }
 
@@ -691,6 +733,9 @@ namespace HelloWorldWinForms
                 myFarm.myAnimals[i].displayAnimal(visualAnimals[i]);
                 visualAnimals[i].Name = "visual" + i;
                 this.Controls.Add(visualAnimals[i]);
+                visualAnimals[i].MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
+                visualAnimals[i].MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+                visualAnimals[i].MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
                 ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).EndInit();
                 visualAnimals[i].Parent = this.pictureBox1;
             }
