@@ -42,6 +42,7 @@ namespace HelloWorldWinForms
         }
         public virtual void makeNoise() { }
         public virtual bool doesLactate() { return false; }
+        public virtual int doesEgg() { return 0; }
         public virtual void displayAnimal(PictureBox visual) { }
         public virtual bool isInside(int X, int Y) { return true; }
         public void feedAnimal()

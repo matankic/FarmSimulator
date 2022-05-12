@@ -9,12 +9,15 @@ namespace HelloWorldWinForms
     [Serializable]
     internal class Bird : Animal
     {
-        private int _eggs;
+        protected int _eggs, _nextEgg;
         public Bird() : base()
         {
             _eggs = 0;
+            _nextEgg = 0;
             _speed = 5;
         }
         public override void gainSpeed() { _speed = 5; }
+        public void takeEggs() { _eggs = 0; }
+        public override int doesEgg() { return _eggs; }
     }
 }

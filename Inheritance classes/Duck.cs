@@ -80,9 +80,16 @@ namespace HelloWorldWinForms
             if (_hunger - 3 <= 0 || _health - 2 <= 0 || _thirst - 1 <= 0)
                 _isAlive = false;
             else {
+                _nextEgg++;
                 _hunger -= 3;
                 _thirst -= 1;
                 _health -= 2;
+                if (_nextEgg == 10)
+                {
+                    if (_sex == false) // females only !!!
+                        _eggs++;
+                    _nextEgg = 0;
+                }
             }
         }
     }

@@ -681,17 +681,23 @@ namespace HelloWorldWinForms
             }
         }
 
-
         private void egg_btn_Click(object sender, EventArgs e)
         {
             if (prevIndex >= 0)
             {
+                if (myFarm.myAnimals[prevIndex].doesEgg() > 0)
                 buy_sell.Play();
-                //myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].getEggs();
-               // myFarm.myAnimals[prevIndex].waterAnimal();
+                myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].doesEgg();
+                if (myFarm.GetCreditRef().get_credit() > 0)
+                {
+                    label11.ForeColor = Color.ForestGreen;
+                    label12.ForeColor = Color.ForestGreen;
+                }
+                label11.Text = myFarm.GetCreditRef().creditUpdate();
+                Bird b = (Bird)myFarm.myAnimals[prevIndex];
+                b.takeEggs();
             }
         }
-
 
         private void displayAnimals() // For load button only!
         {
