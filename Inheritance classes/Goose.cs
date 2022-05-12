@@ -19,6 +19,7 @@ namespace HelloWorldWinForms
         {
             noise = new SoundPlayer(Properties.Resources.GooseSound);
             noise.Play();
+            noise.Dispose();
         }
         public Goose() : base()
         {

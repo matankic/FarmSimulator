@@ -19,6 +19,7 @@ namespace HelloWorldWinForms
         {
             noise = new SoundPlayer(Properties.Resources.PigSound);
             noise.Play();
+            noise.Dispose();
         }
         public Pig() : base()
         {

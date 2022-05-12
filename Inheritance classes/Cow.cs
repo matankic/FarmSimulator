@@ -22,6 +22,7 @@ namespace HelloWorldWinForms
         {
             noise = new SoundPlayer(Properties.Resources.CowSound);
             noise.Play();
+            noise.Dispose();
         }
         public Cow() : base()
         {

@@ -20,6 +20,7 @@ namespace HelloWorldWinForms
         {
             noise = new SoundPlayer(Properties.Resources.SheepSound);
             noise.Play();
+            noise.Dispose();
         }
         public Sheep() : base()
         {

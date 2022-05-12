@@ -19,6 +19,7 @@ namespace HelloWorldWinForms
         {
             noise = new SoundPlayer(Properties.Resources.DuckSound);
             noise.Play();
+            noise.Dispose();
         }
         public Duck() : base()
         {
