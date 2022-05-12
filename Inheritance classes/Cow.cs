@@ -91,7 +91,8 @@ namespace HelloWorldWinForms
                 _health -= 1;
                 if (_lactatingCounter == 24)
                 {
-                    updateLactate(true);
+                    if(_sex == false) // females only !!!
+                        updateLactate(true);
                     _lactatingCounter = 0;
                 }
             }

@@ -22,7 +22,7 @@ namespace HelloWorldWinForms
             _health;
         protected Vector _coordinates, _direction;
         protected double _speed;
-        private readonly bool _sex;
+        protected readonly bool _sex;
         public bool _isAlive;
         
         public Animal() {
