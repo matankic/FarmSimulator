@@ -15,7 +15,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 namespace HelloWorldWinForms
 {
     internal partial class Form1 : Form
-    { 
+    {
         //Fields
         private int counter, moveTickCount, curIndex, prevIndex;
         private Farm myFarm = new Farm();
@@ -474,14 +474,12 @@ namespace HelloWorldWinForms
 
         private void displayAnimals(int begin, int end)
         {
-            int i;
-            for (i = begin; i < end; i++)
+            for (int i = begin; i < end; i++)
             {
                 visualAnimals.Add(new PictureBox());
                 ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).BeginInit();
                 myFarm.myAnimals[i].displayAnimal(visualAnimals[i]);
                 visualAnimals[i].Name = "visual"+i.ToString();
-                visualAnimals[i].Padding = new Padding(0 , 0, 0, i);
                 visualAnimals[i].MouseDown += new MouseEventHandler(this.visual_MouseDown);
                 visualAnimals[i].MouseMove += new MouseEventHandler(this.visual_MouseMove);
                 visualAnimals[i].MouseUp += new MouseEventHandler(this.visual_MouseUp);
@@ -493,10 +491,11 @@ namespace HelloWorldWinForms
 
         private void visual_MouseDown(object sender, MouseEventArgs e)
         {
+            PictureBox visual = (PictureBox)sender;
             curIndex = -1;
             for (int i = 0; i < myFarm._farmSize; i++)
             {
-                if (myFarm.myAnimals[i].isInside(e.X, e.Y))
+                if (myFarm.myAnimals[i].isInside(visual.Location.X + e.X, visual.Location.Y + e.Y))
                 {
                     myFarm.myAnimals[i].displayAnimalStats(name_lbl, id_lbl, spieces_lbl, HungryBar, ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
                     prevIndex = curIndex = i;
@@ -511,33 +510,13 @@ namespace HelloWorldWinForms
             }
         }
 
-        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
-        {
-
-            curIndex = -1;
-            for (int i = 0 ; i < myFarm._farmSize ; i++)
-            {
-                if(myFarm.myAnimals[i].isInside(e.X,e.Y))
-                {
-                    myFarm.myAnimals[i].displayAnimalStats(name_lbl, id_lbl, spieces_lbl, HungryBar, ThirstBar, HpBar, sex_lbl, age_lbl, x_lbl, y_lbl);
-                    prevIndex = curIndex = i;
-                    string s = e.Button.ToString();
-                    if(s== "Left")
-                    {
-                        myFarm.myAnimals[i].setSpeed(0);
-                        myFarm.myAnimals[i].makeNoise();
-                        break;
-                    }
-                }
-            }
-            
-        }
         private void visual_MouseMove(object sender, MouseEventArgs e)
         {
+            PictureBox visual = (PictureBox)sender;
             if (curIndex >= 0)
             {
-                myFarm.myAnimals[curIndex].SetX(e.X);
-                myFarm.myAnimals[curIndex].SetY(e.Y);
+                myFarm.myAnimals[curIndex].SetX(visual.Location.X + e.X);
+                myFarm.myAnimals[curIndex].SetY(visual.Location.Y + e.Y);
             }
         }
         private void visual_MouseUp(object sender, MouseEventArgs e)
@@ -546,24 +525,6 @@ namespace HelloWorldWinForms
                 myFarm.myAnimals[curIndex].gainSpeed();
             curIndex = -1;
         }
-
-
-        private void pictureBox1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (curIndex >= 0)
-            {
-                myFarm.myAnimals[curIndex].SetX(e.X);
-                myFarm.myAnimals[curIndex].SetY(e.Y);
-            }
-        }
-
-        private void pictureBox1_MouseUp(object sender, MouseEventArgs e)
-        {
-            if (curIndex >= 0)
-                myFarm.myAnimals[curIndex].gainSpeed();
-            curIndex = -1;
-        }
-
 
         private void heal_btn_Click(object sender, EventArgs e)
         {
@@ -733,9 +694,9 @@ namespace HelloWorldWinForms
                 myFarm.myAnimals[i].displayAnimal(visualAnimals[i]);
                 visualAnimals[i].Name = "visual" + i;
                 this.Controls.Add(visualAnimals[i]);
-                visualAnimals[i].MouseDown += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseDown);
-                visualAnimals[i].MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
-                visualAnimals[i].MouseUp += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseUp);
+                visualAnimals[i].MouseDown += new System.Windows.Forms.MouseEventHandler(this.visual_MouseDown);
+                visualAnimals[i].MouseMove += new System.Windows.Forms.MouseEventHandler(this.visual_MouseMove);
+                visualAnimals[i].MouseUp += new System.Windows.Forms.MouseEventHandler(this.visual_MouseUp);
                 ((System.ComponentModel.ISupportInitialize)(visualAnimals[i])).EndInit();
                 visualAnimals[i].Parent = this.pictureBox1;
             }
