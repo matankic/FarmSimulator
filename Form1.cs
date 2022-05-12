@@ -686,16 +686,18 @@ namespace HelloWorldWinForms
             if (prevIndex >= 0)
             {
                 if (myFarm.myAnimals[prevIndex].doesEgg() > 0)
-                buy_sell.Play();
-                myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].doesEgg();
-                if (myFarm.GetCreditRef().get_credit() > 0)
                 {
-                    label11.ForeColor = Color.ForestGreen;
-                    label12.ForeColor = Color.ForestGreen;
+                    buy_sell.Play();
+                    myFarm.GetCreditRef() += 10 * myFarm.myAnimals[prevIndex].doesEgg();
+                    if (myFarm.GetCreditRef().get_credit() > 0)
+                    {
+                        label11.ForeColor = Color.ForestGreen;
+                        label12.ForeColor = Color.ForestGreen;
+                    }
+                    label11.Text = myFarm.GetCreditRef().creditUpdate();
+                    Bird b = (Bird)myFarm.myAnimals[prevIndex];
+                    b.takeEggs();
                 }
-                label11.Text = myFarm.GetCreditRef().creditUpdate();
-                Bird b = (Bird)myFarm.myAnimals[prevIndex];
-                b.takeEggs();
             }
             else
                 noise.Play();
