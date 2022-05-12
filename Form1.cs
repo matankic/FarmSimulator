@@ -698,9 +698,9 @@ namespace HelloWorldWinForms
                     Bird b = (Bird)myFarm.myAnimals[prevIndex];
                     b.takeEggs();
                 }
+                else
+                    noise.Play();
             }
-            else
-                noise.Play();
         }
 
         private void displayAnimals() // For load button only!
