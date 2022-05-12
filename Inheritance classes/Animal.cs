@@ -74,9 +74,9 @@ namespace HelloWorldWinForms
             bar2.Value = _thirst;
             bar3.Value = _health;
             if (_sex)
-                lbl5.Text = "Female";
-            else
                 lbl5.Text = "Male";
+            else
+                lbl5.Text = "Female";
             lbl6.Text = _age.daysUpdate() + " days";
             lbl7.Text = ((int)_coordinates.X).ToString();
             lbl8.Text = ((int)_coordinates.Y).ToString();
