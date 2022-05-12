@@ -20,7 +20,8 @@ namespace HelloWorldWinForms
         private int counter, moveTickCount, curIndex, prevIndex;
         private Farm myFarm = new Farm();
         private SoundPlayer audio = new SoundPlayer(Properties.Resources.song)
-            , buy_sell = new SoundPlayer(Properties.Resources.ChaChing);
+            , buy_sell = new SoundPlayer(Properties.Resources.ChaChing)
+            , noise = new SoundPlayer(Properties.Resources.woosh);
         public List<PictureBox> visualAnimals = new List<PictureBox>();
         
         //Methods
@@ -381,6 +382,7 @@ namespace HelloWorldWinForms
                         default:
                             break;
                     }
+                    noise.Play();
                     this.Controls.Remove(visualAnimals[i]);
                     visualAnimals[i].Dispose();
                     myFarm.myAnimals.Remove(myFarm.myAnimals[i]);
