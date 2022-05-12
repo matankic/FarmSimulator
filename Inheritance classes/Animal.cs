@@ -37,7 +37,7 @@ namespace HelloWorldWinForms
                 _sex = true; // male
             _age = new Time(0, 1);
             _thirst = _hunger = _health = 300;
-            _name = generateName(rand.Next(0, 20));
+            _name = generateName(rand.Next(0, 32));
             createDirection();
         }
         public virtual void makeNoise() { }
@@ -107,27 +107,39 @@ namespace HelloWorldWinForms
         {
             switch (val)
             {
-                case 0: return "Simba";
-                case 1: return "Lala";
-                case 2: return "Pooh";
-                case 3: return "Simba";
+                case 0: return "Hezi";
+                case 1: return "Tzahi";
+                case 2: return "Hertzel";
+                case 3: return "Shuki";
                 case 4: return "Eyal";
                 case 5: return "Holon";
                 case 6: return "Jerusalem";
                 case 7: return "Efi";
                 case 8: return "Elad";
                 case 9: return "Shrek";
-                case 10: return "Lehem";
-                case 11: return "Nevel";
+                case 10: return "Gadi";
+                case 11: return "Naveh";
                 case 12: return "Yosef";
                 case 13: return "Sami";
                 case 14: return "Rina";
                 case 15: return "Gigi";
-                case 16: return "Shon";
-                case 17: return "Nala";
+                case 16: return "Ziona";
+                case 17: return "Shimrit";
                 case 18: return "Roti";
-                case 19: return "Baal";
-                case 20: return "Enlil";
+                case 19: return "Osnat";
+                case 20: return "Dafna";
+                case 21: return "Riki";
+                case 22: return "Eti";
+                case 23: return "Nadav";
+                case 24: return "Nevo";
+                case 25: return "Raz";
+                case 26: return "Gila";
+                case 27: return "Ezra";
+                case 28: return "Yeheskel";
+                case 29: return "Shosh";
+                case 30: return "Ilanit";
+                case 31: return "Ravit";
+                case 32: return "Revital";
                 default: return "Eyal";
             }
         }
