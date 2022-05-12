@@ -17,7 +17,7 @@ namespace HelloWorldWinForms
         private static Random rand = new Random();
         public override void makeNoise()
         {
-            noise = new SoundPlayer(Properties.Resources.ChickenSound);
+            SoundPlayer noise = new SoundPlayer(Properties.Resources.ChickenSound);
             noise.Play();
             noise.Dispose();
         }

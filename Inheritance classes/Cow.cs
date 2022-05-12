@@ -20,7 +20,7 @@ namespace HelloWorldWinForms
         
         public override void makeNoise()
         {
-            noise = new SoundPlayer(Properties.Resources.CowSound);
+            SoundPlayer noise = new SoundPlayer(Properties.Resources.CowSound);
             noise.Play();
             noise.Dispose();
         }

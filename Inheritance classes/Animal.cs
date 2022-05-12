@@ -12,7 +12,6 @@ namespace HelloWorldWinForms
     [Serializable]
     internal class Animal
     {
-        protected SoundPlayer noise;
         private static Random rand = new Random();
         readonly private string _name;
         public Time _age;
