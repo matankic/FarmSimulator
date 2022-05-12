@@ -37,7 +37,7 @@ namespace HelloWorldWinForms
                 _sex = true; // male
             _age = new Time(0, 1);
             _thirst = _hunger = _health = 300;
-            _name = generateName(rand.Next(0, 32));
+            _name = generateName(rand.Next(0, 38));
             createDirection();
         }
         public virtual void makeNoise() { }
@@ -112,8 +112,8 @@ namespace HelloWorldWinForms
                 case 2: return "Hertzel";
                 case 3: return "Shuki";
                 case 4: return "Eyal";
-                case 5: return "Holon";
-                case 6: return "Jerusalem";
+                case 5: return "Noa";
+                case 6: return "Shuki";
                 case 7: return "Efi";
                 case 8: return "Elad";
                 case 9: return "Shrek";
@@ -140,6 +140,12 @@ namespace HelloWorldWinForms
                 case 30: return "Ilanit";
                 case 31: return "Ravit";
                 case 32: return "Revital";
+                case 33: return "Shahar";
+                case 34: return "Maayan";
+                case 35: return "Shalev";
+                case 36: return "Lidor";
+                case 37: return "Itay";
+                case 38: return "Almog";
                 default: return "Eyal";
             }
         }
