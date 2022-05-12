@@ -671,7 +671,9 @@ namespace HelloWorldWinForms
                     label11.Text = myFarm.GetCreditRef().creditUpdate();
                     Mammal m = (Mammal)myFarm.myAnimals[prevIndex];
                     m.updateLactate(false);
-                }    
+                } 
+                else
+                    noise.Play();
             }
         }
 
