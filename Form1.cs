@@ -443,10 +443,7 @@ namespace HelloWorldWinForms
                 IFormatter formatter = new BinaryFormatter();
                 using (Stream stream = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write, FileShare.None))
                 {
-                    //for(int i = 0; i < myFarm._farmSize; i++)
-                    //    visualAnimals[i].Dispose();
                     formatter.Serialize(stream, myFarm);
-                    //this.Close();
                 }
             }
         }
@@ -726,7 +723,6 @@ namespace HelloWorldWinForms
                 Stream stream = File.Open(openFileDialog1.FileName, FileMode.Open);
                 var binaryFormatter = new System.Runtime.Serialization.Formatters.Binary.BinaryFormatter();
                 myFarm = (Farm)binaryFormatter.Deserialize(stream);
-                //pictureBox1.Invalidate();
                 if (myFarm.GetCreditRef().get_credit() < 0) // COLOR CREDIT 
                 {
                     label11.ForeColor = Color.Red;
