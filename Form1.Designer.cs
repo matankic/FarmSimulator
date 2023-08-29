@@ -557,7 +557,7 @@
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
             this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.puff;
-            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
             this.pictureBox4.Location = new System.Drawing.Point(272, 18);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox4.Name = "pictureBox4";
@@ -1226,7 +1226,7 @@
             this.meat_btn.BackColor = System.Drawing.Color.Transparent;
             this.meat_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.meat_btn.Image = global::HelloWorldWinForms.Properties.Resources.meat;
-            this.meat_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.meat_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
             this.meat_btn.Location = new System.Drawing.Point(616, 783);
             this.meat_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.meat_btn.Name = "meat_btn";
@@ -1241,7 +1241,7 @@
             this.feed_btn.BackColor = System.Drawing.Color.Transparent;
             this.feed_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.feed_btn.Image = global::HelloWorldWinForms.Properties.Resources.chicken_rice;
-            this.feed_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.feed_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
             this.feed_btn.Location = new System.Drawing.Point(400, 783);
             this.feed_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.feed_btn.Name = "feed_btn";
@@ -1256,7 +1256,7 @@
             this.water_btn.BackColor = System.Drawing.Color.Transparent;
             this.water_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.water_btn.Image = global::HelloWorldWinForms.Properties.Resources.water_drop;
-            this.water_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.water_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
             this.water_btn.Location = new System.Drawing.Point(508, 783);
             this.water_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.water_btn.Name = "water_btn";
@@ -1271,7 +1271,7 @@
             this.milk_btn.BackColor = System.Drawing.Color.Transparent;
             this.milk_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.milk_btn.Image = global::HelloWorldWinForms.Properties.Resources.milking;
-            this.milk_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.milk_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
             this.milk_btn.Location = new System.Drawing.Point(724, 783);
             this.milk_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.milk_btn.Name = "milk_btn";
@@ -1286,7 +1286,7 @@
             this.egg_btn.BackColor = System.Drawing.Color.Transparent;
             this.egg_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.egg_btn.Image = global::HelloWorldWinForms.Properties.Resources.egg;
-            this.egg_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.egg_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
             this.egg_btn.Location = new System.Drawing.Point(832, 783);
             this.egg_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.egg_btn.Name = "egg_btn";
@@ -1301,7 +1301,7 @@
             this.heal_btn.BackColor = System.Drawing.Color.Transparent;
             this.heal_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.heal_btn.Image = global::HelloWorldWinForms.Properties.Resources.syringe;
-            this.heal_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.heal_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
             this.heal_btn.Location = new System.Drawing.Point(292, 783);
             this.heal_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.heal_btn.Name = "heal_btn";
