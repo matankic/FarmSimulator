@@ -38,8 +38,8 @@ namespace HelloWorldWinForms
         {
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
-            visual.Image = global::HelloWorldWinForms.Properties.Resources.goose;
-            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.goose;
+            visual.Image = global::HelloWorldWinForms.Properties.Resources.seahorse;
+            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.seahorse;
             visual.Location = new System.Drawing.Point((int)getX(), (int)getY());
             visual.Size = new System.Drawing.Size(60, 60);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

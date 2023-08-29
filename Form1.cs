@@ -19,9 +19,9 @@ namespace HelloWorldWinForms
         //Fields
         private int counter, moveTickCount, curIndex, prevIndex;
         private Farm myFarm = new Farm();
-        private SoundPlayer audio = new SoundPlayer(Properties.Resources.song)
-            , buy_sell = new SoundPlayer(Properties.Resources.ChaChing)
-            , noise = new SoundPlayer(Properties.Resources.woosh);
+        private SoundPlayer buy_sell = new SoundPlayer(Properties.Resources.ChaChing)
+            , noise = new SoundPlayer(Properties.Resources.woosh),
+            audio = new SoundPlayer(Properties.Resources.song);
         public List<PictureBox> visualAnimals = new List<PictureBox>();
         
         //Methods
@@ -33,7 +33,7 @@ namespace HelloWorldWinForms
             moveTickCount = counter = 0;
             timer1.Start();
             moveAnimal.Start();
-            audio.Play();
+            //audio.Play();
             label11.Text = myFarm.GetCreditRef().creditUpdate();
 
             this.save_btn.Parent = pictureBox1;

@@ -43,10 +43,10 @@ namespace HelloWorldWinForms
         {
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
-            visual.Image = global::HelloWorldWinForms.Properties.Resources.cow;
-            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.cow;
+            visual.Image = global::HelloWorldWinForms.Properties.Resources.dolphin;
+            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.dolphin;
             visual.Location = new System.Drawing.Point((int)getX(), (int)getY());
-            visual.Size = new System.Drawing.Size(61, 58);
+            visual.Size = new System.Drawing.Size(150, 80);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             visual.TabIndex = 13;
             visual.TabStop = false;

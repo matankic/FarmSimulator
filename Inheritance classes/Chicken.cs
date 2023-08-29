@@ -36,8 +36,8 @@ namespace HelloWorldWinForms
         }
         public override void displayAnimal(PictureBox visual)
         {
-            visual.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
-            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            visual.Image = global::HelloWorldWinForms.Properties.Resources.puff;
+            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
             visual.Size = new System.Drawing.Size(32, 32);
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
