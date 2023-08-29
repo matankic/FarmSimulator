@@ -98,6 +98,8 @@
     <None Include="Resources\grass.jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\ocean1.gif" />
+    <None Include="Resources\ocean.gif" />
     <None Include="Resources\planel.png" />
     <None Include="Resources\planel1.png" />
     <None Include="Resources\egg.png" />

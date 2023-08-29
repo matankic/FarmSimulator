@@ -659,6 +659,11 @@ namespace HelloWorldWinForms
             }
         }
 
+        private void tools_pnl_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
         private void milk_btn_Click(object sender, EventArgs e)
         {   
             if (prevIndex >= 0)
