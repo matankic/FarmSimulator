@@ -265,7 +265,7 @@ namespace HelloWorldWinForms
         //Radios
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.duck;
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.cat;
             int x = 0;
             try
             {
@@ -279,7 +279,7 @@ namespace HelloWorldWinForms
         }
         private void goose_radio_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.goose;
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.seahorse;
             int x = 0;
             try
             {
@@ -293,7 +293,7 @@ namespace HelloWorldWinForms
         }
         private void Chicken_radio_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.puff;
             int x = 0;
             try
             {
@@ -307,7 +307,7 @@ namespace HelloWorldWinForms
         }
         private void sheep_radio_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.sheep;
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.turtle;
             int x = 0;
             try
             {
@@ -321,7 +321,7 @@ namespace HelloWorldWinForms
         }
         private void pig_radio_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.pig;
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.shark;
             int x = 0;
             try
             {
@@ -335,7 +335,7 @@ namespace HelloWorldWinForms
         }
         private void cow_radio_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.cow;
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.dolphin;
             int x = 0;
             try
             {

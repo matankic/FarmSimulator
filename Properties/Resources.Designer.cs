@@ -61,6 +61,16 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cat {
+            get {
+                object obj = ResourceManager.GetObject("cat", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream ChaChing {
@@ -114,6 +124,16 @@ namespace HelloWorldWinForms.Properties {
         internal static System.IO.UnmanagedMemoryStream CowSound {
             get {
                 return ResourceManager.GetStream("CowSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap dolphin {
+            get {
+                object obj = ResourceManager.GetObject("dolphin", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -247,6 +267,16 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap puff {
+            get {
+                object obj = ResourceManager.GetObject("puff", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_file {
             get {
                 object obj = ResourceManager.GetObject("save_file", resourceCulture);
@@ -257,9 +287,29 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seahorse {
+            get {
+                object obj = ResourceManager.GetObject("seahorse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap shark {
+            get {
+                object obj = ResourceManager.GetObject("shark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -298,6 +348,16 @@ namespace HelloWorldWinForms.Properties {
         internal static System.Drawing.Bitmap syringe {
             get {
                 object obj = ResourceManager.GetObject("syringe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap turtle {
+            get {
+                object obj = ResourceManager.GetObject("turtle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

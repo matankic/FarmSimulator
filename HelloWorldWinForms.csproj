@@ -98,6 +98,11 @@
     <None Include="Resources\grass.jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\turtle.gif" />
+    <None Include="Resources\shark.gif" />
+    <None Include="Resources\seahorse.gif" />
+    <None Include="Resources\puff.gif" />
+    <None Include="Resources\dolphin.gif" />
     <None Include="Resources\ocean1.gif" />
     <None Include="Resources\ocean.gif" />
     <None Include="Resources\planel.png" />
@@ -125,6 +130,7 @@
     <None Include="Resources\ChaChing.wav" />
     <None Include="Resources\Chicken.wav" />
     <None Include="Resources\chicken-rice.png" />
+    <None Include="Resources\cat.gif" />
     <Content Include="Resources\Chicken_Strut.gif" />
   </ItemGroup>
   <ItemGroup />

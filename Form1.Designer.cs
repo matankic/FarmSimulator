@@ -556,7 +556,7 @@
             // 
             this.pictureBox4.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Default;
-            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
+            this.pictureBox4.Image = global::HelloWorldWinForms.Properties.Resources.puff;
             this.pictureBox4.InitialImage = global::HelloWorldWinForms.Properties.Resources.Chicken_Strut;
             this.pictureBox4.Location = new System.Drawing.Point(272, 18);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
