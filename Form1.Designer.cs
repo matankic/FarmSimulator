@@ -582,7 +582,7 @@
             this.puff_radio.TabStop = true;
             this.puff_radio.Text = "Puff";
             this.puff_radio.UseVisualStyleBackColor = false;
-            this.puff_radio.CheckedChanged += new System.EventHandler(this.Chicken_radio_CheckedChanged);
+            this.puff_radio.CheckedChanged += new System.EventHandler(this.puff_radio_CheckedChanged);
             // 
             // turtle_radio
             // 
@@ -596,7 +596,7 @@
             this.turtle_radio.TabIndex = 17;
             this.turtle_radio.Text = "Turtle";
             this.turtle_radio.UseVisualStyleBackColor = false;
-            this.turtle_radio.CheckedChanged += new System.EventHandler(this.Duck_radio_CheckedChanged);
+            this.turtle_radio.CheckedChanged += new System.EventHandler(this.turtle_radio_CheckedChanged);
             // 
             // seahorse_radio
             // 
@@ -610,7 +610,7 @@
             this.seahorse_radio.TabIndex = 17;
             this.seahorse_radio.Text = "Seahorse";
             this.seahorse_radio.UseVisualStyleBackColor = false;
-            this.seahorse_radio.CheckedChanged += new System.EventHandler(this.goose_radio_CheckedChanged);
+            this.seahorse_radio.CheckedChanged += new System.EventHandler(this.seahorse_radio_CheckedChanged);
             // 
             // dolphin_radio
             // 
@@ -624,7 +624,7 @@
             this.dolphin_radio.TabIndex = 17;
             this.dolphin_radio.Text = "Dolphin";
             this.dolphin_radio.UseVisualStyleBackColor = false;
-            this.dolphin_radio.CheckedChanged += new System.EventHandler(this.cow_radio_CheckedChanged);
+            this.dolphin_radio.CheckedChanged += new System.EventHandler(this.dolphin_radio_CheckedChanged);
             // 
             // shark_radio
             // 
@@ -638,7 +638,7 @@
             this.shark_radio.TabIndex = 17;
             this.shark_radio.Text = "Shark";
             this.shark_radio.UseVisualStyleBackColor = false;
-            this.shark_radio.CheckedChanged += new System.EventHandler(this.pig_radio_CheckedChanged);
+            this.shark_radio.CheckedChanged += new System.EventHandler(this.shark_radio_CheckedChanged);
             // 
             // jellyfish_radio
             // 
@@ -652,7 +652,7 @@
             this.jellyfish_radio.TabIndex = 17;
             this.jellyfish_radio.Text = "Jellyfish";
             this.jellyfish_radio.UseVisualStyleBackColor = false;
-            this.jellyfish_radio.CheckedChanged += new System.EventHandler(this.sheep_radio_CheckedChanged);
+            this.jellyfish_radio.CheckedChanged += new System.EventHandler(this.jellyfish_radio_CheckedChanged);
             // 
             // label6
             // 

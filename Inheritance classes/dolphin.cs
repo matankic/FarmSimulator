@@ -7,30 +7,35 @@ using System.Media;
 using System.Windows.Forms;
 using System.Drawing;
 
+
 namespace HelloWorldWinForms
 {
     [Serializable]
-    internal class Goose : Bird
+    internal class dolphin : Mammal
     {  
-        public const int _buy_goose = 100;
-        public const int _sell_goose = 87;
+        public const int _buy_dolphin = 200;
+        public const int _sell_dolphin = 180;
+        private int _lactatingCounter;
         private static Random rand = new Random();
+        
         public override void makeNoise()
         {
-            SoundPlayer noise = new SoundPlayer(Properties.Resources.GooseSound);
+            SoundPlayer noise = new SoundPlayer(Properties.Resources.Dolphin_sound);
             noise.Play();
             noise.Dispose();
         }
-        public Goose() : base()
+        public dolphin() : base()
         {
-            _spieces = 2;
+            _lactatingCounter = 0;
+            _spieces = 3;
         }
-        public Goose(int id) : base()
+        public dolphin(int id) : base()
         {
+            _lactatingCounter = 0;
             _id = id;
-            _spieces = 2;
+            _spieces = 3;
         }
-        ~Goose()
+        ~dolphin()
         {
 
         }
@@ -38,10 +43,10 @@ namespace HelloWorldWinForms
         {
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
-            visual.Image = global::HelloWorldWinForms.Properties.Resources.seahorse;
-            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.seahorse;
+            visual.Image = global::HelloWorldWinForms.Properties.Resources.dolphin;
+            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.dolphin;
             visual.Location = new System.Drawing.Point((int)getX(), (int)getY());
-            visual.Size = new System.Drawing.Size(60, 60);
+            visual.Size = new System.Drawing.Size(150, 80);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             visual.TabIndex = 13;
             visual.TabStop = false;
@@ -76,19 +81,19 @@ namespace HelloWorldWinForms
         }
         public override void updateStats()
         {
-            if (_hunger - 4 <= 0 || _health - 2 <= 0 || _thirst - 2 <= 0)
+            if (_hunger - 3 <= 0 || _health - 1 <= 0 || _thirst - 5 <= 0)
                 _isAlive = false;
             else
             {
-                _nextEgg++;
-                _hunger -= 4;
-                _thirst -= 2;
-                _health -= 2;
-                if (_nextEgg == 24)
+                _lactatingCounter++;
+                _hunger -= 3;
+                _thirst -= 5;
+                _health -= 1;
+                if (_lactatingCounter == 24)
                 {
-                    if (_sex == false) // females only !!!
-                        _eggs++;
-                    _nextEgg = 0;
+                    if(_sex == false) // females only !!!
+                        updateLactate(true);
+                    _lactatingCounter = 0;
                 }
             }
         }

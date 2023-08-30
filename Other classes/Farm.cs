@@ -14,12 +14,12 @@ namespace HelloWorldWinForms
         private Credit myCredit;
         private Time myTime;
         public int _farmSize;          
-        public int _cnt_chicken {get; set;}
-        public int _cnt_goose {get; set;}
-        public int _cnt_cow {get; set;}
-        public int _cnt_duck {get; set;}
-        public int _cnt_pig {get; set;}
-        public int _cnt_sheep {get; set;}
+        public int _cnt_puff {get; set;}
+        public int _cnt_seahorse {get; set;}
+        public int _cnt_dolphin {get; set;}
+        public int _cnt_turtle {get; set;}
+        public int _cnt_shark {get; set;}
+        public int _cnt_jellyfish {get; set;}
 
         // protected Animal[] animals;
         public Farm()
@@ -27,7 +27,7 @@ namespace HelloWorldWinForms
             myCredit = new Credit();
             myTime = new Time();
             myAnimals = new List<Animal>();
-            _farmSize = _cnt_chicken = _cnt_goose = _cnt_cow = _cnt_duck = _cnt_pig = _cnt_sheep = 0;
+            _farmSize = _cnt_puff = _cnt_seahorse = _cnt_dolphin = _cnt_turtle = _cnt_shark = _cnt_jellyfish = 0;
         }
         public ref Credit GetCreditRef() 
         {
@@ -45,22 +45,22 @@ namespace HelloWorldWinForms
                 switch (type)
                 {
                     case 0:
-                        myAnimals.Add(new Chicken(_farmSize));
+                        myAnimals.Add(new puff(_farmSize));
                         break;
                     case 1:
-                        myAnimals.Add(new Duck(_farmSize));
+                        myAnimals.Add(new turtle(_farmSize));
                         break;
                     case 2:
-                        myAnimals.Add(new Goose(_farmSize));
+                        myAnimals.Add(new seahorse(_farmSize));
                         break;
                     case 3:
-                        myAnimals.Add(new Cow(_farmSize));
+                        myAnimals.Add(new dolphin(_farmSize));
                         break;
                     case 4:
-                        myAnimals.Add(new Pig(_farmSize));
+                        myAnimals.Add(new shark(_farmSize));
                         break;
                     case 5:
-                        myAnimals.Add(new Sheep(_farmSize));
+                        myAnimals.Add(new jellyfish(_farmSize));
                         break;
                     default:
                         break;

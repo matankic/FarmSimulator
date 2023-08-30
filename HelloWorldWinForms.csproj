@@ -49,12 +49,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Inheritance classes\Animal.cs" />
-    <Compile Include="Inheritance classes\Bird.cs" />
-    <Compile Include="Inheritance classes\Chicken.cs" />
-    <Compile Include="Inheritance classes\Cow.cs" />
-    <Compile Include="Inheritance classes\Duck.cs" />
-    <Compile Include="Inheritance classes\Goose.cs" />
-    <Compile Include="Inheritance classes\Pig.cs" />
+    <Compile Include="Inheritance classes\fish.cs" />
+    <Compile Include="Inheritance classes\puff.cs" />
+    <Compile Include="Inheritance classes\dolphin.cs" />
+    <Compile Include="Inheritance classes\turtle.cs" />
+    <Compile Include="Inheritance classes\seahorse.cs" />
+    <Compile Include="Inheritance classes\shark.cs" />
     <Compile Include="Other classes\Credit.cs" />
     <Compile Include="Other classes\Farm.cs" />
     <Compile Include="Form1.cs">
@@ -66,10 +66,11 @@
     <Compile Include="Inheritance classes\Mammal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Inheritance classes\Sheep.cs" />
+    <Compile Include="Inheritance classes\jellyfish.cs" />
     <Compile Include="Other classes\Time.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

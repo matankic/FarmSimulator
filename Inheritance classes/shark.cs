@@ -10,38 +10,38 @@ using System.Drawing;
 namespace HelloWorldWinForms
 {
     [Serializable]
-    internal class Chicken : Bird
+    internal class shark : Mammal
     {
-        public const int _buy_chicken = 50;
-        public const int _sell_chicken = 47;
+        public const int _buy_shark = 150;
+        public const int _sell_shark = 70;
         private static Random rand = new Random();
         public override void makeNoise()
         {
-            SoundPlayer noise = new SoundPlayer(Properties.Resources.ChickenSound);
+            SoundPlayer noise = new SoundPlayer(Properties.Resources.PigSound);
             noise.Play();
             noise.Dispose();
         }
-        public Chicken() : base()
+        public shark() : base()
         {
-            _spieces = 0;
+            _spieces = 4;
         }
-        public Chicken(int id) : base()
+        public shark(int id) : base()
         {
             _id = id;
-            _spieces = 0;
+            _spieces = 4;
         }
-        ~Chicken()
+        ~shark()
         {
 
         }
         public override void displayAnimal(PictureBox visual)
         {
-            visual.Image = global::HelloWorldWinForms.Properties.Resources.puff;
-            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            visual.Size = new System.Drawing.Size(32, 32);
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
+            visual.Image = global::HelloWorldWinForms.Properties.Resources.shark;
+            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.shark;
             visual.Location = new System.Drawing.Point((int)getX(), (int)getY());
+            visual.Size = new System.Drawing.Size(200, 120);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             visual.TabIndex = 13;
             visual.TabStop = false;
@@ -51,7 +51,7 @@ namespace HelloWorldWinForms
             if (changeDirection)
                 createDirection();
             if (_coordinates.X + _direction.X <= 130 || _coordinates.X + _direction.X >= 760 ||
-                _coordinates.Y + _direction.Y <= 0 || _coordinates.Y + _direction.Y >= 470)
+                _coordinates.Y + _direction.Y <= 0 || _coordinates.Y + _direction.Y >= 480)
             {
                 if (_coordinates.X + _direction.X <= 130 && _coordinates.X + _direction.X > 0 &&
                     _coordinates.Y + _direction.Y > 30 && _coordinates.Y + _direction.Y < 450)
@@ -59,7 +59,7 @@ namespace HelloWorldWinForms
                     _coordinates += _direction;
                     return;
                 }
-                    _direction = -_direction;
+                _direction = -_direction;
             }
             _coordinates += _direction;
         }
@@ -72,26 +72,18 @@ namespace HelloWorldWinForms
         }
         public override bool isInside(int X, int Y)
         {
-            return Math.Abs(X - _coordinates.X) <= 32 && Math.Abs(Y - _coordinates.Y) <= 32;
+            return Math.Abs(X - _coordinates.X) <= 60 && Math.Abs(Y - _coordinates.Y) <= 60;
         }
         public override void updateStats()
         {
-            if (_hunger - 3 <= 0 || _health - 2 <= 0 || _thirst - 2 <= 0)
+            if (_hunger - 7 <= 0 || _health - 5 <= 0 || _thirst - 3 <= 0)
                 _isAlive = false;
             else
             {
-                _nextEgg++;
-                _hunger -= 3;
-                _thirst -= 2;
-                _health -= 2;
-                if (_nextEgg == 3)
-                {
-                    if (_sex == false) // females only !!!
-                        _eggs++;
-                    _nextEgg = 0;
-                }
+                _hunger -= 7;
+                _thirst -= 3;
+                _health -= 5;
             }
-            
         }
     }
 }

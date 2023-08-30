@@ -10,27 +10,27 @@ using System.Drawing;
 namespace HelloWorldWinForms
 {
     [Serializable]
-    internal class Pig : Mammal
-    {
-        public const int _buy_pig = 150;
-        public const int _sell_pig = 70;
+    internal class seahorse : fish
+    {  
+        public const int _buy_seahorse = 100;
+        public const int _sell_seahorse = 87;
         private static Random rand = new Random();
         public override void makeNoise()
         {
-            SoundPlayer noise = new SoundPlayer(Properties.Resources.PigSound);
+            SoundPlayer noise = new SoundPlayer(Properties.Resources.horse_sound);
             noise.Play();
             noise.Dispose();
         }
-        public Pig() : base()
+        public seahorse() : base()
         {
-            _spieces = 4;
+            _spieces = 2;
         }
-        public Pig(int id) : base()
+        public seahorse(int id) : base()
         {
             _id = id;
-            _spieces = 4;
+            _spieces = 2;
         }
-        ~Pig()
+        ~seahorse()
         {
 
         }
@@ -38,10 +38,10 @@ namespace HelloWorldWinForms
         {
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
-            visual.Image = global::HelloWorldWinForms.Properties.Resources.shark;
-            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.shark;
+            visual.Image = global::HelloWorldWinForms.Properties.Resources.seahorse;
+            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.seahorse;
             visual.Location = new System.Drawing.Point((int)getX(), (int)getY());
-            visual.Size = new System.Drawing.Size(200, 120);
+            visual.Size = new System.Drawing.Size(60, 60);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             visual.TabIndex = 13;
             visual.TabStop = false;
@@ -76,13 +76,20 @@ namespace HelloWorldWinForms
         }
         public override void updateStats()
         {
-            if (_hunger - 7 <= 0 || _health - 5 <= 0 || _thirst - 3 <= 0)
+            if (_hunger - 4 <= 0 || _health - 2 <= 0 || _thirst - 2 <= 0)
                 _isAlive = false;
             else
             {
-                _hunger -= 7;
-                _thirst -= 3;
-                _health -= 5;
+                _nextEgg++;
+                _hunger -= 4;
+                _thirst -= 2;
+                _health -= 2;
+                if (_nextEgg == 24)
+                {
+                    if (_sex == false) // females only !!!
+                        _eggs++;
+                    _nextEgg = 0;
+                }
             }
         }
     }

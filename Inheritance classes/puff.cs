@@ -10,49 +10,48 @@ using System.Drawing;
 namespace HelloWorldWinForms
 {
     [Serializable]
-    internal class Duck : Bird
+    internal class puff : fish
     {
-        public const int _buy_duck = 75;
-        public const int _sell_duck = 70;
+        public const int _buy_puff = 50;
+        public const int _sell_puff = 47;
         private static Random rand = new Random();
         public override void makeNoise()
         {
-            SoundPlayer noise = new SoundPlayer(Properties.Resources.DuckSound);
+            SoundPlayer noise = new SoundPlayer(Properties.Resources.ChickenSound);
             noise.Play();
             noise.Dispose();
         }
-        public Duck() : base()
+        public puff() : base()
         {
-            _spieces = 1;
+            _spieces = 0;
         }
-        public Duck(int id) : base()
+        public puff(int id) : base()
         {
             _id = id;
-            _spieces = 1;
+            _spieces = 0;
         }
-        ~Duck()
+        ~puff()
         {
-           
+
         }
         public override void displayAnimal(PictureBox visual)
         {
+            visual.Image = global::HelloWorldWinForms.Properties.Resources.puff;
+            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
+            visual.Size = new System.Drawing.Size(32, 32);
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
-            visual.Image = global::HelloWorldWinForms.Properties.Resources.turtle;
-            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.turtle;
             visual.Location = new System.Drawing.Point((int)getX(), (int)getY());
-            visual.Size = new System.Drawing.Size(50, 40);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             visual.TabIndex = 13;
             visual.TabStop = false;
-
         }
         public override void updateLocation(bool changeDirection)
         {
             if (changeDirection)
                 createDirection();
             if (_coordinates.X + _direction.X <= 130 || _coordinates.X + _direction.X >= 760 ||
-                _coordinates.Y + _direction.Y <= 0 || _coordinates.Y + _direction.Y >= 480)
+                _coordinates.Y + _direction.Y <= 0 || _coordinates.Y + _direction.Y >= 470)
             {
                 if (_coordinates.X + _direction.X <= 130 && _coordinates.X + _direction.X > 0 &&
                     _coordinates.Y + _direction.Y > 30 && _coordinates.Y + _direction.Y < 450)
@@ -60,7 +59,7 @@ namespace HelloWorldWinForms
                     _coordinates += _direction;
                     return;
                 }
-                _direction = -_direction;
+                    _direction = -_direction;
             }
             _coordinates += _direction;
         }
@@ -73,24 +72,26 @@ namespace HelloWorldWinForms
         }
         public override bool isInside(int X, int Y)
         {
-            return Math.Abs(X - _coordinates.X) <= 50 && Math.Abs(Y - _coordinates.Y) <= 40;
+            return Math.Abs(X - _coordinates.X) <= 32 && Math.Abs(Y - _coordinates.Y) <= 32;
         }
         public override void updateStats()
         {
-            if (_hunger - 3 <= 0 || _health - 2 <= 0 || _thirst - 1 <= 0)
+            if (_hunger - 3 <= 0 || _health - 2 <= 0 || _thirst - 2 <= 0)
                 _isAlive = false;
-            else {
+            else
+            {
                 _nextEgg++;
                 _hunger -= 3;
-                _thirst -= 1;
+                _thirst -= 2;
                 _health -= 2;
-                if (_nextEgg == 10)
+                if (_nextEgg == 3)
                 {
                     if (_sex == false) // females only !!!
                         _eggs++;
                     _nextEgg = 0;
                 }
             }
+            
         }
     }
 }

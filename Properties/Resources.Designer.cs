@@ -110,9 +110,10 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream CowSound {
+        internal static System.IO.UnmanagedMemoryStream Dolphin_sound
+        {
             get {
-                return ResourceManager.GetStream("CowSound", resourceCulture);
+                return ResourceManager.GetStream("Dolphin_sound", resourceCulture);
             }
         }
         
@@ -129,7 +130,7 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Dolphin_sound {
+        internal static System.IO.UnmanagedMemoryStream Dolphinsound {
             get {
                 return ResourceManager.GetStream("Dolphin_sound", resourceCulture);
             }
@@ -157,9 +158,9 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream GooseSound {
+        internal static System.IO.UnmanagedMemoryStream SeahorseSound {
             get {
-                return ResourceManager.GetStream("GooseSound", resourceCulture);
+                return ResourceManager.GetStream("horse_sound", resourceCulture);
             }
         }
         

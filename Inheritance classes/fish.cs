@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 namespace HelloWorldWinForms
 {
     [Serializable]
-    internal class Bird : Animal
+    internal class fish : Animal
     {
         protected int _eggs, _nextEgg;
-        public Bird() : base()
+        public fish() : base()
         {
             _eggs = 0;
             _nextEgg = 0;

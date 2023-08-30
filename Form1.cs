@@ -62,8 +62,8 @@ namespace HelloWorldWinForms
                     if (puff_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                        myFarm._cnt_chicken += Int32.Parse(amount_lbl.Text);
-                        lbl_1.Text =myFarm._cnt_chicken.ToString();
+                        myFarm._cnt_puff += Int32.Parse(amount_lbl.Text);
+                        lbl_1.Text =myFarm._cnt_puff.ToString();
                         int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 0);
 
@@ -79,8 +79,8 @@ namespace HelloWorldWinForms
                     else if (seahorse_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                        myFarm._cnt_goose += Int32.Parse(amount_lbl.Text);
-                        label30.Text =myFarm._cnt_goose.ToString();
+                        myFarm._cnt_seahorse += Int32.Parse(amount_lbl.Text);
+                        label30.Text =myFarm._cnt_seahorse.ToString();
                         int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 2);
 
@@ -96,8 +96,8 @@ namespace HelloWorldWinForms
                     else if (shark_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                        myFarm._cnt_pig += Int32.Parse(amount_lbl.Text);
-                        label32.Text =myFarm._cnt_pig.ToString();
+                        myFarm._cnt_shark += Int32.Parse(amount_lbl.Text);
+                        label32.Text =myFarm._cnt_shark.ToString();
                         int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 4);
 
@@ -113,8 +113,8 @@ namespace HelloWorldWinForms
                     else if (jellyfish_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                        myFarm._cnt_sheep += Int32.Parse(amount_lbl.Text);
-                        label33.Text =myFarm._cnt_sheep.ToString();
+                        myFarm._cnt_jellyfish += Int32.Parse(amount_lbl.Text);
+                        label33.Text =myFarm._cnt_jellyfish.ToString();
                         int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 5);
 
@@ -130,8 +130,8 @@ namespace HelloWorldWinForms
                     else if (turtle_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                        myFarm._cnt_duck += Int32.Parse(amount_lbl.Text);
-                        label29.Text =myFarm._cnt_duck.ToString();
+                        myFarm._cnt_turtle += Int32.Parse(amount_lbl.Text);
+                        label29.Text =myFarm._cnt_turtle.ToString();
                         int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 1);
 
@@ -147,8 +147,8 @@ namespace HelloWorldWinForms
                     else if (dolphin_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
-                        myFarm._cnt_cow += Int32.Parse(amount_lbl.Text);
-                        label31.Text =myFarm._cnt_cow.ToString();
+                        myFarm._cnt_dolphin += Int32.Parse(amount_lbl.Text);
+                        label31.Text =myFarm._cnt_dolphin.ToString();
                         int begin = myFarm._farmSize;
                         myFarm.AddAnimalToList(Int32.Parse(amount_lbl.Text), 3);
 
@@ -175,27 +175,27 @@ namespace HelloWorldWinForms
             int x = 0, price = 0;
             if (puff_radio.Checked == true)
             {
-                price = Chicken._buy_chicken;
+                price = puff._buy_puff;
             }
             else if (seahorse_radio.Checked == true)
             {
-                price = Goose._buy_goose;
+                price = seahorse._buy_seahorse;
             }
             else if (shark_radio.Checked == true)
             {
-                price = Pig._buy_pig;
+                price = shark._buy_shark;
             }
             else if (jellyfish_radio.Checked == true)
             {
-                price = Sheep._buy_sheep;
+                price = jellyfish._buy_jellyfish;
             }
             else if (turtle_radio.Checked == true)
             {
-                price = Duck._buy_duck;
+                price = turtle._buy_turtle;
             }
             else if (dolphin_radio.Checked == true)
             {
-                price = Cow._buy_cow;
+                price = dolphin._buy_dolphin;
             }
 
 
@@ -229,27 +229,27 @@ namespace HelloWorldWinForms
             int x = 0, price = 0;
             if (puff_radio.Checked == true)
             {
-                price = Chicken._buy_chicken;
+                price = puff._buy_puff;
             }
             else if (seahorse_radio.Checked == true)
             {
-                price = Goose._buy_goose;
+                price = seahorse._buy_seahorse;
             }
             else if (shark_radio.Checked == true)
             {
-                price = Pig._buy_pig;
+                price = shark._buy_shark;
             }
             else if (jellyfish_radio.Checked == true)
             {
-                price = Sheep._buy_sheep;
+                price = jellyfish._buy_jellyfish;
             }
             else if (turtle_radio.Checked == true)
             {
-                price = Duck._buy_duck;
+                price = turtle._buy_turtle;
             }
             else if (dolphin_radio.Checked == true)
             {
-                price = Cow._buy_cow;
+                price = dolphin._buy_dolphin;
             }
             try
             {
@@ -263,13 +263,13 @@ namespace HelloWorldWinForms
         }
 
         //Radios
-        private void Duck_radio_CheckedChanged(object sender, EventArgs e)
+        private void turtle_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.turtle;
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * Duck._buy_duck;
+                x = Int32.Parse(amount_lbl.Text) * turtle._buy_turtle;
                 label18.Text = x.ToString();
             }
             catch
@@ -277,13 +277,13 @@ namespace HelloWorldWinForms
                 label18.Text = x.ToString();
             }
         }
-        private void goose_radio_CheckedChanged(object sender, EventArgs e)
+        private void seahorse_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.seahorse;
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * Goose._buy_goose;
+                x = Int32.Parse(amount_lbl.Text) * seahorse._buy_seahorse;
                 label18.Text = x.ToString();
             }
             catch
@@ -291,13 +291,13 @@ namespace HelloWorldWinForms
                 label18.Text = x.ToString();
             }
         }
-        private void Chicken_radio_CheckedChanged(object sender, EventArgs e)
+        private void puff_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.puff;
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * Chicken._buy_chicken;
+                x = Int32.Parse(amount_lbl.Text) * puff._buy_puff;
                 label18.Text = x.ToString();
             }
             catch
@@ -305,13 +305,13 @@ namespace HelloWorldWinForms
                 label18.Text = x.ToString();
             }
         }
-        private void sheep_radio_CheckedChanged(object sender, EventArgs e)
+        private void jellyfish_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.jellyfish;
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * Sheep._buy_sheep;
+                x = Int32.Parse(amount_lbl.Text) * jellyfish._buy_jellyfish;
                 label18.Text = x.ToString();
             }
             catch
@@ -319,13 +319,13 @@ namespace HelloWorldWinForms
                 label18.Text = x.ToString();
             }
         }
-        private void pig_radio_CheckedChanged(object sender, EventArgs e)
+        private void shark_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.shark;
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * Pig._buy_pig;
+                x = Int32.Parse(amount_lbl.Text) * shark._buy_shark;
                 label18.Text = x.ToString();
             }
             catch
@@ -333,13 +333,13 @@ namespace HelloWorldWinForms
                 label18.Text = x.ToString();
             }
         }
-        private void cow_radio_CheckedChanged(object sender, EventArgs e)
+        private void dolphin_radio_CheckedChanged(object sender, EventArgs e)
         {
             pictureBox4.Image = HelloWorldWinForms.Properties.Resources.dolphin;
             int x = 0;
             try
             {
-                x = Int32.Parse(amount_lbl.Text) * Cow._buy_cow;
+                x = Int32.Parse(amount_lbl.Text) * dolphin._buy_dolphin;
                 label18.Text = x.ToString();
             }
             catch
@@ -362,28 +362,28 @@ namespace HelloWorldWinForms
                     switch (myFarm.myAnimals[i]._spieces)
                     {
                         case 0:
-                            myFarm._cnt_chicken--;
-                            lbl_1.Text = myFarm._cnt_chicken.ToString();
+                            myFarm._cnt_puff--;
+                            lbl_1.Text = myFarm._cnt_puff.ToString();
                             break;
                         case 1:
-                            myFarm._cnt_duck--;
-                            label29.Text = myFarm._cnt_duck.ToString();
+                            myFarm._cnt_turtle--;
+                            label29.Text = myFarm._cnt_turtle.ToString();
                             break;
                         case 2:
-                            myFarm._cnt_goose--;
-                            label30.Text = myFarm._cnt_goose.ToString();
+                            myFarm._cnt_seahorse--;
+                            label30.Text = myFarm._cnt_seahorse.ToString();
                             break;
                         case 3:
-                            myFarm._cnt_cow--;
-                            label31.Text = myFarm._cnt_cow.ToString();
+                            myFarm._cnt_dolphin--;
+                            label31.Text = myFarm._cnt_dolphin.ToString();
                             break;
                         case 4:
-                            myFarm._cnt_pig--;
-                            label32.Text = myFarm._cnt_pig.ToString();
+                            myFarm._cnt_shark--;
+                            label32.Text = myFarm._cnt_shark.ToString();
                             break;
                         case 5:
-                            myFarm._cnt_sheep--;
-                            label33.Text = myFarm._cnt_sheep.ToString();
+                            myFarm._cnt_jellyfish--;
+                            label33.Text = myFarm._cnt_jellyfish.ToString();
                             break;
                         default:
                             break;
@@ -594,8 +594,8 @@ namespace HelloWorldWinForms
                 switch (myFarm.myAnimals[prevIndex].getSpieces())
                 { 
                     case 0: 
-                        myFarm._cnt_chicken--; lbl_1.Text = myFarm._cnt_chicken.ToString();
-                        myFarm.GetCreditRef() += Chicken._sell_chicken * myFarm.myAnimals[prevIndex]._age.get_days();
+                        myFarm._cnt_puff--; lbl_1.Text = myFarm._cnt_puff.ToString();
+                        myFarm.GetCreditRef() += puff._sell_puff * myFarm.myAnimals[prevIndex]._age.get_days();
                         if (myFarm.GetCreditRef().get_credit() > 0)
                         {
                             label11.ForeColor = Color.ForestGreen;
@@ -604,8 +604,8 @@ namespace HelloWorldWinForms
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 1: 
-                        myFarm._cnt_duck--; label29.Text = myFarm._cnt_duck.ToString();
-                        myFarm.GetCreditRef() += Duck._sell_duck * myFarm.myAnimals[prevIndex]._age.get_days();
+                        myFarm._cnt_turtle--; label29.Text = myFarm._cnt_turtle.ToString();
+                        myFarm.GetCreditRef() += turtle._sell_turtle * myFarm.myAnimals[prevIndex]._age.get_days();
                         if (myFarm.GetCreditRef().get_credit() > 0)
                         {
                             label11.ForeColor = Color.ForestGreen;
@@ -614,8 +614,8 @@ namespace HelloWorldWinForms
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 2:
-                        myFarm._cnt_goose--; label30.Text = myFarm._cnt_goose.ToString();
-                        myFarm.GetCreditRef() += Goose._sell_goose * myFarm.myAnimals[prevIndex]._age.get_days();
+                        myFarm._cnt_seahorse--; label30.Text = myFarm._cnt_seahorse.ToString();
+                        myFarm.GetCreditRef() += seahorse._sell_seahorse * myFarm.myAnimals[prevIndex]._age.get_days();
                         if (myFarm.GetCreditRef().get_credit() > 0)
                         {
                             label11.ForeColor = Color.ForestGreen;
@@ -624,8 +624,8 @@ namespace HelloWorldWinForms
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 3: 
-                        myFarm._cnt_cow--; label31.Text = myFarm._cnt_cow.ToString();
-                        myFarm.GetCreditRef() += Cow._sell_cow * myFarm.myAnimals[prevIndex]._age.get_days();
+                        myFarm._cnt_dolphin--; label31.Text = myFarm._cnt_dolphin.ToString();
+                        myFarm.GetCreditRef() += dolphin._sell_dolphin * myFarm.myAnimals[prevIndex]._age.get_days();
                         if (myFarm.GetCreditRef().get_credit() > 0)
                         {
                             label11.ForeColor = Color.ForestGreen;
@@ -634,8 +634,8 @@ namespace HelloWorldWinForms
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 4: 
-                        myFarm._cnt_pig--; label32.Text = myFarm._cnt_pig.ToString();
-                        myFarm.GetCreditRef() += Pig._sell_pig * myFarm.myAnimals[prevIndex]._age.get_days();
+                        myFarm._cnt_shark--; label32.Text = myFarm._cnt_shark.ToString();
+                        myFarm.GetCreditRef() += shark._sell_shark * myFarm.myAnimals[prevIndex]._age.get_days();
                         if (myFarm.GetCreditRef().get_credit() > 0)
                         {
                             label11.ForeColor = Color.ForestGreen;
@@ -644,8 +644,8 @@ namespace HelloWorldWinForms
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                         break;
                     case 5: 
-                        myFarm._cnt_sheep--; label33.Text = myFarm._cnt_sheep.ToString();
-                        myFarm.GetCreditRef() += Sheep._sell_sheep * myFarm.myAnimals[prevIndex]._age.get_days();
+                        myFarm._cnt_jellyfish--; label33.Text = myFarm._cnt_jellyfish.ToString();
+                        myFarm.GetCreditRef() += jellyfish._sell_jellyfish * myFarm.myAnimals[prevIndex]._age.get_days();
                         if (myFarm.GetCreditRef().get_credit() > 0)
                         {
                             label11.ForeColor = Color.ForestGreen;
@@ -1036,7 +1036,7 @@ namespace HelloWorldWinForms
                         label12.ForeColor = Color.ForestGreen;
                     }
                     label11.Text = myFarm.GetCreditRef().creditUpdate();
-                    Bird b = (Bird)myFarm.myAnimals[prevIndex];
+                    fish b = (fish)myFarm.myAnimals[prevIndex];
                     b.takeEggs();
                 }
                 else
@@ -1087,12 +1087,12 @@ namespace HelloWorldWinForms
                 label11.Text = myFarm.GetCreditRef().creditUpdate();
                 label10.Text = myFarm.GetTimeRef().daysUpdate();
                 label9.Text = myFarm.GetTimeRef().hoursUpdate();
-                lbl_1.Text = myFarm._cnt_chicken.ToString();
-                label29.Text = myFarm._cnt_duck.ToString();
-                label30.Text = myFarm._cnt_goose.ToString();
-                label31.Text = myFarm._cnt_cow.ToString();
-                label32.Text = myFarm._cnt_pig.ToString();
-                label33.Text = myFarm._cnt_sheep.ToString();
+                lbl_1.Text = myFarm._cnt_puff.ToString();
+                label29.Text = myFarm._cnt_turtle.ToString();
+                label30.Text = myFarm._cnt_seahorse.ToString();
+                label31.Text = myFarm._cnt_dolphin.ToString();
+                label32.Text = myFarm._cnt_shark.ToString();
+                label33.Text = myFarm._cnt_jellyfish.ToString();
                 displayAnimals();
             }
         }
