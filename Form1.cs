@@ -441,7 +441,7 @@ namespace HelloWorldWinForms
             
             SaveFileDialog saveFileDialog1 = new SaveFileDialog();
             saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
-            saveFileDialog1.Filter = "farm files (*.frm)|*.frm|All files (*.*)|*.*";
+            saveFileDialog1.Filter = "ocean file (*.ocn)|*.ocn|All files (*.*)|*.*";
             saveFileDialog1.FilterIndex = 1;
             saveFileDialog1.RestoreDirectory = true;
             if (saveFileDialog1.ShowDialog() == DialogResult.OK)
@@ -1066,7 +1066,7 @@ namespace HelloWorldWinForms
         {
             OpenFileDialog openFileDialog1 = new OpenFileDialog();
             openFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
-            openFileDialog1.Filter = "farm files (*.frm)|*.frm|All files (*.*)|*.*";
+            openFileDialog1.Filter = "ocean file (*.ocn)|*.ocn|All files (*.*)|*.*";
             openFileDialog1.FilterIndex = 1;
             openFileDialog1.RestoreDirectory = true;
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
