@@ -41,8 +41,8 @@ namespace HelloWorldWinForms
         {
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
-            visual.Image = global::HelloWorldWinForms.Properties.Resources.turtle;
-            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.turtle;
+            visual.Image = global::HelloWorldWinForms.Properties.Resources.jellyfish;
+            visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.jellyfish;
             visual.Location = new System.Drawing.Point((int)_coordinates.X, (int)_coordinates.Y);
             visual.Size = new System.Drawing.Size(65, 65);
             visual.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;

@@ -56,12 +56,12 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.Chicken_radio = new System.Windows.Forms.RadioButton();
-            this.Duck_radio = new System.Windows.Forms.RadioButton();
-            this.goose_radio = new System.Windows.Forms.RadioButton();
-            this.cow_radio = new System.Windows.Forms.RadioButton();
-            this.pig_radio = new System.Windows.Forms.RadioButton();
-            this.sheep_radio = new System.Windows.Forms.RadioButton();
+            this.puff_radio = new System.Windows.Forms.RadioButton();
+            this.turtle_radio = new System.Windows.Forms.RadioButton();
+            this.seahorse_radio = new System.Windows.Forms.RadioButton();
+            this.dolphin_radio = new System.Windows.Forms.RadioButton();
+            this.shark_radio = new System.Windows.Forms.RadioButton();
+            this.jellyfish_radio = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -104,30 +104,30 @@
             this.name_lbl = new System.Windows.Forms.Label();
             this.searchBox = new System.Windows.Forms.ComboBox();
             this.moveAnimal = new System.Windows.Forms.Timer(this.components);
+            this.egg_btn = new System.Windows.Forms.PictureBox();
+            this.heal_btn = new System.Windows.Forms.PictureBox();
+            this.milk_btn = new System.Windows.Forms.PictureBox();
+            this.meat_btn = new System.Windows.Forms.PictureBox();
+            this.water_btn = new System.Windows.Forms.PictureBox();
+            this.feed_btn = new System.Windows.Forms.PictureBox();
             this.load_btn = new System.Windows.Forms.PictureBox();
             this.save_btn = new System.Windows.Forms.PictureBox();
             this.search_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.meat_btn = new System.Windows.Forms.PictureBox();
-            this.feed_btn = new System.Windows.Forms.PictureBox();
-            this.water_btn = new System.Windows.Forms.PictureBox();
-            this.milk_btn = new System.Windows.Forms.PictureBox();
-            this.egg_btn = new System.Windows.Forms.PictureBox();
-            this.heal_btn = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.Animal_stats.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.egg_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heal_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meat_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.water_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meat_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.milk_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.egg_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heal_btn)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_1
@@ -568,91 +568,91 @@
             this.pictureBox4.Tag = "";
             this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
             // 
-            // Chicken_radio
+            // puff_radio
             // 
-            this.Chicken_radio.AutoSize = true;
-            this.Chicken_radio.BackColor = System.Drawing.Color.Transparent;
-            this.Chicken_radio.Checked = true;
-            this.Chicken_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Chicken_radio.Location = new System.Drawing.Point(1230, 60);
-            this.Chicken_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Chicken_radio.Name = "Chicken_radio";
-            this.Chicken_radio.Size = new System.Drawing.Size(125, 33);
-            this.Chicken_radio.TabIndex = 17;
-            this.Chicken_radio.TabStop = true;
-            this.Chicken_radio.Text = "Chicken";
-            this.Chicken_radio.UseVisualStyleBackColor = false;
-            this.Chicken_radio.CheckedChanged += new System.EventHandler(this.Chicken_radio_CheckedChanged);
+            this.puff_radio.AutoSize = true;
+            this.puff_radio.BackColor = System.Drawing.Color.Transparent;
+            this.puff_radio.Checked = true;
+            this.puff_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.puff_radio.Location = new System.Drawing.Point(1230, 60);
+            this.puff_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.puff_radio.Name = "puff_radio";
+            this.puff_radio.Size = new System.Drawing.Size(79, 33);
+            this.puff_radio.TabIndex = 17;
+            this.puff_radio.TabStop = true;
+            this.puff_radio.Text = "Puff";
+            this.puff_radio.UseVisualStyleBackColor = false;
+            this.puff_radio.CheckedChanged += new System.EventHandler(this.Chicken_radio_CheckedChanged);
             // 
-            // Duck_radio
+            // turtle_radio
             // 
-            this.Duck_radio.AutoSize = true;
-            this.Duck_radio.BackColor = System.Drawing.Color.Transparent;
-            this.Duck_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.Duck_radio.Location = new System.Drawing.Point(1230, 106);
-            this.Duck_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Duck_radio.Name = "Duck_radio";
-            this.Duck_radio.Size = new System.Drawing.Size(92, 33);
-            this.Duck_radio.TabIndex = 17;
-            this.Duck_radio.Text = "Duck";
-            this.Duck_radio.UseVisualStyleBackColor = false;
-            this.Duck_radio.CheckedChanged += new System.EventHandler(this.Duck_radio_CheckedChanged);
+            this.turtle_radio.AutoSize = true;
+            this.turtle_radio.BackColor = System.Drawing.Color.Transparent;
+            this.turtle_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.turtle_radio.Location = new System.Drawing.Point(1230, 106);
+            this.turtle_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.turtle_radio.Name = "turtle_radio";
+            this.turtle_radio.Size = new System.Drawing.Size(101, 33);
+            this.turtle_radio.TabIndex = 17;
+            this.turtle_radio.Text = "Turtle";
+            this.turtle_radio.UseVisualStyleBackColor = false;
+            this.turtle_radio.CheckedChanged += new System.EventHandler(this.Duck_radio_CheckedChanged);
             // 
-            // goose_radio
+            // seahorse_radio
             // 
-            this.goose_radio.AutoSize = true;
-            this.goose_radio.BackColor = System.Drawing.Color.Transparent;
-            this.goose_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.goose_radio.Location = new System.Drawing.Point(1230, 152);
-            this.goose_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.goose_radio.Name = "goose_radio";
-            this.goose_radio.Size = new System.Drawing.Size(110, 33);
-            this.goose_radio.TabIndex = 17;
-            this.goose_radio.Text = "Goose";
-            this.goose_radio.UseVisualStyleBackColor = false;
-            this.goose_radio.CheckedChanged += new System.EventHandler(this.goose_radio_CheckedChanged);
+            this.seahorse_radio.AutoSize = true;
+            this.seahorse_radio.BackColor = System.Drawing.Color.Transparent;
+            this.seahorse_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.seahorse_radio.Location = new System.Drawing.Point(1230, 152);
+            this.seahorse_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.seahorse_radio.Name = "seahorse_radio";
+            this.seahorse_radio.Size = new System.Drawing.Size(142, 33);
+            this.seahorse_radio.TabIndex = 17;
+            this.seahorse_radio.Text = "Seahorse";
+            this.seahorse_radio.UseVisualStyleBackColor = false;
+            this.seahorse_radio.CheckedChanged += new System.EventHandler(this.goose_radio_CheckedChanged);
             // 
-            // cow_radio
+            // dolphin_radio
             // 
-            this.cow_radio.AutoSize = true;
-            this.cow_radio.BackColor = System.Drawing.Color.Transparent;
-            this.cow_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.cow_radio.Location = new System.Drawing.Point(1230, 198);
-            this.cow_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cow_radio.Name = "cow_radio";
-            this.cow_radio.Size = new System.Drawing.Size(87, 33);
-            this.cow_radio.TabIndex = 17;
-            this.cow_radio.Text = "Cow";
-            this.cow_radio.UseVisualStyleBackColor = false;
-            this.cow_radio.CheckedChanged += new System.EventHandler(this.cow_radio_CheckedChanged);
+            this.dolphin_radio.AutoSize = true;
+            this.dolphin_radio.BackColor = System.Drawing.Color.Transparent;
+            this.dolphin_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.dolphin_radio.Location = new System.Drawing.Point(1230, 198);
+            this.dolphin_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dolphin_radio.Name = "dolphin_radio";
+            this.dolphin_radio.Size = new System.Drawing.Size(121, 33);
+            this.dolphin_radio.TabIndex = 17;
+            this.dolphin_radio.Text = "Dolphin";
+            this.dolphin_radio.UseVisualStyleBackColor = false;
+            this.dolphin_radio.CheckedChanged += new System.EventHandler(this.cow_radio_CheckedChanged);
             // 
-            // pig_radio
+            // shark_radio
             // 
-            this.pig_radio.AutoSize = true;
-            this.pig_radio.BackColor = System.Drawing.Color.Transparent;
-            this.pig_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.pig_radio.Location = new System.Drawing.Point(1230, 245);
-            this.pig_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pig_radio.Name = "pig_radio";
-            this.pig_radio.Size = new System.Drawing.Size(74, 33);
-            this.pig_radio.TabIndex = 17;
-            this.pig_radio.Text = "Pig";
-            this.pig_radio.UseVisualStyleBackColor = false;
-            this.pig_radio.CheckedChanged += new System.EventHandler(this.pig_radio_CheckedChanged);
+            this.shark_radio.AutoSize = true;
+            this.shark_radio.BackColor = System.Drawing.Color.Transparent;
+            this.shark_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.shark_radio.Location = new System.Drawing.Point(1230, 245);
+            this.shark_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.shark_radio.Name = "shark_radio";
+            this.shark_radio.Size = new System.Drawing.Size(100, 33);
+            this.shark_radio.TabIndex = 17;
+            this.shark_radio.Text = "Shark";
+            this.shark_radio.UseVisualStyleBackColor = false;
+            this.shark_radio.CheckedChanged += new System.EventHandler(this.pig_radio_CheckedChanged);
             // 
-            // sheep_radio
+            // jellyfish_radio
             // 
-            this.sheep_radio.AutoSize = true;
-            this.sheep_radio.BackColor = System.Drawing.Color.Transparent;
-            this.sheep_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.sheep_radio.Location = new System.Drawing.Point(1230, 291);
-            this.sheep_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sheep_radio.Name = "sheep_radio";
-            this.sheep_radio.Size = new System.Drawing.Size(109, 33);
-            this.sheep_radio.TabIndex = 17;
-            this.sheep_radio.Text = "Sheep";
-            this.sheep_radio.UseVisualStyleBackColor = false;
-            this.sheep_radio.CheckedChanged += new System.EventHandler(this.sheep_radio_CheckedChanged);
+            this.jellyfish_radio.AutoSize = true;
+            this.jellyfish_radio.BackColor = System.Drawing.Color.Transparent;
+            this.jellyfish_radio.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.jellyfish_radio.Location = new System.Drawing.Point(1230, 291);
+            this.jellyfish_radio.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.jellyfish_radio.Name = "jellyfish_radio";
+            this.jellyfish_radio.Size = new System.Drawing.Size(124, 33);
+            this.jellyfish_radio.TabIndex = 17;
+            this.jellyfish_radio.Text = "Jellyfish";
+            this.jellyfish_radio.UseVisualStyleBackColor = false;
+            this.jellyfish_radio.CheckedChanged += new System.EventHandler(this.sheep_radio_CheckedChanged);
             // 
             // label6
             // 
@@ -1162,6 +1162,96 @@
             this.moveAnimal.Interval = 20;
             this.moveAnimal.Tick += new System.EventHandler(this.moveAnimal_Tick);
             // 
+            // egg_btn
+            // 
+            this.egg_btn.BackColor = System.Drawing.Color.Transparent;
+            this.egg_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.egg_btn.Image = global::HelloWorldWinForms.Properties.Resources.egg;
+            this.egg_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
+            this.egg_btn.Location = new System.Drawing.Point(832, 783);
+            this.egg_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.egg_btn.Name = "egg_btn";
+            this.egg_btn.Size = new System.Drawing.Size(99, 92);
+            this.egg_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.egg_btn.TabIndex = 13;
+            this.egg_btn.TabStop = false;
+            this.egg_btn.Click += new System.EventHandler(this.egg_btn_Click);
+            // 
+            // heal_btn
+            // 
+            this.heal_btn.BackColor = System.Drawing.Color.Transparent;
+            this.heal_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.heal_btn.Image = global::HelloWorldWinForms.Properties.Resources.syringe;
+            this.heal_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
+            this.heal_btn.Location = new System.Drawing.Point(292, 783);
+            this.heal_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.heal_btn.Name = "heal_btn";
+            this.heal_btn.Size = new System.Drawing.Size(99, 92);
+            this.heal_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.heal_btn.TabIndex = 13;
+            this.heal_btn.TabStop = false;
+            this.heal_btn.Click += new System.EventHandler(this.heal_btn_Click);
+            // 
+            // milk_btn
+            // 
+            this.milk_btn.BackColor = System.Drawing.Color.Transparent;
+            this.milk_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.milk_btn.Image = global::HelloWorldWinForms.Properties.Resources.milking;
+            this.milk_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
+            this.milk_btn.Location = new System.Drawing.Point(724, 783);
+            this.milk_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.milk_btn.Name = "milk_btn";
+            this.milk_btn.Size = new System.Drawing.Size(99, 92);
+            this.milk_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.milk_btn.TabIndex = 13;
+            this.milk_btn.TabStop = false;
+            this.milk_btn.Click += new System.EventHandler(this.milk_btn_Click);
+            // 
+            // meat_btn
+            // 
+            this.meat_btn.BackColor = System.Drawing.Color.Transparent;
+            this.meat_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.meat_btn.Image = global::HelloWorldWinForms.Properties.Resources.meat;
+            this.meat_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
+            this.meat_btn.Location = new System.Drawing.Point(616, 783);
+            this.meat_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.meat_btn.Name = "meat_btn";
+            this.meat_btn.Size = new System.Drawing.Size(99, 92);
+            this.meat_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.meat_btn.TabIndex = 13;
+            this.meat_btn.TabStop = false;
+            this.meat_btn.Click += new System.EventHandler(this.meat_btn_Click);
+            // 
+            // water_btn
+            // 
+            this.water_btn.BackColor = System.Drawing.Color.Transparent;
+            this.water_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.water_btn.Image = global::HelloWorldWinForms.Properties.Resources.water_drop;
+            this.water_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
+            this.water_btn.Location = new System.Drawing.Point(508, 783);
+            this.water_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.water_btn.Name = "water_btn";
+            this.water_btn.Size = new System.Drawing.Size(99, 92);
+            this.water_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.water_btn.TabIndex = 13;
+            this.water_btn.TabStop = false;
+            this.water_btn.Click += new System.EventHandler(this.water_btn_Click);
+            // 
+            // feed_btn
+            // 
+            this.feed_btn.BackColor = System.Drawing.Color.Transparent;
+            this.feed_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.feed_btn.Image = global::HelloWorldWinForms.Properties.Resources.chicken_rice;
+            this.feed_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
+            this.feed_btn.Location = new System.Drawing.Point(400, 783);
+            this.feed_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.feed_btn.Name = "feed_btn";
+            this.feed_btn.Size = new System.Drawing.Size(99, 92);
+            this.feed_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.feed_btn.TabIndex = 13;
+            this.feed_btn.TabStop = false;
+            this.feed_btn.Click += new System.EventHandler(this.feed_btn_Click);
+            // 
             // load_btn
             // 
             this.load_btn.BackColor = System.Drawing.Color.Transparent;
@@ -1221,96 +1311,6 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // meat_btn
-            // 
-            this.meat_btn.BackColor = System.Drawing.Color.Transparent;
-            this.meat_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.meat_btn.Image = global::HelloWorldWinForms.Properties.Resources.meat;
-            this.meat_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            this.meat_btn.Location = new System.Drawing.Point(616, 783);
-            this.meat_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.meat_btn.Name = "meat_btn";
-            this.meat_btn.Size = new System.Drawing.Size(99, 92);
-            this.meat_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.meat_btn.TabIndex = 13;
-            this.meat_btn.TabStop = false;
-            this.meat_btn.Click += new System.EventHandler(this.meat_btn_Click);
-            // 
-            // feed_btn
-            // 
-            this.feed_btn.BackColor = System.Drawing.Color.Transparent;
-            this.feed_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.feed_btn.Image = global::HelloWorldWinForms.Properties.Resources.chicken_rice;
-            this.feed_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            this.feed_btn.Location = new System.Drawing.Point(400, 783);
-            this.feed_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.feed_btn.Name = "feed_btn";
-            this.feed_btn.Size = new System.Drawing.Size(99, 92);
-            this.feed_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.feed_btn.TabIndex = 13;
-            this.feed_btn.TabStop = false;
-            this.feed_btn.Click += new System.EventHandler(this.feed_btn_Click);
-            // 
-            // water_btn
-            // 
-            this.water_btn.BackColor = System.Drawing.Color.Transparent;
-            this.water_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.water_btn.Image = global::HelloWorldWinForms.Properties.Resources.water_drop;
-            this.water_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            this.water_btn.Location = new System.Drawing.Point(508, 783);
-            this.water_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.water_btn.Name = "water_btn";
-            this.water_btn.Size = new System.Drawing.Size(99, 92);
-            this.water_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.water_btn.TabIndex = 13;
-            this.water_btn.TabStop = false;
-            this.water_btn.Click += new System.EventHandler(this.water_btn_Click);
-            // 
-            // milk_btn
-            // 
-            this.milk_btn.BackColor = System.Drawing.Color.Transparent;
-            this.milk_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.milk_btn.Image = global::HelloWorldWinForms.Properties.Resources.milking;
-            this.milk_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            this.milk_btn.Location = new System.Drawing.Point(724, 783);
-            this.milk_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.milk_btn.Name = "milk_btn";
-            this.milk_btn.Size = new System.Drawing.Size(99, 92);
-            this.milk_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.milk_btn.TabIndex = 13;
-            this.milk_btn.TabStop = false;
-            this.milk_btn.Click += new System.EventHandler(this.milk_btn_Click);
-            // 
-            // egg_btn
-            // 
-            this.egg_btn.BackColor = System.Drawing.Color.Transparent;
-            this.egg_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.egg_btn.Image = global::HelloWorldWinForms.Properties.Resources.egg;
-            this.egg_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            this.egg_btn.Location = new System.Drawing.Point(832, 783);
-            this.egg_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.egg_btn.Name = "egg_btn";
-            this.egg_btn.Size = new System.Drawing.Size(99, 92);
-            this.egg_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.egg_btn.TabIndex = 13;
-            this.egg_btn.TabStop = false;
-            this.egg_btn.Click += new System.EventHandler(this.egg_btn_Click);
-            // 
-            // heal_btn
-            // 
-            this.heal_btn.BackColor = System.Drawing.Color.Transparent;
-            this.heal_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.heal_btn.Image = global::HelloWorldWinForms.Properties.Resources.syringe;
-            this.heal_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            this.heal_btn.Location = new System.Drawing.Point(292, 783);
-            this.heal_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.heal_btn.Name = "heal_btn";
-            this.heal_btn.Size = new System.Drawing.Size(99, 92);
-            this.heal_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.heal_btn.TabIndex = 13;
-            this.heal_btn.TabStop = false;
-            this.heal_btn.Click += new System.EventHandler(this.heal_btn_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -1333,13 +1333,13 @@
             this.Controls.Add(this.save_btn);
             this.Controls.Add(this.search_icon);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.sheep_radio);
+            this.Controls.Add(this.jellyfish_radio);
             this.Controls.Add(this.searchBox);
-            this.Controls.Add(this.pig_radio);
-            this.Controls.Add(this.cow_radio);
-            this.Controls.Add(this.goose_radio);
-            this.Controls.Add(this.Duck_radio);
-            this.Controls.Add(this.Chicken_radio);
+            this.Controls.Add(this.shark_radio);
+            this.Controls.Add(this.dolphin_radio);
+            this.Controls.Add(this.seahorse_radio);
+            this.Controls.Add(this.turtle_radio);
+            this.Controls.Add(this.puff_radio);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label27);
@@ -1383,16 +1383,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.Animal_stats.ResumeLayout(false);
             this.Animal_stats.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.egg_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.heal_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.milk_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.meat_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.water_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meat_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.milk_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.egg_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.heal_btn)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1422,12 +1422,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton Chicken_radio;
-        private System.Windows.Forms.RadioButton Duck_radio;
-        private System.Windows.Forms.RadioButton goose_radio;
-        private System.Windows.Forms.RadioButton cow_radio;
-        private System.Windows.Forms.RadioButton pig_radio;
-        private System.Windows.Forms.RadioButton sheep_radio;
+        private System.Windows.Forms.RadioButton puff_radio;
+        private System.Windows.Forms.RadioButton turtle_radio;
+        private System.Windows.Forms.RadioButton seahorse_radio;
+        private System.Windows.Forms.RadioButton dolphin_radio;
+        private System.Windows.Forms.RadioButton shark_radio;
+        private System.Windows.Forms.RadioButton jellyfish_radio;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label label20;

@@ -59,7 +59,7 @@ namespace HelloWorldWinForms
                 if (price > 0 && myFarm.GetCreditRef().get_credit() - price >= -200)
                 {
                     buy_sell.Play();
-                    if (Chicken_radio.Checked == true)
+                    if (puff_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_chicken += Int32.Parse(amount_lbl.Text);
@@ -76,7 +76,7 @@ namespace HelloWorldWinForms
                         }
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                     }
-                    else if (goose_radio.Checked == true)
+                    else if (seahorse_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_goose += Int32.Parse(amount_lbl.Text);
@@ -93,7 +93,7 @@ namespace HelloWorldWinForms
                         }
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                     }
-                    else if (pig_radio.Checked == true)
+                    else if (shark_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_pig += Int32.Parse(amount_lbl.Text);
@@ -110,7 +110,7 @@ namespace HelloWorldWinForms
                         }
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                     }
-                    else if (sheep_radio.Checked == true)
+                    else if (jellyfish_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_sheep += Int32.Parse(amount_lbl.Text);
@@ -127,7 +127,7 @@ namespace HelloWorldWinForms
                         }
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                     }
-                    else if (Duck_radio.Checked == true)
+                    else if (turtle_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_duck += Int32.Parse(amount_lbl.Text);
@@ -144,7 +144,7 @@ namespace HelloWorldWinForms
                         }
                         label11.Text = myFarm.GetCreditRef().creditUpdate();
                     }
-                    else if (cow_radio.Checked == true)
+                    else if (dolphin_radio.Checked == true)
                     {
                         myFarm.GetCreditRef() -= price;
                         myFarm._cnt_cow += Int32.Parse(amount_lbl.Text);
@@ -173,27 +173,27 @@ namespace HelloWorldWinForms
         {
             amount_lbl.Text = comboBox1.SelectedIndex.ToString();
             int x = 0, price = 0;
-            if (Chicken_radio.Checked == true)
+            if (puff_radio.Checked == true)
             {
                 price = Chicken._buy_chicken;
             }
-            else if (goose_radio.Checked == true)
+            else if (seahorse_radio.Checked == true)
             {
                 price = Goose._buy_goose;
             }
-            else if (pig_radio.Checked == true)
+            else if (shark_radio.Checked == true)
             {
                 price = Pig._buy_pig;
             }
-            else if (sheep_radio.Checked == true)
+            else if (jellyfish_radio.Checked == true)
             {
                 price = Sheep._buy_sheep;
             }
-            else if (Duck_radio.Checked == true)
+            else if (turtle_radio.Checked == true)
             {
                 price = Duck._buy_duck;
             }
-            else if (cow_radio.Checked == true)
+            else if (dolphin_radio.Checked == true)
             {
                 price = Cow._buy_cow;
             }
@@ -227,27 +227,27 @@ namespace HelloWorldWinForms
                 amount_lbl.Text = y.ToString();
             }
             int x = 0, price = 0;
-            if (Chicken_radio.Checked == true)
+            if (puff_radio.Checked == true)
             {
                 price = Chicken._buy_chicken;
             }
-            else if (goose_radio.Checked == true)
+            else if (seahorse_radio.Checked == true)
             {
                 price = Goose._buy_goose;
             }
-            else if (pig_radio.Checked == true)
+            else if (shark_radio.Checked == true)
             {
                 price = Pig._buy_pig;
             }
-            else if (sheep_radio.Checked == true)
+            else if (jellyfish_radio.Checked == true)
             {
                 price = Sheep._buy_sheep;
             }
-            else if (Duck_radio.Checked == true)
+            else if (turtle_radio.Checked == true)
             {
                 price = Duck._buy_duck;
             }
-            else if (cow_radio.Checked == true)
+            else if (dolphin_radio.Checked == true)
             {
                 price = Cow._buy_cow;
             }
@@ -265,7 +265,7 @@ namespace HelloWorldWinForms
         //Radios
         private void Duck_radio_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.cat;
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.turtle;
             int x = 0;
             try
             {
@@ -307,7 +307,7 @@ namespace HelloWorldWinForms
         }
         private void sheep_radio_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.turtle;
+            pictureBox4.Image = HelloWorldWinForms.Properties.Resources.jellyfish;
             int x = 0;
             try
             {

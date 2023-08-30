@@ -98,6 +98,8 @@
     <None Include="Resources\grass.jpg.jpg" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\jellyfish.gif" />
+    <None Include="Resources\Jellyfish.bmp" />
     <None Include="Resources\horse_sound.wav" />
     <None Include="Resources\Shark_sound.wav" />
     <None Include="Resources\Caribbean.wav" />
