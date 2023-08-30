@@ -70,16 +70,6 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cat {
-            get {
-                object obj = ResourceManager.GetObject("cat", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream ChaChing {
@@ -110,10 +100,9 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Dolphin_sound
-        {
+        internal static System.IO.UnmanagedMemoryStream CowSound {
             get {
-                return ResourceManager.GetStream("Dolphin_sound", resourceCulture);
+                return ResourceManager.GetStream("CowSound", resourceCulture);
             }
         }
         
@@ -130,7 +119,7 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Dolphinsound {
+        internal static System.IO.UnmanagedMemoryStream Dolphin_sound {
             get {
                 return ResourceManager.GetStream("Dolphin_sound", resourceCulture);
             }
@@ -158,9 +147,9 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream SeahorseSound {
+        internal static System.IO.UnmanagedMemoryStream GooseSound {
             get {
-                return ResourceManager.GetStream("horse_sound", resourceCulture);
+                return ResourceManager.GetStream("GooseSound", resourceCulture);
             }
         }
         

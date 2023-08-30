@@ -96,9 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\grass.jpg.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\jellyfish.gif" />
     <None Include="Resources\Jellyfish.bmp" />
     <None Include="Resources\horse_sound.wav" />
@@ -112,14 +109,11 @@
     <None Include="Resources\dolphin.gif" />
     <None Include="Resources\ocean1.gif" />
     <None Include="Resources\ocean.gif" />
-    <None Include="Resources\planel.png" />
-    <None Include="Resources\planel1.png" />
     <None Include="Resources\egg.png" />
     <None Include="Resources\syringe.png" />
     <None Include="Resources\water-drop.png" />
     <None Include="Resources\meat.png" />
     <None Include="Resources\milking.png" />
-    <None Include="Resources\goose.gif" />
     <None Include="Resources\save-file.png" />
     <None Include="Resources\upload-big-arrow.png" />
     <None Include="Resources\search.png" />
@@ -130,15 +124,9 @@
     <None Include="Resources\Duck.wav" />
     <None Include="Resources\Cow.wav" />
     <None Include="Resources\song.wav" />
-    <None Include="Resources\sheep.gif" />
-    <None Include="Resources\cow.gif" />
-    <None Include="Resources\pig.gif" />
-    <None Include="Resources\duck.gif" />
     <None Include="Resources\ChaChing.wav" />
     <None Include="Resources\Chicken.wav" />
     <None Include="Resources\chicken-rice.png" />
-    <None Include="Resources\cat.gif" />
-    <Content Include="Resources\Chicken_Strut.gif" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

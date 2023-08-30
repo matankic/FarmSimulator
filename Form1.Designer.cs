@@ -344,7 +344,7 @@
             // 
             // buy_btn
             // 
-            this.buy_btn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.buy_btn.BackColor = System.Drawing.Color.White;
             this.buy_btn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buy_btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buy_btn.ForeColor = System.Drawing.Color.Black;
