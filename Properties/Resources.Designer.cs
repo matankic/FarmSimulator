@@ -61,6 +61,16 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap brightwood {
+            get {
+                object obj = ResourceManager.GetObject("brightwood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream Caribbean {
@@ -103,6 +113,16 @@ namespace HelloWorldWinForms.Properties {
         internal static System.IO.UnmanagedMemoryStream CowSound {
             get {
                 return ResourceManager.GetStream("CowSound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap darkwood {
+            get {
+                object obj = ResourceManager.GetObject("darkwood", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

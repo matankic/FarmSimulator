@@ -78,7 +78,6 @@
             this.label31 = new System.Windows.Forms.Label();
             this.label32 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
             this.timer_song = new System.Windows.Forms.Timer(this.components);
             this.label43 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
@@ -102,7 +101,6 @@
             this.id_lbl = new System.Windows.Forms.Label();
             this.spieces_lbl = new System.Windows.Forms.Label();
             this.name_lbl = new System.Windows.Forms.Label();
-            this.searchBox = new System.Windows.Forms.ComboBox();
             this.moveAnimal = new System.Windows.Forms.Timer(this.components);
             this.egg_btn = new System.Windows.Forms.PictureBox();
             this.heal_btn = new System.Windows.Forms.PictureBox();
@@ -112,8 +110,10 @@
             this.feed_btn = new System.Windows.Forms.PictureBox();
             this.load_btn = new System.Windows.Forms.PictureBox();
             this.save_btn = new System.Windows.Forms.PictureBox();
-            this.search_icon = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.search_icon = new System.Windows.Forms.PictureBox();
+            this.searchBox = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
@@ -126,8 +126,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_1
@@ -846,18 +846,6 @@
             this.label33.Text = "0";
             this.label33.Click += new System.EventHandler(this.label33_Click);
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(1226, 548);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(447, 42);
-            this.label16.TabIndex = 3;
-            this.label16.Text = "Selected spieces properties :";
-            this.label16.Click += new System.EventHandler(this.label16_Click);
-            // 
             // timer_song
             // 
             this.timer_song.Enabled = true;
@@ -1144,19 +1132,6 @@
             this.name_lbl.Text = "-----";
             this.name_lbl.Click += new System.EventHandler(this.name_lbl_Click);
             // 
-            // searchBox
-            // 
-            this.searchBox.DropDownHeight = 1;
-            this.searchBox.FormattingEnabled = true;
-            this.searchBox.IntegralHeight = false;
-            this.searchBox.Location = new System.Drawing.Point(1236, 602);
-            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.searchBox.Name = "searchBox";
-            this.searchBox.Size = new System.Drawing.Size(428, 28);
-            this.searchBox.TabIndex = 14;
-            this.searchBox.Text = "Search an animal by typing its correct ID";
-            this.searchBox.SelectedIndexChanged += new System.EventHandler(this.searchBox_SelectedIndexChanged);
-            // 
             // moveAnimal
             // 
             this.moveAnimal.Enabled = true;
@@ -1281,20 +1256,6 @@
             this.save_btn.TabStop = false;
             this.save_btn.Click += new System.EventHandler(this.save_btn_Click);
             // 
-            // search_icon
-            // 
-            this.search_icon.BackColor = System.Drawing.Color.White;
-            this.search_icon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.search_icon.Image = global::HelloWorldWinForms.Properties.Resources.search;
-            this.search_icon.Location = new System.Drawing.Point(1632, 605);
-            this.search_icon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.search_icon.Name = "search_icon";
-            this.search_icon.Size = new System.Drawing.Size(30, 26);
-            this.search_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.search_icon.TabIndex = 19;
-            this.search_icon.TabStop = false;
-            this.search_icon.Click += new System.EventHandler(this.search_icon_Click);
-            // 
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = global::HelloWorldWinForms.Properties.Resources.ocean;
@@ -1312,13 +1273,51 @@
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // search_icon
+            // 
+            this.search_icon.BackColor = System.Drawing.Color.White;
+            this.search_icon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.search_icon.Image = global::HelloWorldWinForms.Properties.Resources.search;
+            this.search_icon.Location = new System.Drawing.Point(1632, 605);
+            this.search_icon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.search_icon.Name = "search_icon";
+            this.search_icon.Size = new System.Drawing.Size(30, 26);
+            this.search_icon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.search_icon.TabIndex = 19;
+            this.search_icon.TabStop = false;
+            this.search_icon.Click += new System.EventHandler(this.search_icon_Click);
+            // 
+            // searchBox
+            // 
+            this.searchBox.DropDownHeight = 1;
+            this.searchBox.FormattingEnabled = true;
+            this.searchBox.IntegralHeight = false;
+            this.searchBox.Location = new System.Drawing.Point(1236, 602);
+            this.searchBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.searchBox.Name = "searchBox";
+            this.searchBox.Size = new System.Drawing.Size(428, 28);
+            this.searchBox.TabIndex = 14;
+            this.searchBox.Text = "Search an animal by typing its correct ID";
+            this.searchBox.SelectedIndexChanged += new System.EventHandler(this.searchBox_SelectedIndexChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Comic Sans MS", 15F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(1226, 548);
+            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(447, 42);
+            this.label16.TabIndex = 3;
+            this.label16.Text = "Selected spieces properties :";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.BackColor = System.Drawing.SystemColors.Control;
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(1707, 884);
             this.Controls.Add(this.egg_btn);
             this.Controls.Add(this.heal_btn);
@@ -1392,8 +1391,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.search_icon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1445,7 +1444,6 @@
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Label label33;
-        private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Timer timer_song;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label35;
@@ -1463,8 +1461,6 @@
         private System.Windows.Forms.ProgressBar HpBar;
         private System.Windows.Forms.Panel Animal_stats;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox searchBox;
-        private System.Windows.Forms.PictureBox search_icon;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.PictureBox save_btn;
         private System.Windows.Forms.PictureBox load_btn;
@@ -1484,6 +1480,9 @@
         private System.Windows.Forms.PictureBox milk_btn;
         private System.Windows.Forms.PictureBox egg_btn;
         private System.Windows.Forms.PictureBox heal_btn;
+        private System.Windows.Forms.PictureBox search_icon;
+        private System.Windows.Forms.ComboBox searchBox;
+        private System.Windows.Forms.Label label16;
     }
 }
 
