@@ -38,7 +38,7 @@ namespace HelloWorldWinForms
         {
             visual.Image = global::HelloWorldWinForms.Properties.Resources.puff;
             visual.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            visual.Size = new System.Drawing.Size(32, 32);
+            visual.Size = new System.Drawing.Size(64, 64);
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
             visual.Location = new System.Drawing.Point((int)getX(), (int)getY());
