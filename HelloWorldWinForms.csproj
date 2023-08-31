@@ -84,8 +84,8 @@
     <Compile Include="Inheritance classes\turtle.cs" />
     <Compile Include="Inheritance classes\seahorse.cs" />
     <Compile Include="Inheritance classes\shark.cs" />
+    <Compile Include="Other classes\aquarium.cs" />
     <Compile Include="Other classes\Credit.cs" />
-    <Compile Include="Other classes\Farm.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,7 +111,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="HelloWorldWinForms_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
