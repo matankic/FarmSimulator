@@ -107,8 +107,8 @@
             this.egg_btn = new System.Windows.Forms.PictureBox();
             this.heal_btn = new System.Windows.Forms.PictureBox();
             this.milk_btn = new System.Windows.Forms.PictureBox();
-            this.meat_btn = new System.Windows.Forms.PictureBox();
-            this.water_btn = new System.Windows.Forms.PictureBox();
+            this.sell_animal_btn = new System.Windows.Forms.PictureBox();
+            this.affection_btn = new System.Windows.Forms.PictureBox();
             this.feed_btn = new System.Windows.Forms.PictureBox();
             this.load_btn = new System.Windows.Forms.PictureBox();
             this.save_btn = new System.Windows.Forms.PictureBox();
@@ -121,8 +121,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.egg_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.heal_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.milk_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meat_btn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sell_animal_btn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.affection_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).BeginInit();
@@ -979,9 +979,9 @@
             this.label41.Location = new System.Drawing.Point(238, 40);
             this.label41.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label41.Name = "label41";
-            this.label41.Size = new System.Drawing.Size(80, 29);
+            this.label41.Size = new System.Drawing.Size(105, 29);
             this.label41.TabIndex = 5;
-            this.label41.Text = "Thirst ";
+            this.label41.Text = "Affection";
             this.label41.Click += new System.EventHandler(this.label41_Click);
             // 
             // label42
@@ -1010,6 +1010,7 @@
             // 
             // ThirstBar
             // 
+            this.ThirstBar.ForeColor = System.Drawing.Color.DeepPink;
             this.ThirstBar.Location = new System.Drawing.Point(338, 40);
             this.ThirstBar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ThirstBar.Maximum = 300;
@@ -1207,35 +1208,35 @@
             this.milk_btn.TabStop = false;
             this.milk_btn.Click += new System.EventHandler(this.milk_btn_Click);
             // 
-            // meat_btn
+            // sell_animal_btn
             // 
-            this.meat_btn.BackColor = System.Drawing.Color.Transparent;
-            this.meat_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.meat_btn.Image = global::HelloWorldWinForms.Properties.Resources.meat;
-            this.meat_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            this.meat_btn.Location = new System.Drawing.Point(616, 783);
-            this.meat_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.meat_btn.Name = "meat_btn";
-            this.meat_btn.Size = new System.Drawing.Size(99, 92);
-            this.meat_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.meat_btn.TabIndex = 13;
-            this.meat_btn.TabStop = false;
-            this.meat_btn.Click += new System.EventHandler(this.meat_btn_Click);
+            this.sell_animal_btn.BackColor = System.Drawing.Color.Transparent;
+            this.sell_animal_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.sell_animal_btn.Image = global::HelloWorldWinForms.Properties.Resources.sell;
+            this.sell_animal_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
+            this.sell_animal_btn.Location = new System.Drawing.Point(616, 783);
+            this.sell_animal_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sell_animal_btn.Name = "sell_animal_btn";
+            this.sell_animal_btn.Size = new System.Drawing.Size(99, 92);
+            this.sell_animal_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.sell_animal_btn.TabIndex = 13;
+            this.sell_animal_btn.TabStop = false;
+            this.sell_animal_btn.Click += new System.EventHandler(this.sell_animal_btn_Click);
             // 
-            // water_btn
+            // affection_btn
             // 
-            this.water_btn.BackColor = System.Drawing.Color.Transparent;
-            this.water_btn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.water_btn.Image = global::HelloWorldWinForms.Properties.Resources.water_drop;
-            this.water_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
-            this.water_btn.Location = new System.Drawing.Point(508, 783);
-            this.water_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.water_btn.Name = "water_btn";
-            this.water_btn.Size = new System.Drawing.Size(99, 92);
-            this.water_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.water_btn.TabIndex = 13;
-            this.water_btn.TabStop = false;
-            this.water_btn.Click += new System.EventHandler(this.water_btn_Click);
+            this.affection_btn.BackColor = System.Drawing.Color.Transparent;
+            this.affection_btn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.affection_btn.Image = global::HelloWorldWinForms.Properties.Resources.hearth;
+            this.affection_btn.InitialImage = global::HelloWorldWinForms.Properties.Resources.puff;
+            this.affection_btn.Location = new System.Drawing.Point(508, 783);
+            this.affection_btn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.affection_btn.Name = "affection_btn";
+            this.affection_btn.Size = new System.Drawing.Size(99, 92);
+            this.affection_btn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.affection_btn.TabIndex = 13;
+            this.affection_btn.TabStop = false;
+            this.affection_btn.Click += new System.EventHandler(this.affection_btn_Click);
             // 
             // feed_btn
             // 
@@ -1322,8 +1323,8 @@
             this.Controls.Add(this.egg_btn);
             this.Controls.Add(this.heal_btn);
             this.Controls.Add(this.milk_btn);
-            this.Controls.Add(this.meat_btn);
-            this.Controls.Add(this.water_btn);
+            this.Controls.Add(this.sell_animal_btn);
+            this.Controls.Add(this.affection_btn);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.feed_btn);
             this.Controls.Add(this.label8);
@@ -1386,8 +1387,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.egg_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.heal_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.milk_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.meat_btn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.water_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sell_animal_btn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.affection_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.feed_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.load_btn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.save_btn)).EndInit();
@@ -1477,9 +1478,9 @@
         private System.Windows.Forms.Label id_lbl;
         private System.Windows.Forms.Label spieces_lbl;
         private System.Windows.Forms.Label name_lbl;
-        private System.Windows.Forms.PictureBox meat_btn;
+        private System.Windows.Forms.PictureBox sell_animal_btn;
         private System.Windows.Forms.PictureBox feed_btn;
-        private System.Windows.Forms.PictureBox water_btn;
+        private System.Windows.Forms.PictureBox affection_btn;
         private System.Windows.Forms.PictureBox milk_btn;
         private System.Windows.Forms.PictureBox egg_btn;
         private System.Windows.Forms.PictureBox heal_btn;

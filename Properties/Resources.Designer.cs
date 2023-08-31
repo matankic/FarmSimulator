@@ -154,6 +154,16 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap hearth {
+            get {
+                object obj = ResourceManager.GetObject("hearth", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream horse_sound {
@@ -168,16 +178,6 @@ namespace HelloWorldWinForms.Properties {
         internal static System.Drawing.Bitmap jellyfish {
             get {
                 object obj = ResourceManager.GetObject("jellyfish", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap meat {
-            get {
-                object obj = ResourceManager.GetObject("meat", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -264,6 +264,16 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap sell {
+            get {
+                object obj = ResourceManager.GetObject("sell", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap shark {
             get {
                 object obj = ResourceManager.GetObject("shark", resourceCulture);
@@ -324,16 +334,6 @@ namespace HelloWorldWinForms.Properties {
         internal static System.Drawing.Bitmap upload_big_arrow {
             get {
                 object obj = ResourceManager.GetObject("upload_big_arrow", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap water_drop {
-            get {
-                object obj = ResourceManager.GetObject("water_drop", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

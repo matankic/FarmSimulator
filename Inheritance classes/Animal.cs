@@ -52,7 +52,7 @@ namespace HelloWorldWinForms
             else
                 _hunger = 300;
         }
-        public void waterAnimal()
+        public void affectionAnimal()
         {
             if (_thirst + 30 <= 300)
                 _thirst += 30;

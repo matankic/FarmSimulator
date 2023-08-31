@@ -44,8 +44,8 @@ namespace HelloWorldWinForms
             this.label7.Parent = pictureBox1;
             this.heal_btn.Parent = pictureBox1;
             this.feed_btn.Parent = pictureBox1;
-            this.water_btn.Parent = pictureBox1;
-            this.meat_btn.Parent = pictureBox1;
+            this.affection_btn.Parent = pictureBox1;
+            this.sell_animal_btn.Parent = pictureBox1;
             this.milk_btn.Parent = pictureBox1;
             this.egg_btn.Parent = pictureBox1;
         }
@@ -570,7 +570,7 @@ namespace HelloWorldWinForms
             }
         }
 
-        private void water_btn_Click(object sender, EventArgs e)
+        private void affection_btn_Click(object sender, EventArgs e)
         {
             if (prevIndex >= 0)
             {
@@ -582,11 +582,11 @@ namespace HelloWorldWinForms
                     label12.ForeColor = Color.Red;
                 }
                 label11.Text = myAquarium.GetCreditRef().creditUpdate();
-                myAquarium.myAnimals[prevIndex].waterAnimal();
+                myAquarium.myAnimals[prevIndex].affectionAnimal();
             }
         }
 
-        private void meat_btn_Click(object sender, EventArgs e)
+        private void sell_animail_btn_Click(object sender, EventArgs e)
         {
             if (prevIndex >= 0)
             {
@@ -998,6 +998,85 @@ namespace HelloWorldWinForms
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void sell_animal_btn_Click(object sender, EventArgs e)
+        {
+            if (prevIndex >= 0)
+            {
+                buy_sell.Play();
+                switch (myAquarium.myAnimals[prevIndex].getSpieces())
+                {
+                    case 0:
+                        myAquarium._cnt_puff--; lbl_1.Text = myAquarium._cnt_puff.ToString();
+                        myAquarium.GetCreditRef() += puff._sell_puff * myAquarium.myAnimals[prevIndex]._age.get_days();
+                        if (myAquarium.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myAquarium.GetCreditRef().creditUpdate();
+                        break;
+                    case 1:
+                        myAquarium._cnt_turtle--; label29.Text = myAquarium._cnt_turtle.ToString();
+                        myAquarium.GetCreditRef() += turtle._sell_turtle * myAquarium.myAnimals[prevIndex]._age.get_days();
+                        if (myAquarium.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myAquarium.GetCreditRef().creditUpdate();
+                        break;
+                    case 2:
+                        myAquarium._cnt_seahorse--; label30.Text = myAquarium._cnt_seahorse.ToString();
+                        myAquarium.GetCreditRef() += seahorse._sell_seahorse * myAquarium.myAnimals[prevIndex]._age.get_days();
+                        if (myAquarium.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myAquarium.GetCreditRef().creditUpdate();
+                        break;
+                    case 3:
+                        myAquarium._cnt_dolphin--; label31.Text = myAquarium._cnt_dolphin.ToString();
+                        myAquarium.GetCreditRef() += dolphin._sell_dolphin * myAquarium.myAnimals[prevIndex]._age.get_days();
+                        if (myAquarium.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myAquarium.GetCreditRef().creditUpdate();
+                        break;
+                    case 4:
+                        myAquarium._cnt_shark--; label32.Text = myAquarium._cnt_shark.ToString();
+                        myAquarium.GetCreditRef() += shark._sell_shark * myAquarium.myAnimals[prevIndex]._age.get_days();
+                        if (myAquarium.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myAquarium.GetCreditRef().creditUpdate();
+                        break;
+                    case 5:
+                        myAquarium._cnt_jellyfish--; label33.Text = myAquarium._cnt_jellyfish.ToString();
+                        myAquarium.GetCreditRef() += jellyfish._sell_jellyfish * myAquarium.myAnimals[prevIndex]._age.get_days();
+                        if (myAquarium.GetCreditRef().get_credit() > 0)
+                        {
+                            label11.ForeColor = Color.ForestGreen;
+                            label12.ForeColor = Color.ForestGreen;
+                        }
+                        label11.Text = myAquarium.GetCreditRef().creditUpdate();
+                        break;
+                    default: break;
+                }
+                this.Controls.Remove(visualAnimals[prevIndex]);
+                visualAnimals[prevIndex].Dispose();
+                myAquarium.myAnimals.Remove(myAquarium.myAnimals[prevIndex]);
+                visualAnimals.Remove(visualAnimals[prevIndex]);
+                prevIndex = -1;
+                myAquarium._aquariumSize--;
+                clearStats();
+            }
         }
 
         private void milk_btn_Click(object sender, EventArgs e)

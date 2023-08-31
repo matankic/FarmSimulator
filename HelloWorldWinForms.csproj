@@ -169,5 +169,17 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sell_fish.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hearth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sell.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
