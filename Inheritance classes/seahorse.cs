@@ -35,7 +35,7 @@ namespace HelloWorldWinForms
 
         }
         public override void displayAnimal(PictureBox visual)
-        {
+        { // פונקציה שאחראית על הצגה של החיה על המסך
             visual.BackColor = System.Drawing.Color.Transparent;
             visual.Cursor = System.Windows.Forms.Cursors.Hand;
             visual.Image = global::HelloWorldWinForms.Properties.Resources.seahorse;
