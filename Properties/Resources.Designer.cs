@@ -63,6 +63,15 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Caribbean {
+            get {
+                return ResourceManager.GetStream("Caribbean", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream ChaChing {
             get {
                 return ResourceManager.GetStream("ChaChing", resourceCulture);
@@ -80,31 +89,11 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Chicken_Strut {
-            get {
-                object obj = ResourceManager.GetObject("Chicken_Strut", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream ChickenSound {
             get {
                 return ResourceManager.GetStream("ChickenSound", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap cow {
-            get {
-                object obj = ResourceManager.GetObject("cow", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
             }
         }
         
@@ -120,10 +109,19 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap duck {
+        internal static System.Drawing.Bitmap dolphin {
             get {
-                object obj = ResourceManager.GetObject("duck", resourceCulture);
+                object obj = ResourceManager.GetObject("dolphin", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Dolphin_sound {
+            get {
+                return ResourceManager.GetStream("Dolphin_sound", resourceCulture);
             }
         }
         
@@ -147,16 +145,6 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap goose {
-            get {
-                object obj = ResourceManager.GetObject("goose", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream GooseSound {
@@ -166,11 +154,20 @@ namespace HelloWorldWinForms.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream horse_sound {
+            get {
+                return ResourceManager.GetStream("horse_sound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap grass_jpg {
+        internal static System.Drawing.Bitmap jellyfish {
             get {
-                object obj = ResourceManager.GetObject("grass.jpg", resourceCulture);
+                object obj = ResourceManager.GetObject("jellyfish", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -198,9 +195,19 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap pig {
+        internal static System.Drawing.Bitmap ocean {
             get {
-                object obj = ResourceManager.GetObject("pig", resourceCulture);
+                object obj = ResourceManager.GetObject("ocean", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ocean1 {
+            get {
+                object obj = ResourceManager.GetObject("ocean1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -217,9 +224,9 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap planel {
+        internal static System.Drawing.Bitmap puff {
             get {
-                object obj = ResourceManager.GetObject("planel", resourceCulture);
+                object obj = ResourceManager.GetObject("puff", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -237,6 +244,16 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap seahorse {
+            get {
+                object obj = ResourceManager.GetObject("seahorse", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap search {
             get {
                 object obj = ResourceManager.GetObject("search", resourceCulture);
@@ -247,10 +264,19 @@ namespace HelloWorldWinForms.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap sheep {
+        internal static System.Drawing.Bitmap shark {
             get {
-                object obj = ResourceManager.GetObject("sheep", resourceCulture);
+                object obj = ResourceManager.GetObject("shark", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Shark_sound {
+            get {
+                return ResourceManager.GetStream("Shark_sound", resourceCulture);
             }
         }
         
@@ -278,6 +304,16 @@ namespace HelloWorldWinForms.Properties {
         internal static System.Drawing.Bitmap syringe {
             get {
                 object obj = ResourceManager.GetObject("syringe", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap turtle {
+            get {
+                object obj = ResourceManager.GetObject("turtle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

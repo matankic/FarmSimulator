@@ -83,12 +83,12 @@ namespace HelloWorldWinForms
             lbl8.Text = ((int)_coordinates.Y).ToString();
             switch (_spieces)
             {
-                case 0: lbl3.Text = "Chicken"; break;
-                case 1: lbl3.Text = "Duck"; break;
-                case 2: lbl3.Text = "Goose"; break;
-                case 3: lbl3.Text = "Cow"; break;
-                case 4: lbl3.Text = "Pig"; break;
-                case 5: lbl3.Text = "Sheep"; break;
+                case 0: lbl3.Text = "puff"; break;
+                case 1: lbl3.Text = "turtle"; break;
+                case 2: lbl3.Text = "seahorse"; break;
+                case 3: lbl3.Text = "dolphin"; break;
+                case 4: lbl3.Text = "shark"; break;
+                case 5: lbl3.Text = "jellyfish"; break;
                 default: break;
             }
         }

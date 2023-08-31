@@ -12,6 +12,23 @@
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\matan\Desktop\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -32,6 +49,18 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>C9AF583CCB09B5AEF9F35BD3ADF8EDA5534240D5</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>HelloWorldWinForms_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,12 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Inheritance classes\Animal.cs" />
-    <Compile Include="Inheritance classes\Bird.cs" />
-    <Compile Include="Inheritance classes\Chicken.cs" />
-    <Compile Include="Inheritance classes\Cow.cs" />
-    <Compile Include="Inheritance classes\Duck.cs" />
-    <Compile Include="Inheritance classes\Goose.cs" />
-    <Compile Include="Inheritance classes\Pig.cs" />
+    <Compile Include="Inheritance classes\fish.cs" />
+    <Compile Include="Inheritance classes\puff.cs" />
+    <Compile Include="Inheritance classes\dolphin.cs" />
+    <Compile Include="Inheritance classes\turtle.cs" />
+    <Compile Include="Inheritance classes\seahorse.cs" />
+    <Compile Include="Inheritance classes\shark.cs" />
     <Compile Include="Other classes\Credit.cs" />
     <Compile Include="Other classes\Farm.cs" />
     <Compile Include="Form1.cs">
@@ -66,10 +95,11 @@
     <Compile Include="Inheritance classes\Mammal.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Inheritance classes\Sheep.cs" />
+    <Compile Include="Inheritance classes\jellyfish.cs" />
     <Compile Include="Other classes\Time.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -81,6 +111,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="HelloWorldWinForms_TemporaryKey.pfx" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -95,17 +126,24 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\grass.jpg.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\planel.png" />
-    <None Include="Resources\planel1.png" />
+    <None Include="Resources\jellyfish.gif" />
+    <None Include="Resources\Jellyfish.bmp" />
+    <None Include="Resources\horse_sound.wav" />
+    <None Include="Resources\Shark_sound.wav" />
+    <None Include="Resources\Caribbean.wav" />
+    <None Include="Resources\Dolphin_sound.wav" />
+    <None Include="Resources\turtle.gif" />
+    <None Include="Resources\shark.gif" />
+    <None Include="Resources\seahorse.gif" />
+    <None Include="Resources\puff.gif" />
+    <None Include="Resources\dolphin.gif" />
+    <None Include="Resources\ocean1.gif" />
+    <None Include="Resources\ocean.gif" />
     <None Include="Resources\egg.png" />
     <None Include="Resources\syringe.png" />
     <None Include="Resources\water-drop.png" />
     <None Include="Resources\meat.png" />
     <None Include="Resources\milking.png" />
-    <None Include="Resources\goose.gif" />
     <None Include="Resources\save-file.png" />
     <None Include="Resources\upload-big-arrow.png" />
     <None Include="Resources\search.png" />
@@ -116,15 +154,21 @@
     <None Include="Resources\Duck.wav" />
     <None Include="Resources\Cow.wav" />
     <None Include="Resources\song.wav" />
-    <None Include="Resources\sheep.gif" />
-    <None Include="Resources\cow.gif" />
-    <None Include="Resources\pig.gif" />
-    <None Include="Resources\duck.gif" />
     <None Include="Resources\ChaChing.wav" />
     <None Include="Resources\Chicken.wav" />
     <None Include="Resources\chicken-rice.png" />
-    <Content Include="Resources\Chicken_Strut.gif" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
